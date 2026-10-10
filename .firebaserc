@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "axomrank-prod"
+  },
+  "targets": {
+    "axomrank-prod": {
+      "hosting": {
+        "axomrank": [
+          "axomrank"
+        ]
+      }
+    }
+  }
+}

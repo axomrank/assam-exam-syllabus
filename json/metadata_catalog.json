@@ -1,0 +1,552 @@
+{
+  "project": "Assam Government Examinations - Comprehensive Canonical Syllabi & Schemes Catalog",
+  "last_updated": "2026-10-01",
+  "total_categories": 12,
+  "universal_general_syllabus_csv": "assam_general_papers_syllabus.csv",
+  "universal_general_syllabus_json": "assam_general_papers_syllabus.json",
+  "master_all_cadres_syllabus_csv": "master_assam_exams_syllabus.csv",
+  "master_all_cadres_syllabus_json": "master_assam_exams_syllabus.json",
+  "categories": [
+    {
+      "id": "01_APSC",
+      "name": "Assam Public Service Commission (APSC)",
+      "official_website": "https://apsc.nic.in",
+      "exams": [
+        {
+          "name": "Combined Competitive Examination (CCE) - Assam Civil Services",
+          "posts": "ACS (Jr. Grade), APS (Jr. Grade), Assam Taxation Service, Assam Finance Service, DTO, Labour Officer, ARCS, BDO, Inspector of Taxes, Sub-Registrar",
+          "folder": "01_APSC/Combined_Competitive_Exam_CCE",
+          "stages": [
+            {
+              "stage": "Stage 1: Preliminary Examination",
+              "folder": "01_APSC/Combined_Competitive_Exam_CCE/01_Prelims",
+              "syllabus_file": "01_APSC/Combined_Competitive_Exam_CCE/01_Prelims/SYLLABUS.md",
+              "pattern_file": "01_APSC/Combined_Competitive_Exam_CCE/01_Prelims/EXAM_PATTERN.md",
+              "official_pdfs": [
+                "01_APSC/Combined_Competitive_Exam_CCE/01_Prelims/Official_Syllabus_CCE_Prelims_GS_I.pdf",
+                "01_APSC/Combined_Competitive_Exam_CCE/01_Prelims/Official_Syllabus_CCE_Prelims_GS_II_CSAT.pdf",
+                "01_APSC/Combined_Competitive_Exam_CCE/01_Prelims/APSC_CCE_Prelims_GS_I_2024_Question_Paper.pdf",
+                "01_APSC/Combined_Competitive_Exam_CCE/01_Prelims/APSC_CCE_Prelims_GS_II_2024_Question_Paper.pdf",
+                "01_APSC/Combined_Competitive_Exam_CCE/01_Prelims/APSC_CCE_Prelims_GS_I_2023_Question_Paper.pdf",
+                "01_APSC/Combined_Competitive_Exam_CCE/01_Prelims/APSC_CCE_Prelims_GS_II_2023_Question_Paper.pdf"
+              ]
+            },
+            {
+              "stage": "Stage 2: Main Examination",
+              "folder": "01_APSC/Combined_Competitive_Exam_CCE/02_Mains",
+              "syllabus_file": "01_APSC/Combined_Competitive_Exam_CCE/02_Mains/SYLLABUS.md",
+              "pattern_file": "01_APSC/Combined_Competitive_Exam_CCE/02_Mains/EXAM_PATTERN.md",
+              "official_pdfs": [
+                "01_APSC/Combined_Competitive_Exam_CCE/02_Mains/Official_Syllabus_CCE_Mains_GS_I.pdf",
+                "01_APSC/Combined_Competitive_Exam_CCE/02_Mains/Official_Syllabus_CCE_Mains_GS_II.pdf",
+                "01_APSC/Combined_Competitive_Exam_CCE/02_Mains/Official_Syllabus_CCE_Mains_GS_III.pdf",
+                "01_APSC/Combined_Competitive_Exam_CCE/02_Mains/Official_Syllabus_CCE_Mains_GS_IV_Ethics.pdf",
+                "01_APSC/Combined_Competitive_Exam_CCE/02_Mains/Official_Syllabus_CCE_Mains_GS_V_Assam.pdf"
+              ]
+            },
+            {
+              "stage": "Statutory Rules & Gazette",
+              "folder": "01_APSC/Combined_Competitive_Exam_CCE/03_Rules_Gazette",
+              "official_pdfs": [
+                "01_APSC/Combined_Competitive_Exam_CCE/03_Rules_Gazette/Official_APSC_CCE_Amendment_Rules_Gazette.pdf"
+              ]
+            }
+          ],
+          "qualification": "Bachelor's Degree in any discipline"
+        },
+        {
+          "name": "Engineering Services (Assistant Engineer & Junior Engineer)",
+          "posts": "AE & JE in PWD (Roads & Buildings), Water Resources, PHE, Irrigation, Housing & Urban Affairs",
+          "folder": "01_APSC/Engineering_Services_AE_JE",
+          "syllabus_file": "01_APSC/Engineering_Services_AE_JE/SYLLABUS.md",
+          "pattern_file": "01_APSC/Engineering_Services_AE_JE/EXAM_PATTERN.md",
+          "official_pdfs": [
+            "01_APSC/Engineering_Services_AE_JE/Official_Syllabus_AE_Civil_PWD.pdf",
+            "01_APSC/Engineering_Services_AE_JE/Official_Syllabus_JE_Civil_PWD.pdf",
+            "01_APSC/Engineering_Services_AE_JE/Official_Syllabus_AE_Mechanical_Irrigation.pdf",
+            "01_APSC/Engineering_Services_AE_JE/Official_Syllabus_AE_Electrical_Irrigation.pdf",
+            "01_APSC/Engineering_Services_AE_JE/Official_Syllabus_AE_Chemical_PHE.pdf"
+          ],
+          "qualification": "B.E./B.Tech (AE) or 3-Year Diploma (JE) in Civil/Mech/Elect/Chem"
+        },
+        {
+          "name": "Forest Services (Forest Ranger & Assam Forest Service - AFS)",
+          "posts": "Forest Ranger, Assistant Conservator of Forests (AFS)",
+          "folder": "01_APSC/Forest_Services_AFS_Ranger",
+          "syllabus_file": "01_APSC/Forest_Services_AFS_Ranger/SYLLABUS.md",
+          "pattern_file": "01_APSC/Forest_Services_AFS_Ranger/EXAM_PATTERN.md",
+          "qualification": "Bachelor's Degree in Science or Engineering"
+        },
+        {
+          "name": "Agriculture, Veterinary & Fisheries Services",
+          "posts": "Agricultural Development Officer (ADO), Veterinary Officer (VO/BVO), Fishery Development Officer (FDO), JE Civil (Fishery)",
+          "folder": "01_APSC/Agriculture_Veterinary_Fisheries",
+          "syllabus_file": "01_APSC/Agriculture_Veterinary_Fisheries/SYLLABUS.md",
+          "pattern_file": "01_APSC/Agriculture_Veterinary_Fisheries/EXAM_PATTERN.md",
+          "official_pdfs": [
+            "01_APSC/Agriculture_Veterinary_Fisheries/Official_Syllabus_Agricultural_Development_Officer_ADO.pdf",
+            "01_APSC/Agriculture_Veterinary_Fisheries/Official_Syllabus_Veterinary_Officer_VO_BVO.pdf",
+            "01_APSC/Agriculture_Veterinary_Fisheries/Official_Syllabus_VO_BVO_General_Studies.pdf",
+            "01_APSC/Agriculture_Veterinary_Fisheries/Official_Syllabus_JE_Civil_Fishery_Dept.pdf"
+          ],
+          "qualification": "B.Sc (Agri) / B.V.Sc & AH / B.F.Sc"
+        },
+        {
+          "name": "Health, Medical, Drug & Food Safety Administration",
+          "posts": "Medical Officer (Allopathic/Ayurvedic/Homeopathic), Food Safety Officer (FSO), Drug Inspector (DI)",
+          "folder": "01_APSC/Health_Drug_Food_Services",
+          "syllabus_file": "01_APSC/Health_Drug_Food_Services/SYLLABUS.md",
+          "pattern_file": "01_APSC/Health_Drug_Food_Services/EXAM_PATTERN.md",
+          "qualification": "MBBS / BAMS / BHMS / B.Pharm / B.Tech Food Tech"
+        },
+        {
+          "name": "Higher & Technical Education Faculty",
+          "posts": "Lecturer in Polytechnics, Assistant Professor in Govt Engineering Colleges (AEC, JEC, BBEC, JIST)",
+          "folder": "01_APSC/Higher_Education_Technical_Faculty",
+          "syllabus_file": "01_APSC/Higher_Education_Technical_Faculty/SYLLABUS.md",
+          "pattern_file": "01_APSC/Higher_Education_Technical_Faculty/EXAM_PATTERN.md",
+          "qualification": "B.E./B.Tech (1st Class) / M.Tech / Ph.D"
+        },
+        {
+          "name": "Specialized Administrative Inspectors & Research Assistant",
+          "posts": "Inspector of Legal Metrology, Boiler Inspector, Factory Inspector, Labour Inspector, Research Assistant (Planning)",
+          "folder": "01_APSC/Specialized_Administrative_Inspectors",
+          "syllabus_file": "01_APSC/Specialized_Administrative_Inspectors/SYLLABUS.md",
+          "pattern_file": "01_APSC/Specialized_Administrative_Inspectors/EXAM_PATTERN.md",
+          "official_pdfs": [
+            "01_APSC/Specialized_Administrative_Inspectors/Official_Syllabus_Inspector_Legal_Metrology.pdf",
+            "01_APSC/Specialized_Administrative_Inspectors/Official_Syllabus_Inspector_of_Boilers.pdf",
+            "01_APSC/Specialized_Administrative_Inspectors/Official_Syllabus_Research_Assistant_Planning_TDD.pdf"
+          ],
+          "qualification": "Degree in Science/Engg/Law/Economics/Statistics"
+        }
+      ]
+    },
+    {
+      "id": "02_ADRE_SLRC",
+      "name": "Assam Direct Recruitment Commission (ADRE - SLRC / ASSEB)",
+      "official_website": "https://assam.gov.in",
+      "exams": [
+        {
+          "name": "Class III (Graduate / Bachelor Degree Level)",
+          "posts": "Junior Assistant, Field Assistant, LDA, Computer Operator, Statistical Assistant, Tax Collector, Village Executive",
+          "folder": "02_ADRE_SLRC/Class_III_Graduate_Level",
+          "syllabus_file": "02_ADRE_SLRC/Class_III_Graduate_Level/SYLLABUS.md",
+          "pattern_file": "02_ADRE_SLRC/Class_III_Graduate_Level/EXAM_PATTERN.md",
+          "qualification": "Bachelor's Degree + Computer Diploma / Certificate"
+        },
+        {
+          "name": "Class III (Higher Secondary 10+2 Level)",
+          "posts": "Data Entry Operator (DEO), Junior Assistant (HS level), Typist, Laboratory Assistant, Section Assistant, Agril Demonstrator",
+          "folder": "02_ADRE_SLRC/Class_III_Higher_Secondary_Level",
+          "syllabus_file": "02_ADRE_SLRC/Class_III_Higher_Secondary_Level/SYLLABUS.md",
+          "pattern_file": "02_ADRE_SLRC/Class_III_Higher_Secondary_Level/EXAM_PATTERN.md",
+          "qualification": "HSSLC (10+2) Pass"
+        },
+        {
+          "name": "Class III (Driver & Technical Posts)",
+          "posts": "Light Vehicle Driver, Heavy Vehicle Driver, Electrician, Plumber, Operator",
+          "folder": "02_ADRE_SLRC/Class_III_Driver_Technical",
+          "syllabus_file": "02_ADRE_SLRC/Class_III_Driver_Technical/SYLLABUS.md",
+          "pattern_file": "02_ADRE_SLRC/Class_III_Driver_Technical/EXAM_PATTERN.md",
+          "qualification": "HSLC + Valid Driving License / ITI"
+        },
+        {
+          "name": "Class IV (HSLC & Class VIII Passed Posts)",
+          "posts": "Peon, Chowkidar, Mali, Ward Boy/Girl, Daftari, Office Attendant, Khalasi, Chainman, Jugali, Sweeper",
+          "folder": "02_ADRE_SLRC/Class_IV_HSLC_ClassVIII",
+          "syllabus_file": "02_ADRE_SLRC/Class_IV_HSLC_ClassVIII/SYLLABUS.md",
+          "pattern_file": "02_ADRE_SLRC/Class_IV_HSLC_ClassVIII/EXAM_PATTERN.md",
+          "qualification": "Class VIII Pass / HSLC Pass"
+        }
+      ]
+    },
+    {
+      "id": "03_Assam_Police_SLPRB",
+      "name": "Assam Police & Uniformed Services (SLPRB)",
+      "official_website": "https://slprbassam.in",
+      "exams": [
+        {
+          "name": "Sub-Inspector (UB, AB & Commando Battalions)",
+          "posts": "Sub-Inspector (Unarmed Branch), Sub-Inspector (Armed Branch), Sub-Inspector (Assam Commando)",
+          "folder": "03_Assam_Police_SLPRB/Sub_Inspector_UB_AB_Commando",
+          "syllabus_file": "03_Assam_Police_SLPRB/Sub_Inspector_UB_AB_Commando/SYLLABUS.md",
+          "pattern_file": "03_Assam_Police_SLPRB/Sub_Inspector_UB_AB_Commando/EXAM_PATTERN.md",
+          "qualification": "Graduate in any discipline"
+        },
+        {
+          "name": "Police Constable (UB, AB & Commando)",
+          "posts": "Constable (Unarmed Branch), Constable (Armed Branch), Commando Constable",
+          "folder": "03_Assam_Police_SLPRB/Constable_UB_AB_Commando",
+          "syllabus_file": "03_Assam_Police_SLPRB/Constable_UB_AB_Commando/SYLLABUS.md",
+          "pattern_file": "03_Assam_Police_SLPRB/Constable_UB_AB_Commando/EXAM_PATTERN.md",
+          "qualification": "HSSLC (for UB) / HSLC (for AB & Commando)"
+        },
+        {
+          "name": "APRO (Radio & Communication)",
+          "posts": "Sub-Inspector & Constable (Communication & Radio Operator)",
+          "folder": "03_Assam_Police_SLPRB/APRO_Radio_Communication",
+          "syllabus_file": "03_Assam_Police_SLPRB/APRO_Radio_Communication/SYLLABUS.md",
+          "pattern_file": "03_Assam_Police_SLPRB/APRO_Radio_Communication/EXAM_PATTERN.md",
+          "qualification": "B.Sc / Diploma in ECE / 10+2 with Physics & Maths"
+        },
+        {
+          "name": "Fire & Emergency Services (F&ES)",
+          "posts": "Station Officer, Sub-Officer, Fireman, Driver Operator",
+          "folder": "03_Assam_Police_SLPRB/Fire_Emergency_Services",
+          "syllabus_file": "03_Assam_Police_SLPRB/Fire_Emergency_Services/SYLLABUS.md",
+          "pattern_file": "03_Assam_Police_SLPRB/Fire_Emergency_Services/EXAM_PATTERN.md",
+          "qualification": "B.Sc / HSLC / HSSLC"
+        },
+        {
+          "name": "Prisons Department (Jailer, Assistant Jailer, Jail Warder)",
+          "posts": "Jailer, Assistant Jailer, Jail Warder (Male & Female)",
+          "folder": "03_Assam_Police_SLPRB/Prisons_Jailer_Warder",
+          "syllabus_file": "03_Assam_Police_SLPRB/Prisons_Jailer_Warder/SYLLABUS.md",
+          "pattern_file": "03_Assam_Police_SLPRB/Prisons_Jailer_Warder/EXAM_PATTERN.md",
+          "qualification": "Graduate (Jailer) / HSLC (Warder)"
+        },
+        {
+          "name": "Excise Department (Inspector, Assistant Inspector, Constable)",
+          "posts": "Inspector of Excise, Assistant Inspector of Excise, Excise Constable",
+          "folder": "03_Assam_Police_SLPRB/Excise_Inspector_Constable",
+          "syllabus_file": "03_Assam_Police_SLPRB/Excise_Inspector_Constable/SYLLABUS.md",
+          "pattern_file": "03_Assam_Police_SLPRB/Excise_Inspector_Constable/EXAM_PATTERN.md",
+          "qualification": "Graduate / HSLC"
+        },
+        {
+          "name": "Forestry Cadres (Forester Grade-I, Forest Guard, AFPF)",
+          "posts": "Forester Grade-I, Forest Guard, AFPF Constable",
+          "folder": "03_Assam_Police_SLPRB/Forestry_Cadres_Forester_Guard",
+          "syllabus_file": "03_Assam_Police_SLPRB/Forestry_Cadres_Forester_Guard/SYLLABUS.md",
+          "pattern_file": "03_Assam_Police_SLPRB/Forestry_Cadres_Forester_Guard/EXAM_PATTERN.md",
+          "qualification": "Graduate (Forester-I) / HSSLC (Forest Guard) / HSLC (AFPF)"
+        },
+        {
+          "name": "Civil Defence & Home Guards (DGCD & CGHG)",
+          "posts": "Sub-Inspector, Guardsman, Havildar, Constable",
+          "folder": "03_Assam_Police_SLPRB/Civil_Defence_Home_Guards",
+          "syllabus_file": "03_Assam_Police_SLPRB/Civil_Defence_Home_Guards/SYLLABUS.md",
+          "pattern_file": "03_Assam_Police_SLPRB/Civil_Defence_Home_Guards/EXAM_PATTERN.md",
+          "qualification": "Graduate / HSLC"
+        }
+      ]
+    },
+    {
+      "id": "04_Health_DME_DHS_NHM",
+      "name": "Health & Family Welfare (DME, DHS, DHS-FW, AYUSH, NHM)",
+      "official_website": "https://dme.assam.gov.in",
+      "exams": [
+        {
+          "name": "Grade III Technical & Paramedical Cadres",
+          "posts": "Staff Nurse, Pharmacist, Lab Technician, Radiographer, OT Tech, Dialysis Tech, ICU Tech, Physiotherapist, ECG Tech, Ophthalmic Assistant, Dental Hygienist, ANM / MPHW",
+          "folder": "04_Health_DME_DHS_NHM/Grade_III_Technical_Paramedical",
+          "syllabus_file": "04_Health_DME_DHS_NHM/Grade_III_Technical_Paramedical/SYLLABUS.md",
+          "pattern_file": "04_Health_DME_DHS_NHM/Grade_III_Technical_Paramedical/EXAM_PATTERN.md",
+          "official_pdfs": [
+            "04_Health_DME_DHS_NHM/Grade_III_Technical_Paramedical/Official_DME_Grade_III_Technical_Recruitment_Rules.pdf"
+          ],
+          "qualification": "B.Sc Nursing / GNM / D.Pharm / DMLT / Paramedical Diploma"
+        },
+        {
+          "name": "Grade III Non-Technical / Hospital Administration",
+          "posts": "LDA, Store Keeper, Health Educator, Medical Record Officer/Keeper, Computer Operator, Statistical Assistant",
+          "folder": "04_Health_DME_DHS_NHM/Grade_III_Non_Technical_Admin",
+          "syllabus_file": "04_Health_DME_DHS_NHM/Grade_III_Non_Technical_Admin/SYLLABUS.md",
+          "pattern_file": "04_Health_DME_DHS_NHM/Grade_III_Non_Technical_Admin/EXAM_PATTERN.md",
+          "qualification": "Graduate / HSSLC + Computer Certificate"
+        },
+        {
+          "name": "Grade IV Hospital Support Staff",
+          "posts": "Ward Boy, Ward Girl, Ayah, Stretcher Bearer, Dark Room Attendant, Mortuary Attendant, Lab Attendant, OT Attendant, Sweeper",
+          "folder": "04_Health_DME_DHS_NHM/Grade_IV_Hospital_Staff",
+          "syllabus_file": "04_Health_DME_DHS_NHM/Grade_IV_Hospital_Staff/SYLLABUS.md",
+          "pattern_file": "04_Health_DME_DHS_NHM/Grade_IV_Hospital_Staff/EXAM_PATTERN.md",
+          "official_pdfs": [
+            "04_Health_DME_DHS_NHM/Grade_IV_Hospital_Staff/Official_DME_Grade_IV_Written_Test_Scheme.pdf"
+          ],
+          "qualification": "Class VIII Pass"
+        },
+        {
+          "name": "NHM Community Health Officer (CHO) & Program Cadres",
+          "posts": "Community Health Officer (CHO), Block Program Manager, District Consultant, Epidemiologist",
+          "folder": "04_Health_DME_DHS_NHM/NHM_Community_Health_Officer_CHO",
+          "syllabus_file": "04_Health_DME_DHS_NHM/NHM_Community_Health_Officer_CHO/SYLLABUS.md",
+          "pattern_file": "04_Health_DME_DHS_NHM/NHM_Community_Health_Officer_CHO/EXAM_PATTERN.md",
+          "qualification": "B.Sc Nursing (with CCH) / BAMS"
+        }
+      ]
+    },
+    {
+      "id": "05_Education_TET_Faculty",
+      "name": "Education, Schools, Colleges & Universities (TET, DSE, DEE, DHE)",
+      "official_website": "https://ssa.assam.gov.in",
+      "exams": [
+        {
+          "name": "Assam Special & General TET (LP & UP)",
+          "posts": "Paper I: Lower Primary (Classes 1-5) & Paper II: Upper Primary (Classes 6-8: Maths/Science & Social Studies)",
+          "folder": "05_Education_TET_Faculty/Assam_TET_LP_UP",
+          "syllabus_file": "05_Education_TET_Faculty/Assam_TET_LP_UP/SYLLABUS.md",
+          "pattern_file": "05_Education_TET_Faculty/Assam_TET_LP_UP/EXAM_PATTERN.md",
+          "qualification": "D.El.Ed / B.Ed + 10+2 / Graduation"
+        },
+        {
+          "name": "Secondary TET (High School)",
+          "posts": "Graduate Teacher (High School - Classes 9-10)",
+          "folder": "05_Education_TET_Faculty/Secondary_TET_High_School",
+          "syllabus_file": "05_Education_TET_Faculty/Secondary_TET_High_School/SYLLABUS.md",
+          "pattern_file": "05_Education_TET_Faculty/Secondary_TET_High_School/EXAM_PATTERN.md",
+          "qualification": "B.Ed + Bachelor's (50%)"
+        },
+        {
+          "name": "Higher Secondary TET (PGT)",
+          "posts": "Post Graduate Teacher (Higher Secondary - Classes 11-12)",
+          "folder": "05_Education_TET_Faculty/Higher_Secondary_TET_PGT",
+          "syllabus_file": "05_Education_TET_Faculty/Higher_Secondary_TET_PGT/SYLLABUS.md",
+          "pattern_file": "05_Education_TET_Faculty/Higher_Secondary_TET_PGT/EXAM_PATTERN.md",
+          "qualification": "B.Ed + Master's (50%)"
+        },
+        {
+          "name": "DEE & DSE Regular Teacher Recruitment",
+          "posts": "Regular Assistant Teacher (LP/UP) and Graduate Teacher (Arts/Science/Hindi/Sanskrit/Arabic)",
+          "folder": "05_Education_TET_Faculty/DEE_DSE_Teacher_Recruitment",
+          "syllabus_file": "05_Education_TET_Faculty/DEE_DSE_Teacher_Recruitment/SYLLABUS.md",
+          "pattern_file": "05_Education_TET_Faculty/DEE_DSE_Teacher_Recruitment/EXAM_PATTERN.md",
+          "qualification": "TET Qualified + Professional Teacher Training"
+        },
+        {
+          "name": "DHE Provincialised College Assistant Professor & Librarian",
+          "posts": "Assistant Professor in Arts/Science/Commerce Provincialised Colleges, College Librarian",
+          "folder": "05_Education_TET_Faculty/DHE_College_Assistant_Professor",
+          "syllabus_file": "05_Education_TET_Faculty/DHE_College_Assistant_Professor/SYLLABUS.md",
+          "pattern_file": "05_Education_TET_Faculty/DHE_College_Assistant_Professor/EXAM_PATTERN.md",
+          "qualification": "UGC NET / SLET / Ph.D + Master's (55%)"
+        },
+        {
+          "name": "Assam State Universities Non-Teaching Staff",
+          "posts": "Junior Administrative Assistant (JAA), Technical Assistant, Lab Assistant, Peon (Gauhati Univ, Dibrugarh Univ, Cotton Univ, etc.)",
+          "folder": "05_Education_TET_Faculty/State_Universities_Staff",
+          "syllabus_file": "05_Education_TET_Faculty/State_Universities_Staff/SYLLABUS.md",
+          "pattern_file": "05_Education_TET_Faculty/State_Universities_Staff/EXAM_PATTERN.md",
+          "qualification": "Graduate / B.Sc / HSLC"
+        }
+      ]
+    },
+    {
+      "id": "06_Judiciary_Gauhati_HC",
+      "name": "Gauhati High Court & District Judiciary",
+      "official_website": "https://ghconline.gov.in",
+      "exams": [
+        {
+          "name": "Assam Judicial Service (AJS Grade I, II, III)",
+          "posts": "District Judge (Grade-I), Civil Judge Sr. Division / CJM (Grade-II), Civil Judge Jr. Division / JMFC (Grade-III)",
+          "folder": "06_Judiciary_Gauhati_HC/Assam_Judicial_Service_AJS",
+          "syllabus_file": "06_Judiciary_Gauhati_HC/Assam_Judicial_Service_AJS/SYLLABUS.md",
+          "pattern_file": "06_Judiciary_Gauhati_HC/Assam_Judicial_Service_AJS/EXAM_PATTERN.md",
+          "qualification": "LL.B / Degree in Law"
+        },
+        {
+          "name": "High Court Registry Staff",
+          "posts": "LDA, Copyist, Typist, Stenographer (Gr. I, II, III), Computer Assistant, Protocol Assistant",
+          "folder": "06_Judiciary_Gauhati_HC/High_Court_Registry_Staff",
+          "syllabus_file": "06_Judiciary_Gauhati_HC/High_Court_Registry_Staff/SYLLABUS.md",
+          "pattern_file": "06_Judiciary_Gauhati_HC/High_Court_Registry_Staff/EXAM_PATTERN.md",
+          "qualification": "Graduate + Shorthand / Typing"
+        },
+        {
+          "name": "District Courts Staff",
+          "posts": "Bench Assistant, Typist, Process Server, Peon",
+          "folder": "06_Judiciary_Gauhati_HC/District_Courts_Staff",
+          "syllabus_file": "06_Judiciary_Gauhati_HC/District_Courts_Staff/SYLLABUS.md",
+          "pattern_file": "06_Judiciary_Gauhati_HC/District_Courts_Staff/EXAM_PATTERN.md",
+          "qualification": "Graduate / HSLC"
+        }
+      ]
+    },
+    {
+      "id": "07_Power_Sector_APDCL",
+      "name": "Power Sector Utilities (APDCL, AEGCL, APGCL)",
+      "official_website": "https://apdcl.org",
+      "exams": [
+        {
+          "name": "Assistant Manager & Junior Manager",
+          "posts": "Assistant Manager & Junior Manager (Electrical, Civil, Mechanical, IT, HR, Finance & Accounts, PR)",
+          "folder": "07_Power_Sector_APDCL/Assistant_Junior_Manager",
+          "syllabus_file": "07_Power_Sector_APDCL/Assistant_Junior_Manager/SYLLABUS.md",
+          "pattern_file": "07_Power_Sector_APDCL/Assistant_Junior_Manager/EXAM_PATTERN.md",
+          "official_pdfs": [
+            "07_Power_Sector_APDCL/Assistant_Junior_Manager/Official_Syllabus_Assistant_Manager_GS.pdf",
+            "07_Power_Sector_APDCL/Assistant_Junior_Manager/Official_Syllabus_AM_Electrical_Engg.pdf",
+            "07_Power_Sector_APDCL/Assistant_Junior_Manager/Official_Syllabus_AM_Mechanical_Engg.pdf",
+            "07_Power_Sector_APDCL/Assistant_Junior_Manager/Official_Syllabus_AM_Civil_Engg.pdf",
+            "07_Power_Sector_APDCL/Assistant_Junior_Manager/Official_Syllabus_AM_Human_Resources.pdf",
+            "07_Power_Sector_APDCL/Assistant_Junior_Manager/Official_Syllabus_Junior_Manager_GS.pdf",
+            "07_Power_Sector_APDCL/Assistant_Junior_Manager/Official_Syllabus_JM_Electrical_Engg.pdf"
+          ],
+          "qualification": "B.E./B.Tech / Diploma / MBA HR"
+        },
+        {
+          "name": "AAO, OFA & Sahayak Cadres",
+          "posts": "Assistant Accounts Officer (AAO), Office-cum-Field Assistant (OFA), Junior Accounts Assistant, Meter Reader, Sahayak (Lineman / Substation Attendant)",
+          "folder": "07_Power_Sector_APDCL/AAO_OFA_Sahayak",
+          "syllabus_file": "07_Power_Sector_APDCL/AAO_OFA_Sahayak/SYLLABUS.md",
+          "pattern_file": "07_Power_Sector_APDCL/AAO_OFA_Sahayak/EXAM_PATTERN.md",
+          "qualification": "B.Com / Graduate / ITI Electrician/Wireman"
+        }
+      ]
+    },
+    {
+      "id": "08_PnRD_Rural_Development",
+      "name": "Panchayat & Rural Development (P&RD & ASRLM)",
+      "official_website": "https://rural.assam.gov.in",
+      "exams": [
+        {
+          "name": "Panchayat Core Cadres",
+          "posts": "Gaon Panchayat Secretary (GPS), Tax Collector-cum-Road Mohorrir, Junior Assistant, Gram Sevak/Sevika",
+          "folder": "08_PnRD_Rural_Development/Panchayat_Core_GPS_TaxCollector",
+          "syllabus_file": "08_PnRD_Rural_Development/Panchayat_Core_GPS_TaxCollector/SYLLABUS.md",
+          "pattern_file": "08_PnRD_Rural_Development/Panchayat_Core_GPS_TaxCollector/EXAM_PATTERN.md",
+          "qualification": "Graduate / HSSLC"
+        },
+        {
+          "name": "ASRLM (Assam State Rural Livelihoods Mission - Jeevika)",
+          "posts": "Block Program Manager (BPM), District Functional Expert (DFE), Project Executive, Block Coordinator",
+          "folder": "08_PnRD_Rural_Development/ASRLM_Jeevika_Mission",
+          "syllabus_file": "08_PnRD_Rural_Development/ASRLM_Jeevika_Mission/SYLLABUS.md",
+          "pattern_file": "08_PnRD_Rural_Development/ASRLM_Jeevika_Mission/EXAM_PATTERN.md",
+          "qualification": "Post Graduate / Graduate in Rural Dev/MSW/Agriculture"
+        },
+        {
+          "name": "Accredited Engineers & Junior Engineers (P&RD)",
+          "posts": "Accredited Engineer, Junior Engineer (P&RD)",
+          "folder": "08_PnRD_Rural_Development/PnRD_Engineers_Accredited_JE",
+          "syllabus_file": "08_PnRD_Rural_Development/PnRD_Engineers_Accredited_JE/SYLLABUS.md",
+          "pattern_file": "08_PnRD_Rural_Development/PnRD_Engineers_Accredited_JE/EXAM_PATTERN.md",
+          "official_pdfs": [
+            "08_PnRD_Rural_Development/PnRD_Engineers_Accredited_JE/Official_Syllabus_JE_Civil_PnRD.pdf"
+          ],
+          "qualification": "Degree / Diploma in Civil Engineering"
+        }
+      ]
+    },
+    {
+      "id": "09_Transport_IWT_ASTC",
+      "name": "Transport, ASTC & Inland Waterways",
+      "official_website": "https://transport.assam.gov.in",
+      "exams": [
+        {
+          "name": "Transport Enforcement Branch",
+          "posts": "Assistant Enforcement Inspector (AEI), Enforcement Checker",
+          "folder": "09_Transport_IWT_ASTC/Transport_Enforcement_Branch",
+          "syllabus_file": "09_Transport_IWT_ASTC/Transport_Enforcement_Branch/SYLLABUS.md",
+          "pattern_file": "09_Transport_IWT_ASTC/Transport_Enforcement_Branch/EXAM_PATTERN.md",
+          "qualification": "Graduate / HSSLC"
+        },
+        {
+          "name": "ASTC (Assam State Transport Corporation)",
+          "posts": "Station Superintendent, Traffic Inspector, Conductor, Driver, Junior Assistant",
+          "folder": "09_Transport_IWT_ASTC/ASTC_State_Transport",
+          "syllabus_file": "09_Transport_IWT_ASTC/ASTC_State_Transport/SYLLABUS.md",
+          "pattern_file": "09_Transport_IWT_ASTC/ASTC_State_Transport/EXAM_PATTERN.md",
+          "qualification": "Graduate / HSLC"
+        },
+        {
+          "name": "Inland Water Transport (IWT Assam)",
+          "posts": "Master, Engine Driver, Lascar, Section Assistant, Ghat Incharge, Junior Engineer",
+          "folder": "09_Transport_IWT_ASTC/Inland_Water_Transport_IWT",
+          "syllabus_file": "09_Transport_IWT_ASTC/Inland_Water_Transport_IWT/SYLLABUS.md",
+          "pattern_file": "09_Transport_IWT_ASTC/Inland_Water_Transport_IWT/EXAM_PATTERN.md",
+          "official_pdfs": [
+            "09_Transport_IWT_ASTC/Inland_Water_Transport_IWT/Official_Syllabus_AE_IWT_Transport.pdf"
+          ],
+          "qualification": "Marine Certificate / ITI / HSLC"
+        }
+      ]
+    },
+    {
+      "id": "10_Corporations_Cooperatives_Boards",
+      "name": "State Public Enterprises, Cooperatives & Corporations",
+      "official_website": "https://assam.gov.in",
+      "exams": [
+        {
+          "name": "Assam Cooperative Apex Bank Ltd",
+          "posts": "Assistant Manager, Assistant / Cashier",
+          "folder": "10_Corporations_Cooperatives_Boards/Assam_Cooperative_Apex_Bank",
+          "syllabus_file": "10_Corporations_Cooperatives_Boards/Assam_Cooperative_Apex_Bank/SYLLABUS.md",
+          "pattern_file": "10_Corporations_Cooperatives_Boards/Assam_Cooperative_Apex_Bank/EXAM_PATTERN.md",
+          "qualification": "Graduate (Min 50%) / Post Graduate"
+        },
+        {
+          "name": "Assam Gas Company (AGCL) & Assam Petro-chemicals (APL)",
+          "posts": "Graduate Engineer Trainee (GET), Management Trainee, Plant Operator, Technician",
+          "folder": "10_Corporations_Cooperatives_Boards/AGCL_Gas_Company_APL_Petrochem",
+          "syllabus_file": "10_Corporations_Cooperatives_Boards/AGCL_Gas_Company_APL_Petrochem/SYLLABUS.md",
+          "pattern_file": "10_Corporations_Cooperatives_Boards/AGCL_Gas_Company_APL_Petrochem/EXAM_PATTERN.md",
+          "qualification": "B.E./B.Tech in Chemical/Mech/Elect/Instrumentation or B.Sc"
+        },
+        {
+          "name": "Sericulture & Handloom Textiles Directorates",
+          "posts": "Sericulture Demonstrator, Weaving Demonstrator, Inspector of Sericulture/Handloom",
+          "folder": "10_Corporations_Cooperatives_Boards/Sericulture_Handloom_Textiles",
+          "syllabus_file": "10_Corporations_Cooperatives_Boards/Sericulture_Handloom_Textiles/SYLLABUS.md",
+          "pattern_file": "10_Corporations_Cooperatives_Boards/Sericulture_Handloom_Textiles/EXAM_PATTERN.md",
+          "qualification": "Certificate in Sericulture/Handloom or B.Sc"
+        },
+        {
+          "name": "Agricultural Marketing & Fisheries Boards (ASAMB & AFDC)",
+          "posts": "Market Inspector, Auctioneer, Fishery Officer",
+          "folder": "10_Corporations_Cooperatives_Boards/Agri_Marketing_Fisheries_Boards",
+          "syllabus_file": "10_Corporations_Cooperatives_Boards/Agri_Marketing_Fisheries_Boards/SYLLABUS.md",
+          "pattern_file": "10_Corporations_Cooperatives_Boards/Agri_Marketing_Fisheries_Boards/EXAM_PATTERN.md",
+          "qualification": "Graduate / B.Sc Fishery"
+        }
+      ]
+    },
+    {
+      "id": "11_Revenue_Disaster_Management",
+      "name": "Revenue, Land Records & Disaster Management",
+      "official_website": "https://landrecords.assam.gov.in",
+      "exams": [
+        {
+          "name": "Lot Mandal (Patwari / Land Record Cadre)",
+          "posts": "Lot Mandal / Recorder across all District Commissioner (DC) Offices",
+          "folder": "11_Revenue_Disaster_Management/Lot_Mandal_Patwari_Land_Records",
+          "syllabus_file": "11_Revenue_Disaster_Management/Lot_Mandal_Patwari_Land_Records/SYLLABUS.md",
+          "pattern_file": "11_Revenue_Disaster_Management/Lot_Mandal_Patwari_Land_Records/EXAM_PATTERN.md",
+          "qualification": "HSLC / HSSLC + 6-Month RCCC (Recorders' Course Class Certificate)"
+        },
+        {
+          "name": "ASDMA (Assam State Disaster Management Authority)",
+          "posts": "Field Officer (Disaster Management) at Revenue Circle level, Project Officer",
+          "folder": "11_Revenue_Disaster_Management/ASDMA_Disaster_Management",
+          "syllabus_file": "11_Revenue_Disaster_Management/ASDMA_Disaster_Management/SYLLABUS.md",
+          "pattern_file": "11_Revenue_Disaster_Management/ASDMA_Disaster_Management/EXAM_PATTERN.md",
+          "qualification": "Bachelor's Degree in Science or Geography/Geology/Environmental Science"
+        }
+      ]
+    },
+    {
+      "id": "12_Legislative_Assembly_Secretariat",
+      "name": "Assam Legislative Assembly Secretariat (ALA)",
+      "official_website": "https://assamassembly.gov.in",
+      "exams": [
+        {
+          "name": "Junior Administrative Assistant (JAA) & Typist",
+          "posts": "Junior Administrative Assistant, Typist, Computer Operator, Protocol Assistant",
+          "folder": "12_Legislative_Assembly_Secretariat/Junior_Admin_Assistant_JAA",
+          "syllabus_file": "12_Legislative_Assembly_Secretariat/Junior_Admin_Assistant_JAA/SYLLABUS.md",
+          "pattern_file": "12_Legislative_Assembly_Secretariat/Junior_Admin_Assistant_JAA/EXAM_PATTERN.md",
+          "qualification": "Graduate in Arts/Science/Commerce + Computer Diploma"
+        },
+        {
+          "name": "Language Reporters & Translation Officers",
+          "posts": "Reporter (Assamese, English, Bengali), Translation Officer, Research Officer",
+          "folder": "12_Legislative_Assembly_Secretariat/Language_Reporters_Translators",
+          "syllabus_file": "12_Legislative_Assembly_Secretariat/Language_Reporters_Translators/SYLLABUS.md",
+          "pattern_file": "12_Legislative_Assembly_Secretariat/Language_Reporters_Translators/EXAM_PATTERN.md",
+          "qualification": "Graduate + Shorthand (120/140 wpm)"
+        }
+      ]
+    }
+  ]
+}

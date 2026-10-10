@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "onedaydelivery-market"
+  },
+  "targets": {
+    "onedaydelivery-market": {
+      "hosting": {
+        "assamcoders": [
+          "assamcoders"
+        ]
+      }
+    }
+  }
+}

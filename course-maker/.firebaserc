@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "axomrank-bf44f"
+  },
+  "targets": {
+    "axomrank-bf44f": {
+      "hosting": {
+        "axomrank-dev": [
+          "axomrank-dev"
+        ]
+      }
+    }
+  }
+}

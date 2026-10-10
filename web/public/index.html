@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>AxomRank — Assam's Premier Exam Prep & Learning Journey</title>
+  <meta name="description" content="Prepare for APSC, ADRE, Assam Police, Health, Education, and other Assam Government examinations with bite-sized learning cards, flashcards, interactive quizzes, and matching challenges.">
+  <link rel="icon" type="image/png" href="assets/gamusa_motif.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Serif+Bengali:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="desktop-gallery-mode">
+  
+  <!-- Global Top Header for Web Beta Preview -->
+  <header class="web-nav">
+    <div class="web-nav-container">
+      <div class="brand-group">
+        <a href="#" class="brand-logo" onclick="switchView('app'); showScreen(1); return false;">
+          <span class="logo-axom">Axom</span><span class="logo-rank">Rank</span>
+        </a>
+        <span class="beta-badge">BETA PREVIEW</span>
+        <span class="project-tag">axomrank.web.app</span>
+      </div>
+
+      <!-- Navigation Stepper / Quick Switch -->
+      <nav class="stepper-nav" aria-label="Journey stages">
+        <button class="step-btn active" data-step="1" onclick="selectJourneyStep(1)">
+          <span class="num">1</span><span class="lbl">Home</span>
+        </button>
+        <button class="step-btn" data-step="2" onclick="selectJourneyStep(2)">
+          <span class="num">2</span><span class="lbl">Learning Feed</span>
+        </button>
+        <button class="step-btn" data-step="3" onclick="selectJourneyStep(3)">
+          <span class="num">3</span><span class="lbl">Flashcards</span>
+        </button>
+        <button class="step-btn" data-step="4" onclick="selectJourneyStep(4)">
+          <span class="num">4</span><span class="lbl">Quizzes</span>
+        </button>
+        <button class="step-btn" data-step="5" onclick="selectJourneyStep(5)">
+          <span class="num">5</span><span class="lbl">Match & Complete</span>
+        </button>
+      </nav>
+
+      <div class="header-actions">
+        <button class="syllabus-trigger-btn" onclick="openSyllabusModal()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          <span>Master Syllabus (842)</span>
+        </button>
+        <div class="view-toggle-wrap">
+          <button class="mode-toggle-btn active" id="btnGalleryMode" onclick="switchView('gallery')">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+            <span>5-Stage Overview</span>
+          </button>
+          <button class="mode-toggle-btn" id="btnAppMode" onclick="switchView('app')">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+            <span>Interactive Phone</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Decorative Assamese Heritage Watermark Banner -->
+  <div class="heritage-top-motif">
+    <img src="assets/gamusa_motif.png" alt="Assamese Gamusa Pattern" class="motif-flower">
+  </div>
+
+  <!-- MAIN WRAPPER -->
+  <main class="main-content" id="mainContainer">
+    
+    <!-- 5-STAGE OVERVIEW PANORAMA -->
+    <section class="gallery-view" id="galleryView">
+      <div class="gallery-hero-intro">
+        <h1 class="gallery-title">The Complete Assamese Learning Journey</h1>
+        <p class="gallery-sub">From foundational concepts to exam readiness: Experience the structured 5-step pedagogy designed for Assam government exam aspirants.</p>
+      </div>
+
+      <div class="phones-panorama-grid">
+        
+        <!-- STAGE 1: HOME -->
+        <div class="phone-column" onclick="switchView('app'); showScreen(1);">
+          <div class="stage-header">
+            <span class="stage-number">1. Home</span>
+            <p class="stage-desc">Choose your domain and exam to start learning</p>
+          </div>
+          <div class="phone-mockup" data-phone="1">
+            <div class="phone-chassis">
+              <div class="dynamic-island"></div>
+              <!-- Status Bar -->
+              <div class="phone-status-bar">
+                <span class="status-time">9:41</span>
+                <div class="status-icons">
+                  <svg width="14" height="10" viewBox="0 0 16 12" fill="currentColor"><path d="M1 10h2V2H1v8zm4 0h2V0H5v10zm4 0h2V5H9v5zm4 0h2V7h-2v3z"/></svg>
+                  <svg width="13" height="10" viewBox="0 0 16 12" fill="currentColor"><path d="M8 2.5C11.5 2.5 14.5 4 16 6.5L8 15 0 6.5C1.5 4 4.5 2.5 8 2.5z"/></svg>
+                  <svg width="18" height="10" viewBox="0 0 24 12" fill="currentColor"><rect x="1" y="1" width="18" height="10" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="3" width="12" height="6" rx="1.5"/><path d="M21 4v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                </div>
+              </div>
+
+              <!-- Screen 1 Content -->
+              <div class="screen-scrollable screen-1-body">
+                <div class="app-top-header">
+                  <div class="app-logo">
+                    <span class="axom">Axom</span><span class="rank">Rank</span>
+                  </div>
+                  <div class="header-right-tools">
+                    <button class="icon-circle-btn" aria-label="Notifications">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+                      <span class="red-dot"></span>
+                    </button>
+                    <button class="icon-circle-btn profile-btn" aria-label="User Profile">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Hero Banner Card -->
+                <div class="hero-banner-card">
+                  <div class="hero-text-side">
+                    <span class="greeting-tag">GOOD MORNING,</span>
+                    <h2 class="hero-quote">Prepare for<br>a <span class="highlight-red">Brighter Assam</span></h2>
+                    <p class="hero-tagline">Learn • Practice • Grow</p>
+                  </div>
+                  <div class="hero-art-side">
+                    <img src="assets/hero_banner.png" alt="Assam Cultural Heritage" class="hero-img">
+                  </div>
+                </div>
+
+                <!-- Search Input -->
+                <div class="search-box-pill" onclick="openSyllabusModal()">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="2.2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                  <span class="search-ph">Search topics, exams or keywords...</span>
+                </div>
+
+                <!-- Domains Section -->
+                <div class="section-row-header">
+                  <h3 class="sec-title">Domains</h3>
+                  <a href="#" class="see-all-link" onclick="openSyllabusModal(); return false;">See all <span>→</span></a>
+                </div>
+
+                <div class="domains-grid">
+                  <div class="domain-tile domain-history" onclick="switchView('app'); showScreen(2);">
+                    <div class="icon-wrap">🏛️</div>
+                    <span class="domain-name">History</span>
+                  </div>
+                  <div class="domain-tile domain-geography" onclick="switchView('app'); showScreen(4);">
+                    <div class="icon-wrap">🌍</div>
+                    <span class="domain-name">Geography</span>
+                  </div>
+                  <div class="domain-tile domain-polity" onclick="openSyllabusModal('Polity');">
+                    <div class="icon-wrap">⚖️</div>
+                    <span class="domain-name">Polity</span>
+                  </div>
+                  <div class="domain-tile domain-economy" onclick="openSyllabusModal('Economy');">
+                    <div class="icon-wrap">📊</div>
+                    <span class="domain-name">Economy</span>
+                  </div>
+                  <div class="domain-tile domain-aptitude" onclick="openSyllabusModal('Aptitude');">
+                    <div class="icon-wrap">🧮</div>
+                    <span class="domain-name">Aptitude</span>
+                  </div>
+                  <div class="domain-tile domain-english" onclick="openSyllabusModal('English');">
+                    <div class="icon-wrap"><span class="aa-text">Aa</span></div>
+                    <span class="domain-name">English</span>
+                  </div>
+                </div>
+
+                <!-- General Awareness Banner -->
+                <div class="ga-wide-banner" onclick="openSyllabusModal('General Awareness & Science');">
+                  <div class="ga-left">
+                    <span class="bulb-icon">💡</span>
+                    <span class="ga-text">General Awareness & Science</span>
+                  </div>
+                  <span class="chevron-r">›</span>
+                </div>
+
+                <!-- Exams Section -->
+                <div class="section-row-header" style="margin-top: 14px;">
+                  <h3 class="sec-title">Exams</h3>
+                  <a href="#" class="see-all-link" onclick="openSyllabusModal(); return false;">See all <span>→</span></a>
+                </div>
+
+                <div class="exams-scroller">
+                  <div class="exam-chip active">
+                    <div class="exam-icon-circle apsc-icon">🏛️</div>
+                    <span class="exam-label">APSC</span>
+                  </div>
+                  <div class="exam-chip">
+                    <div class="exam-icon-circle adre-icon">📖</div>
+                    <span class="exam-label">ADRE/<br>SLRC</span>
+                  </div>
+                  <div class="exam-chip">
+                    <div class="exam-icon-circle police-icon">🛡️</div>
+                    <span class="exam-label">Assam<br>Police</span>
+                  </div>
+                  <div class="exam-chip">
+                    <div class="exam-icon-circle health-icon">🩺</div>
+                    <span class="exam-label">Health</span>
+                  </div>
+                  <div class="exam-chip">
+                    <div class="exam-icon-circle edu-icon">🎓</div>
+                    <span class="exam-label">Education</span>
+                  </div>
+                  <div class="exam-chip">
+                    <div class="exam-icon-circle jud-icon">⚖️</div>
+                    <span class="exam-label">Judiciary</span>
+                  </div>
+                  <div class="exam-chip">
+                    <div class="exam-icon-circle apdcl-icon">⚡</div>
+                    <span class="exam-label">JHDCL</span>
+                  </div>
+                  <div class="exam-chip">
+                    <div class="exam-icon-circle pnrd-icon">🏡</div>
+                    <span class="exam-label">PNRD</span>
+                  </div>
+                </div>
+
+                <!-- Bottom Navigation Bar -->
+                <div class="phone-bottom-nav">
+                  <button class="nav-item active" onclick="showScreen(1)">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+                    <span>Home</span>
+                  </button>
+                  <button class="nav-item" onclick="showScreen(2)">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                    <span>Learn</span>
+                  </button>
+                  <button class="nav-item" onclick="showScreen(3)">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    <span>Practice</span>
+                  </button>
+                  <button class="nav-item" onclick="showScreen(4)">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                    <span>Progress</span>
+                  </button>
+                  <button class="nav-item" onclick="showScreen(5)">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    <span>Profile</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STAGE 2: LEARNING FEED -->
+        <div class="phone-column" onclick="switchView('app'); showScreen(2);">
+          <div class="stage-header">
+            <span class="stage-number">2. Learning Feed</span>
+            <p class="stage-desc">Scroll through focused learning cards on each sub-topic</p>
+          </div>
+          <div class="phone-mockup" data-phone="2">
+            <div class="phone-chassis">
+              <div class="dynamic-island"></div>
+              <div class="phone-status-bar">
+                <span class="status-time">9:41</span>
+                <div class="status-icons">
+                  <svg width="14" height="10" viewBox="0 0 16 12" fill="currentColor"><path d="M1 10h2V2H1v8zm4 0h2V0H5v10zm4 0h2V5H9v5zm4 0h2V7h-2v3z"/></svg>
+                  <svg width="13" height="10" viewBox="0 0 16 12" fill="currentColor"><path d="M8 2.5C11.5 2.5 14.5 4 16 6.5L8 15 0 6.5C1.5 4 4.5 2.5 8 2.5z"/></svg>
+                  <svg width="18" height="10" viewBox="0 0 24 12" fill="currentColor"><rect x="1" y="1" width="18" height="10" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="3" width="12" height="6" rx="1.5"/><path d="M21 4v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                </div>
+              </div>
+
+              <!-- Screen 2 Content -->
+              <div class="screen-scrollable screen-2-body">
+                <!-- Top Nav Bar -->
+                <div class="screen-top-subnav">
+                  <button class="back-arrow-btn" onclick="showScreen(1)">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                  </button>
+                  <div class="title-with-icon">
+                    <span class="icon">🏛️</span>
+                    <span class="title-txt">Assam History</span>
+                  </div>
+                  <span class="counter-badge">3/20</span>
+                </div>
+
+                <!-- Filter Pills -->
+                <div class="pill-tabs-row">
+                  <button class="pill-tab active">All</button>
+                  <button class="pill-tab">Dynasties</button>
+                  <button class="pill-tab">Freedom Movement</button>
+                  <button class="pill-tab">Culture</button>
+                </div>
+
+                <!-- Primary Learning Card -->
+                <div class="learning-feed-card">
+                  <div class="card-visual-wrapper">
+                    <img src="assets/rang_ghar.png" alt="Rang Ghar Sivasagar" class="card-hero-image">
+                    <div class="assamese-corner-flourish"></div>
+                  </div>
+                  <div class="card-inner-pad">
+                    <div class="card-subject-pill">
+                      <span class="pill-icon">🏛️</span>
+                      <span>Assam History</span>
+                    </div>
+                    <h2 class="card-headline">The Ahom Dynasty: An Overview</h2>
+                    <p class="card-paragraph">
+                      The Ahom dynasty ruled Assam for nearly 600 years (1228 – 1826) and played a key role in shaping the region's political, cultural and social identity. They successfully resisted several Mughal attempts to capture Assam and established a unique administrative system.
+                    </p>
+
+                    <div class="next-areas-box">
+                      <div class="na-heading">
+                        <span class="na-bulb">💡</span>
+                        <span>Key areas to explore in next cards:</span>
+                      </div>
+                      <div class="na-tags">
+                        <span class="na-tag">Origins</span>
+                        <span class="na-tag">Administration</span>
+                        <span class="na-tag">Mughal Conflicts</span>
+                      </div>
+                    </div>
+
+                    <button class="primary-action-btn" onclick="switchView('app'); showScreen(3);">
+                      <span>Almost done — flashcards next!</span>
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Peeking Next Card (Battle of Saraighat) -->
+                <div class="peek-card">
+                  <div class="peek-card-header">
+                    <span class="peek-tag">🏛️ Assam History</span>
+                    <span class="peek-counter">4/20</span>
+                  </div>
+                  <h4 class="peek-title">Battle of Saraighat (1671) & Lachit Borphukan</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STAGE 3: FLASHCARDS -->
+        <div class="phone-column" onclick="switchView('app'); showScreen(3);">
+          <div class="stage-header">
+            <span class="stage-number">3. Flashcards</span>
+            <p class="stage-desc">Swipe left or right through bite-sized flashcards</p>
+          </div>
+          <div class="phone-mockup" data-phone="3">
+            <div class="phone-chassis">
+              <div class="dynamic-island"></div>
+              <div class="phone-status-bar">
+                <span class="status-time">9:41</span>
+                <div class="status-icons">
+                  <svg width="14" height="10" viewBox="0 0 16 12" fill="currentColor"><path d="M1 10h2V2H1v8zm4 0h2V0H5v10zm4 0h2V5H9v5zm4 0h2V7h-2v3z"/></svg>
+                  <svg width="13" height="10" viewBox="0 0 16 12" fill="currentColor"><path d="M8 2.5C11.5 2.5 14.5 4 16 6.5L8 15 0 6.5C1.5 4 4.5 2.5 8 2.5z"/></svg>
+                  <svg width="18" height="10" viewBox="0 0 24 12" fill="currentColor"><rect x="1" y="1" width="18" height="10" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="3" width="12" height="6" rx="1.5"/><path d="M21 4v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                </div>
+              </div>
+
+              <!-- Screen 3 Content -->
+              <div class="screen-scrollable screen-3-body">
+                <div class="screen-top-subnav">
+                  <button class="back-arrow-btn" onclick="showScreen(2)">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                  </button>
+                  <div class="title-with-dropdown">
+                    <span class="title-bold">Flashcards</span>
+                    <span class="title-sub">Assam History <span>⌵</span></span>
+                  </div>
+                  <div style="width: 28px;"></div>
+                </div>
+
+                <!-- Daily Target Donut Progress -->
+                <div class="target-progress-card">
+                  <div class="donut-chart-wrap">
+                    <svg viewBox="0 0 36 36" class="circular-chart">
+                      <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                      <path class="circle-fill" stroke-dasharray="60, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                    </svg>
+                    <div class="donut-text">
+                      <span class="donut-num" id="flashcardScoreDisplay">12/20</span>
+                      <span class="donut-sub">cards</span>
+                    </div>
+                  </div>
+                  <div class="target-message">
+                    <h4 class="tm-title">Keep going!</h4>
+                    <p class="tm-sub">8 more cards to complete today's target.</p>
+                  </div>
+                  <div class="target-gamusa-accent">
+                    <img src="assets/gamusa_motif.png" alt="motif">
+                  </div>
+                </div>
+
+                <!-- Flashcard Widget -->
+                <div class="flashcard-container" id="flashcardElement" onclick="flipFlashcard()">
+                  <div class="flashcard-header-bar">
+                    <span class="card-badge red">🏛️ Assam History</span>
+                    <span class="card-counter-tag" id="cardCounterTag">3/20</span>
+                  </div>
+                  <div class="flashcard-image-box">
+                    <img src="assets/rang_ghar.png" alt="Rang Ghar" class="fc-image">
+                  </div>
+                  <div class="flashcard-content">
+                    <h3 class="fc-statement">
+                      The Ahom dynasty ruled Assam for nearly 600 years (1228 – 1826).
+                    </h3>
+                    <div class="fc-keypoints">
+                      <div class="kp-header">
+                        <span>🎁</span>
+                        <span class="kp-title">Key Points:</span>
+                      </div>
+                      <ul class="kp-list">
+                        <li>Founded by Sukapha in 1228</li>
+                        <li>Ruled for almost 6 centuries</li>
+                        <li>Known for administrative brilliance</li>
+                        <li>Played a key role in resisting Mughal expansion</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- Gamusa corner flourishes -->
+                  <div class="gamusa-corner-left"></div>
+                  <div class="gamusa-corner-right"></div>
+
+                  <!-- Pagination Dots -->
+                  <div class="pagination-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                  </div>
+                </div>
+
+                <!-- Flashcard Action Buttons -->
+                <div class="flashcard-actions-grid">
+                  <button class="fc-btn fc-know-btn" onclick="knowFlashcard()">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>I Know This</span>
+                  </button>
+                  <button class="fc-btn fc-revise-btn" onclick="reviseFlashcard()">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+                    <span>Revise Again</span>
+                  </button>
+                </div>
+
+                <!-- Swipe hint -->
+                <div class="swipe-hint-bar" onclick="nextFlashcard()">
+                  <span class="chev">‹</span>
+                  <span class="hint-text">Swipe left/right for next card</span>
+                  <span class="chev">›</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STAGE 4: QUIZZES -->
+        <div class="phone-column" onclick="switchView('app'); showScreen(4);">
+          <div class="stage-header">
+            <span class="stage-number">4. Quizzes</span>
+            <p class="stage-desc">Test your understanding with practice questions</p>
+          </div>
+          <div class="phone-mockup" data-phone="4">
+            <div class="phone-chassis">
+              <div class="dynamic-island"></div>
+              <div class="phone-status-bar">
+                <span class="status-time">9:41</span>
+                <div class="status-icons">
+                  <svg width="14" height="10" viewBox="0 0 16 12" fill="currentColor"><path d="M1 10h2V2H1v8zm4 0h2V0H5v10zm4 0h2V5H9v5zm4 0h2V7h-2v3z"/></svg>
+                  <svg width="13" height="10" viewBox="0 0 16 12" fill="currentColor"><path d="M8 2.5C11.5 2.5 14.5 4 16 6.5L8 15 0 6.5C1.5 4 4.5 2.5 8 2.5z"/></svg>
+                  <svg width="18" height="10" viewBox="0 0 24 12" fill="currentColor"><rect x="1" y="1" width="18" height="10" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="3" width="12" height="6" rx="1.5"/><path d="M21 4v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                </div>
+              </div>
+
+              <!-- Screen 4 Content -->
+              <div class="screen-scrollable screen-4-body">
+                <div class="screen-top-subnav">
+                  <button class="back-arrow-btn" onclick="showScreen(3)">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                  </button>
+                  <div class="title-with-dropdown">
+                    <span class="title-bold">Quiz</span>
+                    <span class="title-sub">Assam History <span>⌵</span></span>
+                  </div>
+                  <div style="width: 28px;"></div>
+                </div>
+
+                <!-- Segmented Progress Bar -->
+                <div class="quiz-progress-wrap">
+                  <span class="quiz-ratio">4/15</span>
+                  <div class="segmented-track">
+                    <span class="segment filled"></span>
+                    <span class="segment filled"></span>
+                    <span class="segment filled"></span>
+                    <span class="segment filled"></span>
+                    <span class="segment"></span>
+                    <span class="segment"></span>
+                    <span class="segment"></span>
+                    <span class="segment"></span>
+                  </div>
+                </div>
+
+                <!-- Quiz Question Image -->
+                <div class="quiz-media-wrap">
+                  <img src="assets/brahmaputra.png" alt="Majuli Brahmaputra River" class="quiz-hero-img">
+                  <div class="corner-gamusa-overlay"></div>
+                </div>
+
+                <!-- Question Prompt -->
+                <h3 class="quiz-question-title">
+                  Which of the following rivers flows through Majuli island in Assam?
+                </h3>
+
+                <!-- MCQ Options -->
+                <div class="options-container" id="quizOptionsContainer">
+                  <div class="option-pill correct" id="optA" onclick="selectOption('A')">
+                    <span class="option-letter">A</span>
+                    <span class="option-text">Brahmaputra</span>
+                    <span class="check-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </span>
+                  </div>
+                  <div class="option-pill" id="optB" onclick="selectOption('B')">
+                    <span class="option-letter">B</span>
+                    <span class="option-text">Subansiri</span>
+                  </div>
+                  <div class="option-pill" id="optC" onclick="selectOption('C')">
+                    <span class="option-letter">C</span>
+                    <span class="option-text">Dibang</span>
+                  </div>
+                  <div class="option-pill" id="optD" onclick="selectOption('D')">
+                    <span class="option-letter">D</span>
+                    <span class="option-text">Lohit</span>
+                  </div>
+                </div>
+
+                <!-- Explanation Box -->
+                <div class="explanation-box" id="quizExplanation">
+                  <div class="exp-badge">
+                    <span class="check-round">✓</span>
+                    <span class="exp-title">Correct!</span>
+                  </div>
+                  <p class="exp-text">
+                    Majuli, the world's largest river island, is formed by the Brahmaputra River in Assam.
+                  </p>
+                </div>
+
+                <!-- Next Question Button -->
+                <button class="primary-action-btn red-solid" onclick="switchView('app'); showScreen(5);">
+                  <span>Next Question</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STAGE 5: MATCH & COMPLETE -->
+        <div class="phone-column" onclick="switchView('app'); showScreen(5);">
+          <div class="stage-header">
+            <span class="stage-number">5. Match & Complete</span>
+            <p class="stage-desc">Finish with interactive activities and move to next topic</p>
+          </div>
+          <div class="phone-mockup" data-phone="5">
+            <div class="phone-chassis">
+              <div class="dynamic-island"></div>
+              <div class="phone-status-bar">
+                <span class="status-time">9:41</span>
+                <div class="status-icons">
+                  <svg width="14" height="10" viewBox="0 0 16 12" fill="currentColor"><path d="M1 10h2V2H1v8zm4 0h2V0H5v10zm4 0h2V5H9v5zm4 0h2V7h-2v3z"/></svg>
+                  <svg width="13" height="10" viewBox="0 0 16 12" fill="currentColor"><path d="M8 2.5C11.5 2.5 14.5 4 16 6.5L8 15 0 6.5C1.5 4 4.5 2.5 8 2.5z"/></svg>
+                  <svg width="18" height="10" viewBox="0 0 24 12" fill="currentColor"><rect x="1" y="1" width="18" height="10" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="3" width="12" height="6" rx="1.5"/><path d="M21 4v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                </div>
+              </div>
+
+              <!-- Screen 5 Content -->
+              <div class="screen-scrollable screen-5-body">
+                <div class="screen-top-subnav">
+                  <button class="back-arrow-btn" onclick="showScreen(4)">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                  </button>
+                  <span class="title-bold">Match the Following</span>
+                  <div style="width: 28px;"></div>
+                </div>
+
+                <!-- Segmented Progress Bar 5/5 All Complete -->
+                <div class="quiz-progress-wrap">
+                  <span class="quiz-ratio">5/5</span>
+                  <div class="segmented-track">
+                    <span class="segment filled"></span>
+                    <span class="segment filled"></span>
+                    <span class="segment filled"></span>
+                    <span class="segment filled"></span>
+                    <span class="segment filled"></span>
+                  </div>
+                </div>
+
+                <!-- Tea Garden Landscape Image -->
+                <div class="quiz-media-wrap">
+                  <img src="assets/tea_garden.png" alt="Assam Tea Garden Plucker" class="quiz-hero-img">
+                  <div class="corner-gamusa-overlay"></div>
+                </div>
+
+                <!-- Activity Titles -->
+                <div class="match-heading-block">
+                  <h3 class="match-main-title">Match the Following</h3>
+                  <p class="match-subtitle">Match the Ahom rulers with their key contributions.</p>
+                </div>
+
+                <!-- Interactive Match Matrix with SVG connections -->
+                <div class="interactive-matching-board" id="matchingBoard">
+                  <svg class="match-lines-svg" id="matchingSvg" viewBox="0 0 300 210" preserveAspectRatio="none">
+                    <!-- Sukapha -> Established Ahom in 1228 (red line) -->
+                    <path class="line-path red" d="M 98 25 C 150 25, 140 135, 192 135" />
+                    <!-- Suhungmung -> Expanded the kingdom (blue line) -->
+                    <path class="line-path blue" d="M 104 78 C 150 78, 145 25, 195 25" />
+                    <!-- Rajeswar Singha -> Built Rang Ghar (cyan/green line) -->
+                    <path class="line-path teal" d="M 125 132 C 160 132, 160 80, 202 80" />
+                    <!-- Rudra Singha -> Promoted arts (orange line) -->
+                    <path class="line-path orange" d="M 108 185 C 150 185, 150 185, 192 185" />
+                  </svg>
+
+                  <div class="matching-columns-row">
+                    <!-- Left Column: Rulers -->
+                    <div class="match-col left-col">
+                      <span class="col-heading">Ahom Ruler</span>
+                      <div class="match-item ruler-item" data-id="1">
+                        <span class="node-dot dot-red"></span>
+                        <span class="node-label">Sukapha</span>
+                      </div>
+                      <div class="match-item ruler-item" data-id="2">
+                        <span class="node-dot dot-blue"></span>
+                        <span class="node-label">Suhungmung</span>
+                      </div>
+                      <div class="match-item ruler-item" data-id="3">
+                        <span class="node-dot dot-teal"></span>
+                        <span class="node-label">Rajeswar Singha</span>
+                      </div>
+                      <div class="match-item ruler-item" data-id="4">
+                        <span class="node-dot dot-orange"></span>
+                        <span class="node-label">Rudra Singha</span>
+                      </div>
+                    </div>
+
+                    <!-- Right Column: Contributions -->
+                    <div class="match-col right-col">
+                      <span class="col-heading">Contribution</span>
+                      <div class="match-item contrib-item" data-match="2">
+                        <span class="node-label">Expanded the kingdom</span>
+                      </div>
+                      <div class="match-item contrib-item" data-match="3">
+                        <span class="node-label">Built Rang Ghar</span>
+                      </div>
+                      <div class="match-item contrib-item" data-match="1">
+                        <span class="node-label">Established the Ahom kingdom in 1228</span>
+                      </div>
+                      <div class="match-item contrib-item" data-match="4">
+                        <span class="node-label">Promoted arts and culture</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Topic Completed Banner -->
+                <div class="topic-completed-card">
+                  <div class="confetti-row">
+                    <span class="party-popper">🎉</span>
+                    <span class="tc-title">Topic Completed!</span>
+                  </div>
+                  <p class="tc-subtitle">You've finished Assam History: Ahom Dynasty. Great job! 👏</p>
+                </div>
+
+                <!-- Next Topic Button -->
+                <button class="primary-action-btn red-solid" onclick="celebrateAndLoop()">
+                  <span>Next Topic</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SINGLE INTERACTIVE APP VIEW (Mobile Simulator or Mobile Devices) -->
+    <section class="single-app-view" id="appView" style="display: none;">
+      <div class="app-view-container">
+        <!-- Floating Stage Nav Controller -->
+        <div class="simulator-controls">
+          <span class="sim-label">Journey Stage:</span>
+          <div class="sim-pills">
+            <button class="sim-pill active" onclick="showScreen(1)">1. Home</button>
+            <button class="sim-pill" onclick="showScreen(2)">2. Feed</button>
+            <button class="sim-pill" onclick="showScreen(3)">3. Flashcards</button>
+            <button class="sim-pill" onclick="showScreen(4)">4. Quiz</button>
+            <button class="sim-pill" onclick="showScreen(5)">5. Match</button>
+          </div>
+        </div>
+
+        <!-- Single Active Phone Frame -->
+        <div class="single-phone-stage">
+          <div class="phone-mockup active-simulator">
+            <div class="phone-chassis" id="simulatorChassis">
+              <!-- Content gets rendered dynamically based on active screen -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- MASTER SYLLABUS MODAL (Powered by 842 topics from MAster_topics_checklist.csv) -->
+  <div class="modal-backdrop" id="syllabusModal" onclick="closeSyllabusModal(event)">
+    <div class="modal-card" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <div class="modal-brand">
+          <span class="modal-icon">📚</span>
+          <div>
+            <h3 class="modal-title">Assam Master Exam Syllabus</h3>
+            <p class="modal-sub">842 Bite-sized Learning Topics across 7 Foundational Domains</p>
+          </div>
+        </div>
+        <button class="modal-close-btn" onclick="closeSyllabusModal()">&times;</button>
+      </div>
+
+      <!-- Domain filter tabs -->
+      <div class="modal-search-wrap">
+        <input type="text" id="syllabusSearchInput" placeholder="Filter topics (e.g. Ahom, Majuli, Brahmaputra, National Parks, Constitution)..." oninput="filterSyllabus()">
+      </div>
+
+      <div class="modal-domain-tabs" id="modalDomainTabs">
+        <button class="modal-tab active" onclick="filterByDomain('All')">All Domains</button>
+        <button class="modal-tab" onclick="filterByDomain('History')">History (356)</button>
+        <button class="modal-tab" onclick="filterByDomain('Geography')">Geography (134)</button>
+        <button class="modal-tab" onclick="filterByDomain('Polity')">Polity (92)</button>
+        <button class="modal-tab" onclick="filterByDomain('Economy')">Economy (45)</button>
+        <button class="modal-tab" onclick="filterByDomain('Aptitude')">Aptitude (72)</button>
+        <button class="modal-tab" onclick="filterByDomain('English')">English (28)</button>
+        <button class="modal-tab" onclick="filterByDomain('General Awareness & Science')">Science & GA (115)</button>
+      </div>
+
+      <div class="modal-topic-list" id="modalTopicList">
+        <!-- Rendered by JS -->
+      </div>
+
+      <div class="modal-footer">
+        <span class="mf-count" id="mfCount">Showing 842 atomic syllabus topics</span>
+        <button class="modal-start-btn" onclick="closeSyllabusModal(); switchView('app'); showScreen(1);">Start Journey ➔</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Confetti Canvas for Celebration -->
+  <canvas id="confettiCanvas" class="confetti-canvas"></canvas>
+
+  <script src="app.js"></script>
+</body>
+</html>

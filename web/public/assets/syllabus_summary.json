@@ -1,0 +1,172 @@
+{
+  "total_items": 842,
+  "domains": {
+    "History": {
+      "subject_count": 5,
+      "subjects": {
+        "Ancient Indian History": [
+          "Indus Valley Civilization",
+          "Mahajanapadas & Mauryan Empire",
+          "Vedic Period & Literature",
+          "Gupta Empire & South Indian Kingdoms",
+          "Buddhism & Jainism",
+          "India UNESCO World Cultural Heritage Sites"
+        ],
+        "Medieval Indian History": [
+          "India UNESCO World Cultural Heritage Sites",
+          "Delhi Sultanate (1206-1526)",
+          "Vijayanagara & Bahmani Empires",
+          "Mughal Empire & Sur Dynasty"
+        ],
+        "Modern Indian History": [
+          "Revolt of 1857 & Social Reforms",
+          "India UNESCO World Cultural Heritage Sites",
+          "British Conquest of India",
+          "Indian National Movement (1885-1947)"
+        ],
+        "Assam History": [
+          "Post-Independence Reorganization & Accords of Assam",
+          "Post-Independence Assam History",
+          "Ancient Assam (Pragjyotisha & Kamarupa)",
+          "Archaeological & Ancient Heritage Sites of Assam",
+          "Modern Assam & Freedom Struggle",
+          "Medieval Assam: Ahoms & Regional Kingdoms"
+        ],
+        "Art, Culture & Literature": [
+          "Festivals, Folk Dances & Textiles of Assam",
+          "Major Harvest & Regional Festivals of India",
+          "UNESCO Intangible Cultural Heritage of Humanity (ICH - India)",
+          "Tribal Communities & Ethnography of Assam",
+          "Classical Languages & Literary Traditions of India",
+          "Assamese Literature & Cultural Icons",
+          "Sankardeva & Neo-Vaishnavite Culture",
+          "Indian Classical Dances & Performing Arts"
+        ]
+      }
+    },
+    "Geography": {
+      "subject_count": 3,
+      "subjects": {
+        "Physical & Indian Geography": [
+          "Strategic Mountain Passes & Border Infrastructure",
+          "Indian Drainage Systems & Climate",
+          "Physical Geography Fundamentals",
+          "Physiography of India"
+        ],
+        "Assam Geography": [
+          "Wetlands, Lakes (Beels) & Fluvial Dynamics",
+          "Climate, Floods & Minerals of Assam",
+          "Brahmaputra & Barak River Systems",
+          "Physiography & Borders of Assam",
+          "Mountain Ranges, Peaks & Plateaus of Assam",
+          "Demographics, Census & Transportation Bridges"
+        ],
+        "Environment & Ecology": [
+          "Biosphere Reserves & UNESCO MAB Programme",
+          "Wildlife Conservation Missions & Tiger Reserves",
+          "Global Biodiversity Hotspots in India",
+          "7 National Parks of Assam",
+          "Ecology & Climate Action",
+          "Protected Areas & Biodiversity of Assam",
+          "India UNESCO Natural World Heritage Sites",
+          "Ramsar Wetlands of National & International Importance"
+        ]
+      }
+    },
+    "Polity": {
+      "subject_count": 2,
+      "subjects": {
+        "Indian Polity & Constitution": [
+          "Recent Landmark Constitutional Amendments",
+          "DPSPs, Duties & Union-State Organs",
+          "Constitutional Framework & Fundamental Rights",
+          "Anti-Corruption & Transparency Bodies"
+        ],
+        "Assam Governance & Administration": [
+          "Flagship Schemes of Assam Government",
+          "Assam State Governance & 6th Schedule",
+          "Constitutional Law Officers & State Judicial Bodies",
+          "Assam Administrative Machinery & Secretariat"
+        ]
+      }
+    },
+    "Economy": {
+      "subject_count": 2,
+      "subjects": {
+        "Indian Economy Essentials": [
+          "Fiscal Federalism & Development Planning",
+          "Financial Markets & Banking Reforms",
+          "Indian Economy & Banking Essentials",
+          "Macroeconomic Fundamentals & Inflation"
+        ],
+        "Assam Economy Essentials": [
+          "Geographical Indications (GI Tags) of Assam",
+          "Assam Economy, Tea, Oil & Infrastructure",
+          "Assam State Budget, Public Finance & Economic Survey",
+          "Major Industrial Infrastructure of Assam"
+        ]
+      }
+    },
+    "Aptitude": {
+      "subject_count": 3,
+      "subjects": {
+        "Quantitative Aptitude (Mathematics)": [
+          "Ratios, Proportions & Averages",
+          "Commercial Arithmetic",
+          "Data Interpretation (Charts, Tables & Graphs)",
+          "Number Systems & Simplification",
+          "Time, Work, Speed & Distance",
+          "Permutations, Combinations & Probability",
+          "Geometry & Mensuration (2D & 3D)"
+        ],
+        "Logical Reasoning": [
+          "Logical & Analytical Reasoning",
+          "CSAT Specialized Reasoning"
+        ],
+        "Verbal Reasoning (Critical Logic)": [
+          "Verbal Reasoning & Non-Verbal Figures"
+        ]
+      }
+    },
+    "General Awareness & Science": {
+      "subject_count": 6,
+      "subjects": {
+        "Everyday Science (Physics)": [
+          "Everyday Physics",
+          "Nuclear Physics & Energy"
+        ],
+        "Everyday Science (Chemistry)": [
+          "Everyday Chemistry"
+        ],
+        "Everyday Science (Biology)": [
+          "Biotechnology & Modern Health Sciences",
+          "Life Sciences & Biology"
+        ],
+        "Static GK": [
+          "Static GK & International Organizations"
+        ],
+        "Current Affairs & Contemporary Issues": [
+          "Frontier Technologies & Clean Energy",
+          "Contemporary Current Affairs"
+        ],
+        "Computer Fundamentals & Digital Literacy": [
+          "Computer Fundamentals & Office Productivity"
+        ]
+      }
+    },
+    "English": {
+      "subject_count": 3,
+      "subjects": {
+        "English Grammar": [
+          "English Grammar & Syntax"
+        ],
+        "Vocabulary & Word Power": [
+          "Vocabulary, Idioms & Word Power"
+        ],
+        "Reading Comprehension & Composition": [
+          "Reading Comprehension & Verbal Ability"
+        ]
+      }
+    }
+  }
+}

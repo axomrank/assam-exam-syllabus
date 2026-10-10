@@ -1,0 +1,840 @@
+[
+  {
+    "id": "NESFIC-D-01",
+    "title": "Irrigation Water Demand Forecasting & Smarter Scheduling",
+    "ownerType": "Departments",
+    "owners": "Irrigation Department ● Government of Assam",
+    "region": "Assam",
+    "themes": [
+      "IoT & Sensors",
+      "Satellite & Remote Sensing",
+      "Water & Irrigation"
+    ]
+  },
+  {
+    "id": "NESFIC-D-02",
+    "title": "Irrigation Canals Condition Monitoring & Predictive Maintenance",
+    "ownerType": "Departments",
+    "owners": "Irrigation Department ● Government of Assam",
+    "region": "Assam",
+    "themes": [
+      "AI & Machine Learning",
+      "Dashboards & Digital Platforms",
+      "GIS Mapping",
+      "IoT & Sensors",
+      "Mobile Applications",
+      "Water & Irrigation"
+    ]
+  },
+  {
+    "id": "NESFIC-D-03",
+    "title": "Smart Pumping & Energy Optimisation for Lift Irrigation Schemes",
+    "ownerType": "Departments",
+    "owners": "Government of Assam ● Irrigation Department",
+    "region": "Assam",
+    "themes": [
+      "Dashboards & Digital Platforms",
+      "Mobile Applications",
+      "Water & Irrigation"
+    ]
+  },
+  {
+    "id": "NESFIC-D-04",
+    "title": "GIS-Based Monitoring of Irrigation Potential, Command Areas & Water Use",
+    "ownerType": "Departments",
+    "owners": "Government of Assam ● Irrigation Department",
+    "region": "Assam",
+    "themes": [
+      "AI & Machine Learning",
+      "Dashboards & Digital Platforms",
+      "GIS Mapping",
+      "Satellite & Remote Sensing",
+      "Water & Irrigation"
+    ]
+  },
+  {
+    "id": "NESFIC-D-05",
+    "title": "Road Surface Defect Detection & Maintenance Prioritisation",
+    "ownerType": "Departments",
+    "owners": "Assam ● Public Works Department",
+    "region": "Assam",
+    "themes": [
+      "Computer Vision",
+      "GIS Mapping",
+      "Roads & Transport",
+      "Satellite & Remote Sensing"
+    ]
+  },
+  {
+    "id": "NESFIC-D-06",
+    "title": "Integrated Road & Bridge Alignment Planning Support",
+    "ownerType": "Departments",
+    "owners": "Public Works Department (National Highway Works) ● Assam",
+    "region": "Assam",
+    "themes": [
+      "GIS Mapping",
+      "Roads & Transport",
+      "Satellite & Remote Sensing"
+    ]
+  },
+  {
+    "id": "NESFIC-D-07",
+    "title": "Soil Erosion Risk Mapping & Monitoring",
+    "ownerType": "Departments",
+    "owners": "Soil Conservation Department ● Government of Assam",
+    "region": "Assam",
+    "themes": [
+      "AI & Machine Learning",
+      "Environment & Land",
+      "GIS Mapping",
+      "IoT & Sensors",
+      "Satellite & Remote Sensing"
+    ]
+  },
+  {
+    "id": "NESFIC-D-08",
+    "title": "Recovery of Value from Multi-Layer Plastic Waste",
+    "ownerType": "Departments",
+    "owners": "Department of Housing & Urban Affairs – Swachh Bharat Mission (Urban) ● Assam",
+    "region": "Assam",
+    "themes": [
+      "AI & Machine Learning",
+      "Computer Vision",
+      "Urban Services"
+    ]
+  },
+  {
+    "id": "NESFIC-D-09",
+    "title": "Automated Detection and Clearing of Blocked Culverts for Urban Drainage",
+    "ownerType": "Departments",
+    "owners": "Department of Housing & Urban Affairs ● Government of Assam / Directorate of Town and Country Planning ● Assam",
+    "region": "Assam",
+    "themes": [
+      "Robotics & Automation",
+      "Urban Services"
+    ]
+  },
+  {
+    "id": "NESFIC-D-10",
+    "title": "Real-Time Monitoring of Decentralised Planning Schemes",
+    "ownerType": "Departments",
+    "owners": "Transformation & Development Department ● Government of Assam – Decentralised Planning Division",
+    "region": "Assam",
+    "themes": [
+      "Dashboards & Digital Platforms",
+      "GIS Mapping",
+      "Governance & Administration",
+      "Mobile Applications"
+    ]
+  },
+  {
+    "id": "NESFIC-D-11",
+    "title": "Crop Health Monitoring, Pest & Disease Forecasting and Location-Specific Advisory",
+    "ownerType": "Departments",
+    "owners": "Department of Science & Technology ● Government of Assam – Assam State Space Application Centre (ASSAC) ● Department of Agriculture ● Government of Assam",
+    "region": "Assam",
+    "themes": [
+      "Agriculture",
+      "AI & Machine Learning",
+      "Drones",
+      "Satellite & Remote Sensing"
+    ]
+  },
+  {
+    "id": "NESFIC-D-12",
+    "title": "Crop Yield & Production Estimation Using Satellite/UAV and Field Data",
+    "ownerType": "Departments",
+    "owners": "Department of Science & Technology ● Government of Assam – ASSAC",
+    "region": "Assam",
+    "themes": [
+      "Agriculture",
+      "Drones",
+      "Satellite & Remote Sensing",
+      "Statistical Surveys & Sampling"
+    ]
+  },
+  {
+    "id": "NESFIC-D-13",
+    "title": "Geospatial Identification of Cultivable & Fertile Agricultural Potential Lands",
+    "ownerType": "Departments",
+    "owners": "Department of Science & Technology ● Government of Assam – ASSAC",
+    "region": "Assam",
+    "themes": [
+      "Agriculture",
+      "GIS Mapping",
+      "Satellite & Remote Sensing"
+    ]
+  },
+  {
+    "id": "NESFIC-D-14",
+    "title": "Wetland Mapping & Seasonal Monitoring for Irrigation and Fisheries",
+    "ownerType": "Departments",
+    "owners": "Department of Science & Technology ● Government of Assam – ASSAC",
+    "region": "Assam",
+    "themes": [
+      "Environment & Land",
+      "GIS Mapping",
+      "Satellite & Remote Sensing"
+    ]
+  },
+  {
+    "id": "NESFIC-D-15",
+    "title": "Forest & Tree Plantation Monitoring for Growth, Biomass and Carbon Assessment",
+    "ownerType": "Departments",
+    "owners": "Department of Science & Technology ● Government of Assam – ASSAC",
+    "region": "Assam",
+    "themes": [
+      "AI & Machine Learning",
+      "Drones",
+      "Environment & Land",
+      "Satellite & Remote Sensing"
+    ]
+  },
+  {
+    "id": "NESFIC-D-16",
+    "title": "Integrated Urban Geospatial Intelligence for Waste, Drainage , Transport and Encroachment Management",
+    "ownerType": "Departments",
+    "owners": "Department of Science & Technology ● Government of Assam – ASSAC",
+    "region": "Assam",
+    "themes": [
+      "AI & Machine Learning",
+      "Dashboards & Digital Platforms",
+      "IoT & Sensors",
+      "Satellite & Remote Sensing",
+      "Urban Services"
+    ]
+  },
+  {
+    "id": "NESFIC-D-17",
+    "title": "Integrated Government Land & Wetland Encroachment Monitoring",
+    "ownerType": "Departments",
+    "owners": "Department of Science & Technology ● Government of Assam – ASSAC",
+    "region": "Assam",
+    "themes": [
+      "AI & Machine Learning",
+      "Environment & Land",
+      "GIS Mapping",
+      "Mobile Applications",
+      "Satellite & Remote Sensing"
+    ]
+  },
+  {
+    "id": "NESFIC-D-18",
+    "title": "Digital Twin for Flood Management, Simulation and Early Warning Using Space Technology",
+    "ownerType": "Departments",
+    "owners": "Department of Science & Technology ● Government of Assam – ASSAC",
+    "region": "Assam",
+    "themes": [
+      "Digital Twin Simulatiom",
+      "Disaster & Public Safety",
+      "GIS Mapping",
+      "Satellite & Remote Sensing"
+    ]
+  },
+  {
+    "id": "NESFIC-D-19",
+    "title": "AI-Enabled Integrated Border Surveillance and Illegal Intrusion Detection Using Satellite, UAV and Ground-Based Sensors",
+    "ownerType": "Departments",
+    "owners": "Department of Science & Technology ● Government of Assam – ASSAC",
+    "region": "Assam",
+    "themes": [
+      "AI & Machine Learning",
+      "Disaster & Public Safety",
+      "Drones",
+      "IoT & Sensors",
+      "Satellite & Remote Sensing"
+    ]
+  },
+  {
+    "id": "NESFIC-D-20",
+    "title": "Satellite and Mobile Broadband Solutions for Remote Education and Healthcare Connectivity",
+    "ownerType": "Departments",
+    "owners": "Department of Science & Technology ● Government of Assam – ASSAC",
+    "region": "Assam",
+    "themes": [
+      "Digital Connectivity",
+      "Education & Healthcare"
+    ]
+  },
+  {
+    "id": "NESFIC-D-21",
+    "title": "AI-Based Automated Land Use / Land Cover Change Detection and Monitoring System",
+    "ownerType": "Departments",
+    "owners": "Department of Science & Technology ● Government of Assam – ASSAC",
+    "region": "Assam",
+    "themes": [
+      "AI & Machine Learning",
+      "Environment & Land",
+      "GIS Mapping",
+      "IoT & Sensors"
+    ]
+  },
+  {
+    "id": "NESFIC-D-22",
+    "title": "AI-Based Smart Transport Monitoring and Traffic Decision-Support for Urban Areas (NEW)",
+    "ownerType": "Departments",
+    "owners": "Assam State Space Application Centre (ASSAC) ● Department of Science & Technology ● Government of Assam",
+    "region": "Assam",
+    "themes": [
+      "AI & Machine Learning",
+      "GIS Mapping",
+      "Roads & Transport"
+    ]
+  },
+  {
+    "id": "NESFIC-D-23",
+    "title": "Early detection of Pregnancy-Induced Hypertension",
+    "ownerType": "Departments",
+    "owners": "Health & Family Welfare Department ● Government of Assam – National Health Mission ● Assam",
+    "region": "Assam",
+    "themes": [
+      "AI & Machine Learning",
+      "Health",
+      "IoT & Sensors",
+      "Medical Devices & Diagnostics"
+    ]
+  },
+  {
+    "id": "NESFIC-D-24",
+    "title": "Expanding Access to Obstetric Ultrasound Screening",
+    "ownerType": "Departments",
+    "owners": "Health & Family Welfare Department ● Government of Assam – National Health Mission ● Assam",
+    "region": "Assam",
+    "themes": [
+      "AI & Machine Learning",
+      "Health",
+      "Medical Devices & Diagnostics"
+    ]
+  },
+  {
+    "id": "NESFIC-D-25",
+    "title": "Monitoring Infection Prevention & Control Compliance in Labour Rooms and Maternity OTs",
+    "ownerType": "Departments",
+    "owners": "Health & Family Welfare Department ● Government of Assam – National Health Mission ● Assam",
+    "region": "Assam",
+    "themes": [
+      "AI & Machine Learning",
+      "Computer Vision",
+      "Health",
+      "Mobile Applications"
+    ]
+  },
+  {
+    "id": "NESFIC-D-26",
+    "title": "Timely Identification, Referral & Follow-up of Sick Newborns",
+    "ownerType": "Departments",
+    "owners": "Assam ● Government of Assam – National Health Mission ● Health & Family Welfare Department",
+    "region": "Assam",
+    "themes": [
+      "Dashboards & Digital Platforms",
+      "Health",
+      "Medical Devices & Diagnostics",
+      "Mobile Applications"
+    ]
+  },
+  {
+    "id": "NESFIC-D-27",
+    "title": "Earlier Identification of Congenital Deformities for Timely Care",
+    "ownerType": "Departments",
+    "owners": "Assam ● Government of Assam – National Health Mission ● Health & Family Welfare Department",
+    "region": "Assam",
+    "themes": [
+      "AI & Machine Learning",
+      "Health"
+    ]
+  },
+  {
+    "id": "NESFIC-D-28",
+    "title": "Cross-Programme NCD Analytics for Better Planning and Case Identification",
+    "ownerType": "Departments",
+    "owners": "Assam ● Government of Assam – National Health Mission ● Health & Family Welfare Department",
+    "region": "Assam",
+    "themes": [
+      "AI & Machine Learning",
+      "Dashboards & Digital Platforms",
+      "Health"
+    ]
+  },
+  {
+    "id": "NESFIC-D-29",
+    "title": "Earlier Identification & Service Planning Support for Mental Health Needs",
+    "ownerType": "Departments",
+    "owners": "Assam ● Government of Assam – National Health Mission ● Health & Family Welfare Department",
+    "region": "Assam",
+    "themes": [
+      "AI & Machine Learning",
+      "Dashboards & Digital Platforms",
+      "Health"
+    ]
+  },
+  {
+    "id": "NESFIC-D-30",
+    "title": "TB Risk Stratification & Programme Decision Support",
+    "ownerType": "Departments",
+    "owners": "Assam ● Government of Assam – National Health Mission ● Health & Family Welfare Department",
+    "region": "Assam",
+    "themes": [
+      "AI & Machine Learning",
+      "Dashboards & Digital Platforms",
+      "Health"
+    ]
+  },
+  {
+    "id": "NESFIC-D-31",
+    "title": "Current Geospatial Register of Fishery Resources for Production Estimation",
+    "ownerType": "Departments",
+    "owners": "Fishery Department ● Government of Assam / Directorate of Fisheries",
+    "region": "Assam",
+    "themes": [
+      "Drones",
+      "Fisheries",
+      "GIS Mapping",
+      "Mobile Applications",
+      "Satellite & Remote Sensing"
+    ]
+  },
+  {
+    "id": "NESFIC-D-32",
+    "title": "Scientific Sample Survey for Pond and Tank Aquaculture Production Estimation",
+    "ownerType": "Departments",
+    "owners": "Fishery Department ● Government of Assam / Directorate of Fisheries",
+    "region": "Assam",
+    "themes": [
+      "Fisheries",
+      "Mobile Applications",
+      "Statistical Surveys & Sampling"
+    ]
+  },
+  {
+    "id": "NESFIC-D-33",
+    "title": "Scientific Estimation of Fish Catch from Beels, Rivers and Other Open Waters",
+    "ownerType": "Departments",
+    "owners": "Fishery Department ● Government of Assam / Directorate of Fisheries",
+    "region": "Assam",
+    "themes": [
+      "Fisheries",
+      "GIS Mapping",
+      "Mobile Applications",
+      "Statistical Surveys & Sampling"
+    ]
+  },
+  {
+    "id": "NESFIC-D-34",
+    "title": "Fish-Flow and Market Data for Independent Validation of Annual Fish Production Estimates",
+    "ownerType": "Departments",
+    "owners": "Fishery Department ● Government of Assam / Directorate of Fisheries",
+    "region": "Assam",
+    "themes": [
+      "Fisheries",
+      "Statistical Surveys & Sampling"
+    ]
+  },
+  {
+    "id": "NESFIC-D-35",
+    "title": "Agricultural Commodity Price Intelligence and Forecasting for Farmer Decisions",
+    "ownerType": "Departments",
+    "owners": "Department of Agriculture ● Government of Assam",
+    "region": "Assam",
+    "themes": [
+      "Agriculture",
+      "AI & Machine Learning"
+    ]
+  },
+  {
+    "id": "NESFIC-D-36",
+    "title": "Trusted Government Knowledge, Rules & Document Assistant",
+    "ownerType": "Departments",
+    "owners": "Administrative Reforms ● Assam Administrative Staff College (AASC) ● Department of Science & Technology ● Pension & Public Grievances Department ● together with Assam State Space Application Centre (ASSAC) ● Training",
+    "region": "Assam",
+    "themes": [
+      "Generative AI & Language Tools",
+      "Governance & Administration"
+    ]
+  },
+  {
+    "id": "NESFIC-D-37",
+    "title": "Continuous RTPS Service Delivery Performance & SLA Monitoring",
+    "ownerType": "Departments",
+    "owners": "Administrative Reforms ● Pension & Public Grievances Department ● Training",
+    "region": "Assam",
+    "themes": [
+      "Dashboards & Digital Platforms",
+      "Governance & Administration"
+    ]
+  },
+  {
+    "id": "NESFIC-D-38",
+    "title": "Faster, More Consistent Multilingual Proofreading of Government Documents",
+    "ownerType": "Departments",
+    "owners": "Assam ● Information ● Printing & Stationery Department – Directorate of Printing & Stationery ● Public Relations",
+    "region": "Assam",
+    "themes": [
+      "Generative AI & Language Tools",
+      "Governance & Administration"
+    ]
+  },
+  {
+    "id": "NESFIC-D-39",
+    "title": "Digital Inventory & Movement Tracking for Government Press and Stationery",
+    "ownerType": "Departments",
+    "owners": "Assam ● Information ● Printing & Stationery Department – Directorate of Printing & Stationery ● Public Relations",
+    "region": "Assam",
+    "themes": [
+      "Dashboards & Digital Platforms",
+      "Governance & Administration"
+    ]
+  },
+  {
+    "id": "NESFIC-D-40",
+    "title": "Improving Folding Productivity in Government Press Operations",
+    "ownerType": "Departments",
+    "owners": "Information ● Printing & Stationery Department – Assam Government Press ● Public Relations",
+    "region": "Assam",
+    "themes": [
+      "Governance & Administration",
+      "Hardware & Engineering"
+    ]
+  },
+  {
+    "id": "NESFIC-D-41",
+    "title": "Digital Traceability and Non-Destructive Authentication of Muga Silk and Apparel from Cocoon to Consumer",
+    "ownerType": "Departments",
+    "owners": "Department of Handloom, Textiles & Sericulture",
+    "region": "Assam",
+    "themes": [
+      "Agriculture",
+      "AI & Machine Learning",
+      "Mobile Applications",
+      "Traceability"
+    ]
+  },
+  {
+    "id": "NESFIC-D-42",
+    "title": "Technology-Based Quality Monitoring and Preventive Maintenance of PWD Building Structures",
+    "ownerType": "Departments",
+    "owners": "Public Works Department (Building)",
+    "region": "Assam",
+    "themes": [
+      "Construction",
+      "Dashboards & Digital Platforms",
+      "Digitization",
+      "Traceability"
+    ]
+  },
+  {
+    "id": "NESFIC-D-43",
+    "title": "Geo-Verified Water Quality Sampling and Predictive Risk Intelligence for Drinking Water",
+    "ownerType": "Departments",
+    "owners": "Public Health Engineering Department",
+    "region": "Assam",
+    "themes": [
+      "AI & Machine Learning",
+      "Dashboards & Digital Platforms",
+      "Digitization",
+      "Disaster & Public Safety",
+      "GIS & Geospatial Technology",
+      "IoT & Sensors",
+      "Mobile Applications",
+      "Robotics & Automation",
+      "Statistical Surveys & Sampling",
+      "Water & Irrigation"
+    ]
+  },
+  {
+    "id": "NESFIC-D-44",
+    "title": "Intelligent Detection and Localisation of Leakage and Non-Revenue Water in Distribution Networks",
+    "ownerType": "Departments",
+    "owners": "Public Health Engineering Department",
+    "region": "Assam",
+    "themes": [
+      "AI & Machine Learning",
+      "Dashboards & Digital Platforms",
+      "GIS & Geospatial Technology",
+      "IoT & Sensors",
+      "Robotics & Automation",
+      "Statistical Surveys & Sampling",
+      "Traceability",
+      "Water & Irrigation"
+    ]
+  },
+  {
+    "id": "NESFIC-D-45",
+    "title": "Predictive Monitoring and Early Warning for Drinking Water Source Sustainability and Failure Risk",
+    "ownerType": "Departments",
+    "owners": "Public Health Engineering Department",
+    "region": "Assam",
+    "themes": [
+      "AI & Machine Learning",
+      "Dashboards & Digital Platforms",
+      "Digitization",
+      "Disaster & Public Safety",
+      "GIS & Geospatial Technology",
+      "GIS Mapping",
+      "Governance & Administration",
+      "IoT & Sensors",
+      "Mobile Applications",
+      "Robotics & Automation",
+      "Satellite & Remote Sensing",
+      "Statistical Surveys & Sampling",
+      "Traceability",
+      "Water & Irrigation"
+    ]
+  },
+  {
+    "id": "NESFIC-D-46",
+    "title": "Intelligent Energy Optimisation and Predictive Maintenance of Water Supply Pumping Systems",
+    "ownerType": "Departments",
+    "owners": "Public Health Engineering Department",
+    "region": "Assam",
+    "themes": [
+      "AI & Machine Learning",
+      "Dashboards & Digital Platforms",
+      "Digitization",
+      "GIS & Geospatial Technology",
+      "Hardware & Engineering",
+      "IoT & Sensors",
+      "Satellite & Remote Sensing",
+      "Statistical Surveys & Sampling",
+      "Supply Chain & Inventory",
+      "Traceability",
+      "Water & Irrigation"
+    ]
+  },
+  {
+    "id": "NESFIC-D-47",
+    "title": "Continuous Verification of Drinking Water Service Levels at Consumer and Tail-End Locations",
+    "ownerType": "Departments",
+    "owners": "Public Health Engineering Department",
+    "region": "Assam",
+    "themes": [
+      "AI & Machine Learning",
+      "Dashboards & Digital Platforms",
+      "Disaster & Public Safety",
+      "GIS & Geospatial Technology",
+      "IoT & Sensors",
+      "Mobile Applications",
+      "Robotics & Automation",
+      "Supply Chain & Inventory",
+      "Traceability",
+      "Water & Irrigation"
+    ]
+  },
+  {
+    "id": "NESFIC-D-48",
+    "title": "Land Record Time Machine: Historical View of Every Dag and Patta",
+    "ownerType": "Departments",
+    "owners": "Revenue & Disaster Management Department",
+    "region": "Assam",
+    "themes": [
+      "Dashboards & Digital Platforms",
+      "Digital Asset Management",
+      "Digitization",
+      "Environment & Land",
+      "GIS & Geospatial Technology",
+      "GIS Mapping",
+      "Governance & Administration",
+      "Satellite & Remote Sensing",
+      "Statistical Surveys & Sampling",
+      "Traceability",
+      "Urban Services"
+    ]
+  },
+  {
+    "id": "NESFIC-D-49",
+    "title": "One Change, Everywhere: Automatic Synchronisation Across Land Record Systems in Assam",
+    "ownerType": "Departments",
+    "owners": "Revenue & Disaster Management Department",
+    "region": "Assam",
+    "themes": [
+      "AI & Machine Learning",
+      "Dashboards & Digital Platforms",
+      "Digital Asset Management",
+      "Digitization",
+      "Environment & Land",
+      "GIS & Geospatial Technology",
+      "GIS Mapping",
+      "Governance & Administration",
+      "Mobile Applications",
+      "Satellite & Remote Sensing",
+      "Statistical Surveys & Sampling",
+      "Traceability"
+    ]
+  },
+  {
+    "id": "NESFIC-D-50",
+    "title": "Land Health Check: Early Detection of Errors and Risky Land Records",
+    "ownerType": "Departments",
+    "owners": "Revenue & Disaster Management Department",
+    "region": "Assam",
+    "themes": [
+      "AI & Machine Learning",
+      "Dashboards & Digital Platforms",
+      "Digital Asset Management",
+      "Digitization",
+      "Environment & Land",
+      "GIS & Geospatial Technology",
+      "GIS Mapping",
+      "Governance & Administration",
+      "Mobile Applications",
+      "Satellite & Remote Sensing",
+      "Statistical Surveys & Sampling",
+      "Traceability"
+    ]
+  },
+  {
+    "id": "NESFIC-D-51",
+    "title": "Land Transaction Pre-Flight Check: Spot Problems Before a Transaction Starts",
+    "ownerType": "Departments",
+    "owners": "Revenue & Disaster Management Department",
+    "region": "Assam",
+    "themes": [
+      "AI & Machine Learning",
+      "Digital Asset Management",
+      "Digitization",
+      "Environment & Land",
+      "Governance & Administration",
+      "Mobile Applications",
+      "Statistical Surveys & Sampling",
+      "Traceability",
+      "Urban Services"
+    ]
+  },
+  {
+    "id": "NESFIC-D-52",
+    "title": "Assam Land Exchange: Government-Verified Marketplace for Buying and Selling Land",
+    "ownerType": "Departments",
+    "owners": "Revenue & Disaster Management Department",
+    "region": "Assam",
+    "themes": [
+      "AI & Machine Learning",
+      "Dashboards & Digital Platforms",
+      "Digital Asset Management",
+      "Digitization",
+      "Environment & Land",
+      "GIS & Geospatial Technology",
+      "GIS Mapping",
+      "Governance & Administration",
+      "Mobile Applications",
+      "Satellite & Remote Sensing",
+      "Statistical Surveys & Sampling",
+      "Traceability"
+    ]
+  },
+  {
+    "id": "NESFIC-I-01",
+    "title": "Low-Temperature Flow Assurance for High-Wax North-East Crude — Next-Generation Pour Point Depressants and Energy-Efficient Demulsifiers",
+    "ownerType": "Industry / MSME",
+    "owners": "MC² Foundation",
+    "region": "North Eastern Region",
+    "themes": [
+      "Next-Gen Drilling & Well Completion (Flow Assurance)",
+      "Oil & Gas"
+    ]
+  },
+  {
+    "id": "NESFIC-I-02",
+    "title": "Real-Time Pipeline Integrity Intelligence for Waxy-Crude Networks — Continuous Wax Deposition Monitoring with Early Bio-Corrosion Detection",
+    "ownerType": "Industry / MSME",
+    "owners": "MC² Foundation",
+    "region": "North Eastern Region",
+    "themes": [
+      "Digital Asset Management",
+      "Oil & Gas"
+    ]
+  },
+  {
+    "id": "NESFIC-I-03",
+    "title": "Modular Monetisation of Stranded and Marginal Gas in the North-East — Small-Scale Liquefaction and Micro-Conversion for Fields Without Pipeline Connectivity",
+    "ownerType": "Industry / MSME",
+    "owners": "MC² Foundation",
+    "region": "Assam",
+    "themes": [
+      "Oil & Gas",
+      "Open Innovation: Energy Transition & Downstream Futures"
+    ]
+  },
+  {
+    "id": "NESFIC-I-04",
+    "title": "Securing the North-East Bioenergy Feedstock Chain — Biomass Preservation Through the Monsoon and Valorisation of Bio-Refinery Waste Streams",
+    "ownerType": "Industry / MSME",
+    "owners": "MC² Foundation",
+    "region": "Assam",
+    "themes": [
+      "Bioenergy (CBG and Allied)",
+      "Oil & Gas"
+    ]
+  },
+  {
+    "id": "NESFIC-I-05",
+    "title": "Low-Cost AI-Enabled Selective Plucking Solution",
+    "ownerType": "Industry / MSME",
+    "owners": "Tea Research Association (TRA) ● Tocklai — through the New Technology Committee",
+    "region": "Assam",
+    "themes": [
+      "AI & Machine Learning",
+      "Computer Vision",
+      "Crop & Farm Productivity"
+    ]
+  },
+  {
+    "id": "NESFIC-I-06",
+    "title": "Smart Monitoring of Manual / Operator-Carried Spraying",
+    "ownerType": "Industry / MSME",
+    "owners": "Tea Research Association (TRA) ● Tocklai — through the New Technology Committee",
+    "region": "Assam",
+    "themes": [
+      "Crop Protection & Spraying",
+      "IoT & Sensors"
+    ]
+  },
+  {
+    "id": "NESFIC-I-07",
+    "title": "AI-Driven Drone-Based Pest Detection & Targeted Spot-Spraying",
+    "ownerType": "Industry / MSME",
+    "owners": "Tea Research Association (TRA) ● Tocklai — through the New Technology Committee",
+    "region": "Assam",
+    "themes": [
+      "Computer Vision",
+      "Crop & Farm Productivity",
+      "Crop Protection & Spraying",
+      "Drones"
+    ]
+  },
+  {
+    "id": "NESFIC-I-08",
+    "title": "End-to-End Digital Traceability of Tea Across the Assam Tea Value Chain",
+    "ownerType": "Industry / MSME",
+    "owners": "Tea Research Association (TRA) ● Tocklai — through the New Technology Committee",
+    "region": "Assam",
+    "themes": [
+      "Blockchain",
+      "Digitization",
+      "IoT & Sensors",
+      "Traceability"
+    ]
+  },
+  {
+    "id": "NESFIC-I-09",
+    "title": "Improving Medicine Demand Forecasting and Inventory Availability Across Northeast India",
+    "ownerType": "Industry / MSME",
+    "owners": "GR Dhanuka Group",
+    "region": "Assam",
+    "themes": [
+      "AI & Machine Learning",
+      "Supply Chain & Inventory"
+    ]
+  },
+  {
+    "id": "NESFIC-I-10",
+    "title": "Creating Real-Time Intelligence Across Assam’s Waste Value Chain",
+    "ownerType": "Industry / MSME",
+    "owners": "PRIDE Cooperative",
+    "region": "Assam",
+    "themes": [
+      "Circular Economy",
+      "Digitization",
+      "GIS & Geospatial Technology",
+      "Waste Management"
+    ]
+  }
+]

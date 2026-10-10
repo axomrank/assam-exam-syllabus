@@ -1,0 +1,502 @@
+import os
+import csv
+import json
+
+BASE_DIR = "/home/angsuman/extra_spac/Study_Assam"
+
+def build_master_dataset():
+    rows = []
+
+    def add(cat_id, cat_name, exam_name, stage, paper_name, subject, topic, subtopics, std_marks, source_file):
+        rows.append({
+            "Category_ID": cat_id,
+            "Category_Name": cat_name,
+            "Exam_Name": exam_name,
+            "Stage": stage,
+            "Paper_Name": paper_name,
+            "Subject": subject,
+            "Topic": topic,
+            "Subtopics": subtopics,
+            "Standard_Marks_Weightage": std_marks,
+            "Source_File": source_file
+        })
+
+    # =========================================================================
+    # 01. APSC COMBINED COMPETITIVE EXAM (CCE) - PRELIMS
+    # =========================================================================
+    p1 = "01_APSC/Combined_Competitive_Exam_CCE/01_Prelims/SYLLABUS.md"
+    
+    add("01_APSC", "Assam Public Service Commission (APSC)", "APSC Combined Competitive Exam (CCE)",
+        "Stage 1: Preliminary Exam", "Paper I: General Studies I", "Indian History",
+        "Ancient India",
+        "Indus Valley Civilization, Vedic period (Early & Later), Mahajanapadas, Rise of Magadha, Buddhism & Jainism, Mauryan Empire (Administration, Ashoka's Dhamma, Edicts), Post-Mauryan period (Kushanas, Satavahanas), Gupta Empire (Golden Age, Literature, Science & Art), Post-Gupta Era (Harshavardhana), Southern Dynasties (Cholas, Pallavas, Chalukyas, Rashtrakutas)",
+        "200 Marks Total Paper", p1)
+
+    add("01_APSC", "Assam Public Service Commission (APSC)", "APSC Combined Competitive Exam (CCE)",
+        "Stage 1: Preliminary Exam", "Paper I: General Studies I", "Indian History",
+        "Medieval India",
+        "Early Medieval India, Delhi Sultanate (Slave, Khilji, Tughlaq, Sayyid, Lodi dynasties; Alauddin Khilji's market reforms, Muhammad bin Tughlaq's experiments), Administration & Agrarian systems under Sultanate, Mughal Empire (Babur to Aurangzeb; Akbar's administrative policies, Mansabdari & Jagirdari systems, Religious policy), Decline of Mughals, Vijayanagara Empire & Bahmani Kingdom, Maratha Empire (Shivaji & Peshwas), Bhakti Movement (Kabir, Guru Nanak, Chaitanya, Mirabai) & Sufi Movement",
+        "200 Marks Total Paper", p1)
+
+    add("01_APSC", "Assam Public Service Commission (APSC)", "APSC Combined Competitive Exam (CCE)",
+        "Stage 1: Preliminary Exam", "Paper I: General Studies I", "Indian History",
+        "Modern Indian History & National Movement",
+        "Advent of European powers (Portuguese, Dutch, French, British), British conquest of Bengal (Plassey 1757, Buxar 1764), Dual Government, Governor-Generals & Viceroys, Economic impact of British rule (Drain of Wealth theory, Land revenue settlements - Permanent Settlement, Ryotwari, Mahalwari), Revolt of 1857 (causes, leaders, suppression, Government of India Act 1858), 19th Century Socio-Religious Reform Movements (Brahmo Samaj, Arya Samaj, Prarthana Samaj, Ramakrishna Mission, Theosophical Society, Aligarh Movement), Growth of Indian Nationalism, Foundation of INC (1885), Moderate Phase (1885–1905), Extremist Phase & Swadeshi Movement (1905–1911), Surat Split (1907), Morley-Minto Reforms (1909), Home Rule Movement (1916), Lucknow Pact (1916), Gandhian Era (Champaran, Kheda, Ahmedabad Mill Strike), Montagu-Chelmsford Reforms (1919), Rowlatt Act & Jallianwala Bagh (1919), Non-Cooperation & Khilafat Movement (1920–22), Swaraj Party, Simon Commission (1927), Nehru Report (1928), Purna Swaraj Declaration (1929), Civil Disobedience Movement & Dandi March (1930), Gandhi-Irwin Pact, Round Table Conferences, Poona Pact (1932), Government of India Act 1935, Provincial Elections (1937), August Offer (1940), Individual Satyagraha, Cripps Mission (1942), Quit India Movement (1942), Indian National Army (INA) & Subhas Chandra Bose, CR Formula, Wavell Plan & Simla Conference (1945), Cabinet Mission Plan (1946), Mountbatten Plan & Indian Independence Act 1947, Partition and Integration of Princely States",
+        "200 Marks Total Paper", p1)
+
+    add("01_APSC", "Assam Public Service Commission (APSC)", "APSC Combined Competitive Exam (CCE)",
+        "Stage 1: Preliminary Exam", "Paper I: General Studies I", "History of Assam",
+        "Ancient Assam (Pragjyotisha & Kamarupa)",
+        "Pre-historic & Proto-historic Assam, Sources of Ancient Assam History (Nidhanpur & Doobi Copperplate inscriptions, Allahabad Pillar inscription, Tezpur Rock inscription), Epics & Puranic accounts (Naraka, Bhagadatta), Varman Dynasty (Pushyavarman, Samudravarman, Bhaskaravarman, Alliance with Harshavardhana, Account of Xuanzang/Hiuen Tsang), Salastambha Dynasty (Harjaravarman, Vanamalavarmadeva), Pala Dynasty of Kamarupa (Brahmapala, Ratnapala, Dharmapala), Society, Economy, Religion, Art & Architecture of Kamarupa",
+        "30-35% Compulsory Assam Weightage", p1)
+
+    add("01_APSC", "Assam Public Service Commission (APSC)", "APSC Combined Competitive Exam (CCE)",
+        "Stage 1: Preliminary Exam", "Paper I: General Studies I", "History of Assam",
+        "Medieval Assam (Ahom, Koch, Chutiya, Kachari Kingdoms)",
+        "Establishment of Ahom Kingdom by Chaolung Sukapha (1228 AD), Consolidation of Ahom rule, Chutiya Kingdom (Gaurinarayan, Sati Sadhani), Kachari Kingdom (Hidimba, Maibang, Khaspur), Koch Kingdom (Biswa Singha, Naranarayan, Chilarai / Sukladhwaj, Division of Koch Kingdom into Koch Hajo and Koch Behar), Suhungmung (Dihingia Raja - expansion, introduction of Saka Era, first census), Pratap Singha (administrative reforms, Momai Tamuli Barbarua, Paik & Khel System, creation of Barbarua & Borphukan posts), Mughal-Ahom Conflicts, Mir Jumla's Invasion of Assam (1662-63, Treaty of Ghilajharighat), Chakradhwaj Singha, Battle of Alaboi (1669), Battle of Saraighat (1671 - Lachit Borphukan, Naval battle tactics on Brahmaputra), Udayaditya Singha, Battle of Itakhuli (1682 - Mansur Khan defeated, Western boundary fixed at Manas river), Gadadhar Singha (establishment of Tungkhungia dynasty), Rudra Singha (Siva Singha, Ambika, Joymoti sacrifice, Rang Ghar, Kareng Ghar, Talatal Ghar, architecture, Trade relations with Tibet & Bengal), Ahom Administration, Paik system, Khel system, Chamua, Posha system, Moamoria Rebellion (causes, Mayamara Satra, three phases of rebellion, Purnananda Burhagohain), Captain Welsh's Expedition (1792-94), Burmese Invasions of Assam (Maanar Din - three invasions 1817, 1819, 1821; Badan Chandra Borphukan, atrocities), Fall of Ahom Kingdom, Anglo-Burmese War (1824-26), Treaty of Yandaboo (24th February 1826 - End of Ahom independence, Annexation by British East India Company)",
+        "30-35% Compulsory Assam Weightage", p1)
+
+    add("01_APSC", "Assam Public Service Commission (APSC)", "APSC Combined Competitive Exam (CCE)",
+        "Stage 1: Preliminary Exam", "Paper I: General Studies I", "History of Assam",
+        "Modern Assam & Freedom Struggle",
+        "Early British Administration (David Scott, Robertson, Jenkins), Annexation of Cachar, Jaintia, Matak, Khamti and Hill areas, Anti-British Uprisings (Gomdhar Konwar 1828, Piyoli Phukan & Jeuram Dulia Baruah 1830), Discovery of Tea in Assam (Robert Bruce 1823, C.A. Bruce, Assam Tea Company 1839), Waste Land Rules & Tea Plantations, Indentured Tea Garden Labourers (Coolie system), Annexation of Assam to Bengal Presidency (1836-1873) & Imposition of Bengali language, Struggle for restoration of Assamese language (American Baptist Missionaries - Nathan Brown, Miles Bronson, Oronodoi 1846, Anandaram Dhekial Phukan, Hemchandra Baruah, Gunabhiram Baruah), Revolt of 1857 in Assam (Maniram Dewan's role, Piyoli Baruah, Execution at Jorhat 1858), Creation of Chief Commissionership of Assam (1874), Peasant Uprisings against British Revenue Policies (Ryot Sabhas, Phulaguri Dhawa 1861 - First Peasant Uprising in Assam against Opium tax, Rangiya Peasant Uprising 1893-94, Lachima Uprising 1894, Patharughat Ran 1894 - Assam's Jallianwala Bagh, 140 peasants martyred), Socio-Cultural & Political Organizations (Asom Desh Hitaishini Sabha, Sarbajanik Sabha of Jorhat 1884 by Jagannath Baruah, Assam Association 1903 by Manik Chandra Baruah, Asam Sahitya Sabha 1917, Asam Chhatra Sanmilan 1916), Partition of Bengal & Eastern Bengal and Assam (1905-1911), Non-Cooperation Movement in Assam (1920-22 - Visit of Mahatma Gandhi 1921, Boycott of foreign goods, Opium eradication campaign, Forest satyagraha, Resignation of Tarun Ram Phukan, Nabin Chandra Bardoloi, Bishnuram Medhi, Chandranath Sharma, Striking of tea garden workers - Charger Gola exodus), Assam Provincial Congress Committee (APCC 1921), Civil Disobedience Movement in Assam (1930-34 - Salt Satyagraha, Cunningham Circular boycott, Martyrdom of Kushal Konwar, Role of Tyagbir Hem Baruah, Omeo Kumar Das, Pushpalata Das), Tribal Movements (All Assam Plains Tribal League 1933, Bodo Movement, Kalicharan Brahma), Provincial Autonomy & Coalition Ministries (Sir Muhammad Saadulla Ministry, Gopinath Bordoloi Congress Coalition Ministry 1938), Line System & Immigration issue, Quit India Movement in Assam (1942 - Mass participation, Underground activities, Mrityu Bahini & Shanti Sena, Kanaklata Barua & Mukunda Kakati martyrdom at Gohpur, Bhogeswari Phukanani martyrdom at Barhampur, Tilak Deka, Kushal Konwar execution on false sabotage charges), Cabinet Mission & Grouping Scheme (Section C proposal to group Assam with Bengal, Historic resistance led by Lokapriya Gopinath Bordoloi with blessings of Mahatma Gandhi, Preservation of Assam's identity), Sylhet Referendum (1947), Independence & Integration of Assam",
+        "30-35% Compulsory Assam Weightage", p1)
+
+    add("01_APSC", "Assam Public Service Commission (APSC)", "APSC Combined Competitive Exam (CCE)",
+        "Stage 1: Preliminary Exam", "Paper I: General Studies I", "Geography of India & World",
+        "Physical, Economic & Human Geography",
+        "Origin of Earth, Earth's interior structure, Plate Tectonics, Continental Drift Theory, Earthquakes & Volcanoes, Geomorphic processes (Weathering, Mass wasting, Erosion, Fluvial, Glacial, Aeolian, Karst, Coastal landforms), Atmosphere (Composition, Structure, Temperature distribution, Atmospheric pressure & Wind belts, Air masses, Fronts, Jet Streams, Tropical & Extratropical Cyclones), Climatology & Monsoon mechanism (El Nino, La Nina, IOD), Oceanography (Ocean relief, Temperature, Salinity, Ocean Currents, Tides, Coral reefs & bleaching), Natural Resources (Soil types, Soil erosion & conservation, Forests & vegetation types, Water resources, Mineral resources - Iron ore, Bauxite, Copper, Manganese, Mica, Non-metallic minerals), Energy Resources (Coal, Petroleum, Natural Gas, Nuclear, Solar, Wind, Hydroelectric, Geothermal), Agriculture of India (Cropping patterns, Rice, Wheat, Cotton, Sugarcane, Tea, Coffee, Green Revolution, Blue Revolution, Precision farming), Manufacturing Industries (Iron & steel, Cotton textiles, Petrochemicals, Automobile, Information Technology, Industrial corridors), Human Geography (Demographic transition, Population distribution, Density, Growth, Sex ratio, Literacy, Urbanization, Migration patterns, Scheduled Tribes distribution in India)",
+        "200 Marks Total Paper", p1)
+
+    add("01_APSC", "Assam Public Service Commission (APSC)", "APSC Combined Competitive Exam (CCE)",
+        "Stage 1: Preliminary Exam", "Paper I: General Studies I", "Geography of Assam",
+        "Physiography, Climate, Drainage & Environment of Assam",
+        "Geographical location and administrative boundaries (Inter-state & International borders), Physiographic divisions (Brahmaputra Valley, Barak Valley, Karbi Anglong Hills, Dima Hasao/North Cachar Hills), Geological structure and tectonic setting (Seismic Zone V vulnerability), Drainage System of Assam (Brahmaputra River - Origin, Course, Major North bank tributaries: Subansiri, Ranganadi, Dikrong, Jia Bharali, Gabharu, Belsiri, Dhansiri North, Puthimari, Pagladiya, Manas, Beki, Aie, Champamati, Gaurang, Gangadhar, Sankosh; Major South bank tributaries: Burhi Dihing, Disang, Dikhow, Jhanji, Bhogdoi, Kakodonga, Dhansiri South, Kopili, Kulsi, Dudhnoi, Krishnai, Jinjiram; Majuli Island - World's largest inhabited riverine island; Barak River System - Course, Tributaries: Jiri, Siri, Madhura, Jatinga, Sonai, Rukni, Dhaleswari, Singla, Longai; Surma and Kushiyara branches), Flood and Riverbank Erosion problem in Assam (Causes, Hydro-meteorological factors, Sediment load, Bank erosion at Palasbari, Rohmoria, Majuli, Flood control measures, Brahmaputra Board, Water Resources Department initiatives), Climate of Assam (Sub-tropical humid climate, Seasonal rhythm, Pre-monsoon showers, South-West Monsoon, Retreating monsoon, Temperature & Rainfall distribution), Soils of Assam (Alluvial soil - Old and New alluvium, Red soil, Hill soil, Laterite soil; Soil erosion and soil fertility management), Forest and Wildlife Resources of Assam (Forest cover types - Tropical Wet Evergreen, Semi-Evergreen, Tropical Moist Deciduous, Riverine forests; State forest statistics; 7 National Parks: Kaziranga NP - World Heritage Site, Manas NP - World Heritage Site & Biosphere Reserve, Orang NP, Nameri NP, Raimona NP, Dihing Patkai NP, Dibru-Saikhowa NP - Biosphere Reserve; Wildlife Sanctuaries: Pobitora, Chakrashila - Golden Langur habitat, Hoollongapar Gibbon - Hoolock Gibbon sanctuary, Laokhowa, Burachapori, Bornadi, Panidihing Bird Sanctuary, Bherjan-Borajan-Padumoni; Deepor Beel - Ramsar Wetland Site; Major Faunal species: Greater One-Horned Rhinoceros, Asian Elephant, Royal Bengal Tiger, Pygmy Hog, Golden Langur, Wild Water Buffalo, Hoolock Gibbon, White-Winged Wood Duck / Deo Hah - State Bird, Gangetic River Dolphin / Xihu - State Aquatic Animal; Man-Animal Conflict issues), Mineral & Energy Resources (Petroleum & Natural Gas deposits: Digboi - Asia's first oil well 1889, Naharkatiya, Moran-Hugrijan, Rudrasagar, Lakwa, Geleki, Borholla; Coal deposits: Makum Coalfield, Ledo, Margherita, Dilli-Jeypore; Limestone deposits: Karbi Anglong, Dima Hasao - Dillai Parbat, Umrangso; China clay, Sillimanite, Quartz, Feldspar, Glass sand; Hydropower potential and projects: Karbi Langpi, Kopili, Khandong, Lower Kopili HEP; Non-conventional energy initiatives)",
+        "30-35% Compulsory Assam Weightage", p1)
+
+    add("01_APSC", "Assam Public Service Commission (APSC)", "APSC Combined Competitive Exam (CCE)",
+        "Stage 1: Preliminary Exam", "Paper I: General Studies I", "Indian Polity & Governance",
+        "Constitutional Framework & Political System",
+        "Historical background of the Constitution (Regulating Act 1773 to Independence Act 1947), Constituent Assembly (Making of Constitution, Committees, Drafting process, Enactment & Commencement), Preamble (Philosophical foundations, Sovereign, Socialist, Secular, Democratic, Republic, Justice, Liberty, Equality, Fraternity, Amendment of Preamble), Salient features of Indian Constitution, Union and its Territory (Articles 1-4, Reorganization of States), Citizenship (Articles 5-11, Citizenship Act 1955, CAA, NRC, Overseas Citizenship), Fundamental Rights (Articles 12-35: Right to Equality 14-18, Right to Freedom 19-22, Right against Exploitation 23-24, Right to Freedom of Religion 25-28, Cultural & Educational Rights 29-30, Right to Constitutional Remedies 32 - Writs: Habeas Corpus, Mandamus, Prohibition, Certiorari, Quo-Warranto), Directive Principles of State Policy (Articles 36-51: Socialistic, Gandhian, Liberal-Intellectual principles, Fundamental Rights vs DPSP conflicts), Fundamental Duties (Article 51A, Swaran Singh Committee, 42nd & 86th Amendments), Amendment of the Constitution (Article 368, Types of amendments, Basic Structure Doctrine - Shankari Prasad, Golaknath, Kesavananda Bharati, Minerva Mills cases), System of Government (Parliamentary vs Presidential, Federal vs Unitary, Center-State Relations: Legislative, Administrative, Financial relations, Inter-State Council, Zonal Councils, Finance Commission, GST Council), Emergency Provisions (National Emergency Article 352, President's Rule / State Emergency Article 356, Financial Emergency Article 360), Union Executive (President: Election, Qualifications, Powers, Pardoning power Article 72, Impeachment; Vice-President; Prime Minister; Union Council of Ministers; Cabinet Committees; Attorney General of India), Union Legislature / Parliament (Rajya Sabha & Lok Sabha composition, Presiding officers: Speaker, Chairman; Parliamentary procedures, Sessions, Quorum, Motions, Question Hour, Zero Hour; Legislative procedure: Ordinary Bills, Money Bills Article 110, Financial Bills, Constitution Amendment Bills; Parliamentary Committees: PAC, Estimates, COPU, Standing Committees; Parliamentary Privileges), State Executive (Governor: Appointment, Powers, Discretionary powers, Constitutional role; Chief Minister; State Council of Ministers; Advocate General of the State), State Legislature (Vidhan Sabha & Vidhan Parishad structure, legislative procedures, powers), Judiciary (Supreme Court of India: Composition, Appointment of Judges - Collegium system, NJAC controversy, Jurisdiction: Original, Appellate, Advisory Article 143, Review, Writ jurisdiction Article 32, Judicial Review, Judicial Activism, Public Interest Litigation / PIL; High Courts: Composition, Appointment, Jurisdiction Article 226, Gauhati High Court jurisdiction over Assam, Nagaland, Mizoram, Arunachal Pradesh; Subordinate Courts: District Judges, Sessions Judges, Civil Judges, Judicial Magistrates, Fast Track Courts, Gram Nyayalayas, Lok Adalats), Local Self-Government (73rd Constitutional Amendment Act 1992 - Panchayati Raj Institutions: 3-tier structure, Compulsory & Voluntary provisions, 11th Schedule 29 functional items, State Election Commission, State Finance Commission, Assam Panchayat Act 1994; 74th Constitutional Amendment Act 1992 - Urban Local Bodies: Municipal Corporations, Municipal Boards, Town Committees, 12th Schedule 18 functional items, Guwahati Municipal Corporation / GMC Act), Special Provisions for Special Categories (Sixth Schedule of the Constitution - Administration of Tribal Areas in Assam, Meghalaya, Tripura, Mizoram: Autonomous District Councils - BTR / Bodoland Territorial Region, Karbi Anglong Autonomous Council / KAAC, North Cachar Hills Autonomous Council / NCHAC - Dima Hasao; Powers, Functioning, Village Councils; Statutory Autonomous Councils in Assam: Mising, Rabha Hasong, Tiwa, Deori, Sonowal Kachari, Thengal Kachari Autonomous Councils; Fifth Schedule vs Sixth Schedule comparison; Special Category States, Article 371A to 371J provisions), Constitutional & Non-Constitutional Bodies (Election Commission of India, UPSC & APSC, CAG of India, National Commissions for SC, ST, OBC; NITI Aayog, NHRC & AHRC, Central Information Commission / State Information Commission, CVC, CBI, Lokpal & Lokayukta of Assam)",
+        "200 Marks Total Paper", p1)
+
+    add("01_APSC", "Assam Public Service Commission (APSC)", "APSC Combined Competitive Exam (CCE)",
+        "Stage 1: Preliminary Exam", "Paper I: General Studies I", "Economy of India & Assam",
+        "Macroeconomics, Public Finance & Economic Landscape of Assam",
+        "National Income Accounting (GDP, GNP, NNP, GVA, Factor Cost, Market Price, Real vs Nominal GDP, Green GDP), Economic Growth vs Economic Development, Human Development Index (HDI), Multidimensional Poverty Index (MPI), Sustainable Development Goals (SDGs), Planning in India (History of Five Year Plans, NITI Aayog - structure, objectives, Atal Innovation Mission), Monetary Policy (Reserve Bank of India - functions, Quantitative instruments: Repo Rate, Reverse Repo Rate, SDF, MSF, Bank Rate, CRR, SLR, Open Market Operations; Qualitative instruments; Monetary Policy Committee / MPC, Inflation Targeting framework), Inflation (Concepts, Demand-pull, Cost-push, CPI, WPI, Core Inflation, Inflation spiral, Measures to control inflation), Banking System in India (Commercial Banks, Scheduled Banks, Public Sector Banks consolidation, Regional Rural Banks, Small Finance Banks, Payments Banks, Non-Banking Financial Companies / NBFCs, NPA crisis, IBC 2016, SARFAESI Act, Digital Banking, UPI, CBDC / e-Rupee), Financial Markets (Money Market - Call money, Treasury bills, Commercial paper, Certificate of deposit; Capital Market - Primary & Secondary markets, Shares, Debentures, Mutual Funds, SEBI regulations, Stock Exchanges - BSE, NSE), Public Finance & Budgeting (Union Budget, Components of Revenue Budget & Capital Budget, Revenue Receipts, Capital Receipts, Revenue Expenditure, Capital Expenditure, Fiscal Deficit, Revenue Deficit, Primary Deficit, FRBM Act 2003, Public Debt management), Taxation System (Direct Taxes - Income tax, Corporate tax; Indirect Taxes - GST structure, CGST, SGST, IGST, GST Council, Direct Tax Code proposals, Tax reforms), External Sector (Balance of Payments - Current Account & Capital Account, Foreign Exchange Reserves, Exchange Rate determination, FDI vs FPI, Foreign Trade Policy, WTO, Trade agreements), Economy of Assam (State Gross Domestic Product / GSDP composition, Sectoral contribution: Agriculture, Industry, Services; Agriculture in Assam - Monocropping, Rice production, High-yielding varieties, Assam Agribusiness and Rural Transformation Project / APART, Organic farming initiatives; Tea Industry of Assam - History, Acreage, Production, Small tea growers contribution, Guwahati Tea Auction Centre / GTAC, Problems facing tea industry; Petroleum & Petrochemical Sector - Oil exploration by OIL & ONGC, Refineries: Digboi, Guwahati, Bongaigaon, Numaligarh / NRL expansion, Brahmaputra Cracker and Polymer Limited / BCPL at Lepetkata, Assam Gas Company Limited / AGCL, Assam Petro-chemicals Limited / APL at Namrup; Sericulture of Assam - Muga Silk / Golden Silk with GI tag, Eri Silk / Endi / Ahimsa silk, Pat Silk / Mulberry, Tasar silk, Sualkuchi silk weaving cluster; Traditional Cottage Industries - Bell metal industry of Sarthebari with GI tag, Brass craft of Hajo, Terracotta craft of Asharikandi, Bamboo & Cane craft, Handloom weaving; Infrastructure & Connectivity - Bridges over Brahmaputra: Saraighat, New Saraighat, Kolia Bhomora, New Bhomora, Naranarayan Setu, Bogibeel Rail-cum-Road bridge, Dhola-Sadiya / Bhupen Hazarika bridge, Upcoming Kumarikata-Gohpur underwater tunnel; Inland Waterways: National Waterway 2 / NW-2 on Brahmaputra (Dhubri to Sadiya), Pandu Multi-modal terminal, Jogighapa Multi-Modal Logistics Park / MMLP; Act East Policy and North East Economic Corridor; Assam State Flagship Welfare & Economic Schemes: Orunodoi 3.0, Mission Basundhara 3.0, Mukhya Mantri Nijut Moina scheme, Atmanirbhar Asom Abhijan, Pragyan Bharati, Arundhati Gold Scheme, Amrit Brikshya Andolan, Swanirbhar Naari, Mukhya Mantri Lok Sevak Seba, Mukhya Mantri Mahila Udyamita Abhiyan)",
+        "30-35% Compulsory Assam Weightage", p1)
+
+    # =========================================================================
+    # 01. APSC CCE PRELIMS PAPER II (CSAT)
+    # =========================================================================
+    add("01_APSC", "Assam Public Service Commission (APSC)", "APSC Combined Competitive Exam (CCE)",
+        "Stage 1: Preliminary Exam", "Paper II: General Studies II (CSAT)", "Quantitative Aptitude & Mathematics",
+        "Class X Arithmetic & Numerical Ability",
+        "Number System, Real numbers, Divisibility rules, Prime factorization, HCF and LCM applications, Fractions, Decimals, Surds & Indices, Simplification & BODMAS, Percentage calculations, Profit, Loss and Discount, Marked price, Successive discounts, Simple Interest (SI) and Compound Interest (CI) with annual/half-yearly compounding, Ratio and Proportion, Direct and Inverse proportions, Third/Fourth proportional, Mean proportional, Partnership and Profit sharing ratio, Average, Weighted average, Mixtures and Alligation, Time and Work, Alternate work, Efficiency ratios, Pipes and Cisterns (Inlet/Outlet filling/emptying problems), Time, Speed and Distance, Average speed, Relative speed, Problems on Trains (Crossing stationary/moving objects, bridges, platforms), Boats and Streams (Upstream, Downstream, Still water speed), Races and Circular tracks, Mensuration 2D: Area and Perimeter of Triangles (Equilateral, Isosceles, Scalene, Heron's formula), Quadrilaterals (Rectangle, Square, Parallelogram, Rhombus, Trapezium), Circles, Sectors, Rings; Mensuration 3D: Surface Area and Volume of Cubes, Cuboids, Right circular Cylinders, Cones, Spheres, Hemispheres, Frustums; Basic Statistics: Arithmetic Mean, Median, Mode, Range, Standard Deviation basics",
+        "80 Questions / 200 Marks (Min 33% / 66 Marks Qualifying)", p1)
+
+    add("01_APSC", "Assam Public Service Commission (APSC)", "APSC Combined Competitive Exam (CCE)",
+        "Stage 1: Preliminary Exam", "Paper II: General Studies II (CSAT)", "Logical Reasoning & Mental Ability",
+        "Verbal, Analytical & Non-Verbal Reasoning",
+        "Analogies (Semantic, Number, Letter), Classification / Odd One Out, Series Completion (Number series, Letter series, Alpha-numeric series, Mixed series, Continuous pattern series), Coding and Decoding (Letter coding, Number coding, Substitution, Deciphering message codes), Blood Relations (Family tree, Direct/Indirect relations, Coded relations), Direction and Distance Sense Test (Shadow problems, Pythagoras theorem applications, Turns and Cardinal directions), Seating Arrangements (Linear single/parallel rows, Circular facing center/outside, Square/Rectangular table, Complex matrix arrangements), Order and Ranking (Position from left/right, Total persons, Interchanging positions), Syllogisms (Venn diagram method, Statements & Conclusions, Categorical propositions, Either-or cases, Possibility cases), Logical Venn Diagrams (Geometric diagrams, Intersection sets), Mathematical Operations (Symbol substitution, Equation balancing), Clocks and Calendars (Angle between hands, Reflex angle, Faulty clocks, Odd days calculation, Day of the week on any date, Leap years), Cube and Dice (Opposite faces, Unfolded dice nets, Painted cubes cutting), Critical Reasoning: Statement and Assumptions (Implicit/Explicit assumptions), Statement and Arguments (Strong vs Weak arguments), Statement and Course of Action (Feasible administrative actions), Cause and Effect, Statement and Conclusions / Inferences, Decision Making and Problem Solving (Administrative case scenarios, Ethical dilemma choices, Resource prioritization), Non-Verbal Reasoning: Series, Analogies, Classification of Figures, Analytical Reasoning (Counting triangles, squares, rectangles, straight lines), Mirror Images and Water Images, Embedded Figures, Completion of Incomplete Patterns, Paper Folding and Paper Cutting, Rule Detection",
+        "80 Questions / 200 Marks (Min 33% / 66 Marks Qualifying)", p1)
+
+    add("01_APSC", "Assam Public Service Commission (APSC)", "APSC Combined Competitive Exam (CCE)",
+        "Stage 1: Preliminary Exam", "Paper II: General Studies II (CSAT)", "Comprehension & Data Interpretation",
+        "Reading Comprehension & Data Representation",
+        "Unseen English Reading Comprehension passages covering Socio-Economic, Environmental, Philosophical, Scientific, and Governance themes; Contextual vocabulary, Central idea, Primary purpose, Author's tone, Direct factual questions, Critical inference, Logical deductions, Assumptions underlying the passage; Interpersonal Skills including Communication Skills; Data Interpretation (Class X Level): Tabular Data representation, Line Graphs, Simple and Composite Bar Charts, Pie Charts (Single & Dual pie charts with percentage/degree conversion), Histograms, Frequency Polygons, Data Sufficiency (Evaluating sufficiency of Data Statements to answer analytical problems)",
+        "80 Questions / 200 Marks (Min 33% / 66 Marks Qualifying)", p1)
+
+    # =========================================================================
+    # 01. APSC CCE MAINS (PAPERS 1 TO 6)
+    # =========================================================================
+    p2 = "01_APSC/Combined_Competitive_Exam_CCE/02_Mains/SYLLABUS.md"
+
+    add("01_APSC", "Assam Public Service Commission (APSC)", "APSC Combined Competitive Exam (CCE)",
+        "Stage 2: Main Written Exam", "Paper 1: Essay", "Conventional Essay",
+        "Essay Writing on National, Socio-Economic & Philosophical Themes",
+        "Candidates write two in-depth conventional essays (1000-1200 words each) selected from multiple sections: Section A covering Philosophical, Ethical, Cultural, Education, Women Empowerment, and Socio-Economic Development themes; Section B covering Science & Technology, Environmental Challenges, Sustainable Development, International Relations, and North-East & Assam-specific Developmental, Cultural, and Ecological dynamics. Evaluated on structured thinking, clarity of expression, balanced perspective, logical coherence, and depth of analysis",
+        "250 Marks (3 Hours)", p2)
+
+    add("01_APSC", "Assam Public Service Commission (APSC)", "APSC Combined Competitive Exam (CCE)",
+        "Stage 2: Main Written Exam", "Paper 2: General Studies I", "Indian Heritage, History & Geography",
+        "Indian Culture, Modern History, World History, Society & Geography",
+        "Indian Culture & Heritage: Salient aspects of Art forms, Literature, and Architecture from Ancient to Modern times; Modern Indian History: Significant events, personalities, and issues from the middle of the eighteenth century until the present; The Freedom Struggle: Its various stages and important contributors/contributions from different parts of the country; Post-independence consolidation and reorganization within the country; History of the World: Events from 18th century such as Industrial Revolution, World Wars, Redrawal of national boundaries, Colonization, Decolonization, Political philosophies like Communism, Capitalism, Socialism - their forms and effect on the society; Salient features of Indian Society, Diversity of India; Role of women and women's organization, Population and associated issues, Poverty and developmental issues, Urbanization, their problems and their remedies; Effects of Globalization on Indian society; Social empowerment, Communalism, Regionalism & Secularism; Salient features of world's physical geography; Distribution of key natural resources across the world (including South Asia and the Indian sub-continent); Factors responsible for the location of primary, secondary, and tertiary sector industries in various parts of the world (including India); Important Geophysical phenomena such as Earthquakes, Tsunami, Volcanic activity, Cyclone etc., Geographical features and their location-changes in critical geographical features (including water-bodies and ice-caps) and in flora and fauna and the effects of such changes",
+        "250 Marks (3 Hours)", p2)
+
+    add("01_APSC", "Assam Public Service Commission (APSC)", "APSC Combined Competitive Exam (CCE)",
+        "Stage 2: Main Written Exam", "Paper 3: General Studies II", "Governance, Constitution, Polity, Social Justice & IR",
+        "Constitutional Law, Governance, Social Sector Initiatives & Foreign Policy",
+        "Indian Constitution: Historical underpinnings, evolution, features, amendments, significant provisions and basic structure; Functions and responsibilities of the Union and the States, issues and challenges pertaining to the federal structure, devolution of powers and finances up to local levels and challenges therein; Separation of powers between various organs dispute redressal mechanisms and institutions; Comparison of the Indian constitutional scheme with that of other countries; Parliament and State legislatures: Structure, functioning, conduct of business, powers & privileges and issues arising out of these; Structure, organization and functioning of the Executive and the Judiciary: Ministries and Departments of the Government; Pressure groups and formal/informal associations and their role in the Polity; Salient features of the Representation of People's Act; Appointment to various Constitutional posts, powers, functions and responsibilities of various Constitutional Bodies; Statutory, regulatory and various quasi-judicial bodies; Government policies and interventions for development in various sectors and issues arising out of their design and implementation; Development processes and the development industry: The role of NGOs, SHGs, various groups and associations, donors, charities, institutional and other stakeholders; Welfare schemes for vulnerable sections of the population by the Centre and States and the performance of these schemes; Mechanisms, laws, institutions and Bodies constituted for the protection and betterment of these vulnerable sections; Issues relating to development and management of Social Sector/Services relating to Health, Education, Human Resources; Issues relating to poverty and hunger; Important aspects of governance, transparency and accountability, e-governance applications, models, successes, limitations, and potential; Citizens charters, transparency & accountability and institutional and other measures; Role of civil services in a democracy; India and its neighborhood- relations; Bilateral, regional and global groupings and agreements involving India and/or affecting India's interests; Effect of policies and politics of developed and developing countries on India's interests, Indian diaspora; Important International institutions, agencies and fora: Their structure, mandate",
+        "250 Marks (3 Hours)", p2)
+
+    add("01_APSC", "Assam Public Service Commission (APSC)", "APSC Combined Competitive Exam (CCE)",
+        "Stage 2: Main Written Exam", "Paper 4: General Studies III", "Technology, Economic Dev, Biodiversity, Security & Disaster Mgmt",
+        "Economic Growth, Agriculture, Infrastructure, S&T, Ecology & Internal Security",
+        "Indian Economy and issues relating to planning, mobilization of resources, growth, development and employment; Inclusive growth and issues arising from it; Government Budgeting; Major crops: Cropping patterns in various parts of the country, different types of irrigation and irrigation systems storage, transport and marketing of agricultural produce and issues and related constraints; E-technology in the aid of farmers; Issues related to direct and indirect farm subsidies and minimum support prices; Public Distribution System (PDS): Objectives, functioning, limitations, revamping; Issues of buffer stocks and food security; Technology missions; Economics of animal-rearing; Food processing and related industries in India: Scope and significance, location, upstream and downstream requirements, supply chain management; Land reforms in India; Effects of liberalization on the economy, changes in industrial policy and their effects on industrial growth; Infrastructure: Energy, Ports, Roads, Airports, Railways etc.; Investment models; Science and Technology: Developments and their applications and effects in everyday life; Achievements of Indians in science & technology; Indigenization of technology and developing new technology; Awareness in the fields of IT, Space, Computers, Robotics, Nanotechnology, Bio-technology and issues relating to intellectual property rights (IPR); Conservation, environmental pollution and degradation, environmental impact assessment (EIA); Disaster and disaster management (Floods, Landslides, Earthquakes mitigation in Assam); Linkages between development and spread of extremism; Role of external state and non-state actors in creating challenges to internal security; Challenges to internal security through communication networks, role of media and social networking sites in internal security challenges, basics of cyber security; Money-laundering and its prevention; Security challenges and their management in border areas: Linkages of organized crime with terrorism; Various Security forces and agencies and their mandate",
+        "250 Marks (3 Hours)", p2)
+
+    add("01_APSC", "Assam Public Service Commission (APSC)", "APSC Combined Competitive Exam (CCE)",
+        "Stage 2: Main Written Exam", "Paper 5: General Studies IV", "Ethics, Integrity & Aptitude",
+        "Ethics, Moral Philosophy, Civil Service Values & Applied Case Studies",
+        "Ethics and Human Interface: Essence, determinants and consequences of Ethics in-human actions; Dimensions of ethics; Ethics - in private and public relationships; Human Values - lessons from the lives and teachings of great leaders, reformers and administrators; Role of family society and educational institutions in inculcating values; Attitude: Content, structure, function; Its influence and relation with thought and behaviour; Moral and political attitudes; Social influence and persuasion; Aptitude and foundational values for Civil Service: Integrity, impartiality and non-partisanship, objectivity, dedication to public service, empathy, tolerance and compassion towards the weaker-sections; Emotional intelligence: Concepts, and their utilities and application in administration and governance; Contributions of moral thinkers and philosophers from India and world (including Mahapurusha Srimanta Sankardeva, Madhavdeva, Mahatma Gandhi, Swami Vivekananda, Kautilya); Public/Civil service values and Ethics in Public administration: Status and problems; Ethical concerns and dilemmas in government and private institutions; Laws, rules, regulations and conscience as sources of ethical guidance; Accountability and ethical governance; Strengthening of ethical and moral values in governance; Ethical issues in international relations and funding; Corporate governance; Probity in Governance: Concept of public service; Philosophical basis of governance and probity; Information sharing and transparency in government, Right to Information (RTI), Codes of Ethics, Codes of Conduct, Citizen's Charters, Work culture, Quality of service delivery, Utilization of public funds, challenges of corruption; Case Studies on above issues covering complex administrative decisions, conflict of interest, ethical dilemmas, disaster response, public distribution irregularities, and law enforcement scenarios",
+        "250 Marks (3 Hours)", p2)
+
+    add("01_APSC", "Assam Public Service Commission (APSC)", "APSC Combined Competitive Exam (CCE)",
+        "Stage 2: Main Written Exam", "Paper 6: General Studies V", "Assam Paper",
+        "Comprehensive History, Culture, Geography, Polity, Economy & Ecology of Assam",
+        "History, Art, Culture, Literature, Festivals and Heritage of Assam: Pre-history to modern period; Ancient kingdoms of Pragjyotisha & Kamarupa, epigraphic records; Medieval dynasties: Ahom administration, military strategies, Paik system, Saraighat, Itakhuli, Koch kingdom of Naranarayan & Chilarai, Kachari and Chutiya kingdoms; British annexation, peasant revolts (Phulaguri, Patharughat), 1857 revolt in Assam, Freedom movement, Cabinet mission resistance led by Lokapriya Gopinath Bordoloi; Neo-Vaishnavite movement of Srimanta Sankardeva, Satras, Namghars, Ankiya Naat, Borgeet, Sattriya classical dance; Tribal communities (Bodo, Mishing, Karbi, Dimasa, Rabha, Tiwa, Deori, Sonowal) traditions, folklore, architecture, Bihu festivals; Geography of Assam: Physiography (Brahmaputra & Barak valleys, Hill regions), River drainage networks, Hydrology, Flood and riverbank erosion dynamics and mitigation; Climate, agro-climatic zones, soils, natural resources (Oil, Gas, Coal, Limestone); 7 National parks, Wildlife sanctuaries, Ramsar wetland (Deepor Beel), Endemic biodiversity, conservation strategies, Man-animal conflict; Polity and Administration of Assam: State government machinery, Assam Legislative Assembly, Secretariat administration, District administration; Panchayati Raj Institutions in Assam (Assam Panchayat Act 1994, 3-tier PRIs), Urban Local Bodies; Sixth Schedule administration in Assam: Bodoland Territorial Region (BTR), Karbi Anglong Autonomous Council (KAAC), North Cachar Hills Autonomous Council (NCHAC); Statutory Autonomous Councils; Border disputes (Inter-state boundaries with Meghalaya, Mizoram, Nagaland, Arunachal Pradesh, International borders with Bangladesh & Bhutan); Economy of Assam: State Gross Domestic Product (GSDP) composition, Agriculture and allied sectors, Rice productivity, APART; Tea Industry: History, Small tea growers, production, tea auction, challenges; Petrochemicals and Mineral sectors (Digboi, Guwahati, Bongaigaon, Numaligarh refineries, BCPL, AGCL, APL); Sericulture (Muga GI tag, Eri, Pat) and Handloom industry (Sualkuchi, Sarthebari bell metal); Transport, logistics, and infrastructure: Bridges over Brahmaputra, Multi-modal logistics park Jogighapa, Act East Policy and North-East trade corridor; State Flagship Welfare Schemes: Orunodoi 3.0, Mission Basundhara 3.0, Mukhya Mantri Nijut Moina, Atmanirbhar Asom, Swanirbhar Naari, Amrit Brikshya Andolan",
+        "250 Marks (3 Hours)", p2)
+
+    # =========================================================================
+    # 01. APSC ENGINEERING SERVICES (AE & JE)
+    # =========================================================================
+    p_engg = "01_APSC/Engineering_Services_AE_JE/SYLLABUS.md"
+
+    add("01_APSC", "Assam Public Service Commission (APSC)", "APSC Assistant Engineer (AE) & Junior Engineer (JE)",
+        "Screening Test", "Paper I: General Studies", "General Studies & Engineering Aptitude",
+        "General Awareness, Current Affairs, Assam GK & Engineering Aptitude",
+        "Current events of National and State importance, History and Geography of Assam, Indian Constitution and Governance, Basic Quantitative Aptitude, Logical Reasoning, General English grammar and comprehension",
+        "100 Marks (100 MCQs)", p_engg)
+
+    add("01_APSC", "Assam Public Service Commission (APSC)", "APSC Assistant Engineer (AE) & Junior Engineer (JE)",
+        "Screening Test", "Paper II: Civil Engineering", "Civil Engineering Discipline",
+        "Structural, Geotechnical, Water Resources & Environmental Engineering",
+        "Building Materials & Construction: Cement, Mortar, Concrete, Timber, Steel, Bricks, Tiles; Solid Mechanics / Strength of Materials: Stress-Strain, Elastic constants, Shear Force & Bending Moment Diagrams, Deflection of Beams, Columns & Struts, Torsion, Mohr's Circle; Structural Analysis: Determinate and Indeterminate structures, Truss analysis, Moment Distribution Method, Slope Deflection Method, Matrix methods; Design of RC Structures: Limit State Method, Working Stress Method, Design of Beams, Slabs, Columns, Footings, Prestressed Concrete basics; Design of Steel Structures: Tension members, Compression members, Beams, Plate Girders, Welded & Bolted connections; Fluid Mechanics & Hydraulics: Fluid properties, Pressure measurement, Buoyancy, Bernoulli's equation, Pipe flow, Laminar & Turbulent flow, Open Channel Flow (Manning & Chezy formulas, Hydraulic Jump), Pumps and Hydraulic Turbines; Hydrology & Water Resources: Hydrological cycle, Precipitation, Runoff, Hydrographs, Flood estimation and routing, Irrigation methods, Gravity dams, Spillways, Canal design, Flood management in Assam; Soil Mechanics & Foundation Engineering: Phase relationships, Classification of soils, Permeability, Compaction, Consolidation, Shear strength of soils, Earth pressure theories, Bearing capacity of shallow foundations, Pile foundations, Slope stability; Transportation Engineering: Highway geometric design, Flexible and Rigid pavement design, Traffic engineering, Highway materials testing, Railway & Airport engineering basics; Environmental Engineering: Water demand, Water quality standards, Water treatment processes (Sedimentation, Filtration, Disinfection), Wastewater collection and treatment (Activated sludge, Trickling filters), Solid waste management, Air pollution; Surveying & Estimation: Chain survey, Compass survey, Leveling, Theodolite, Tacheometry, Total Station, GPS & GIS basics, Estimation, Costing, Rate Analysis, Specifications, Contracts & Tenders",
+        "100 Marks (Degree / Diploma Standard)", p_engg)
+
+    add("01_APSC", "Assam Public Service Commission (APSC)", "APSC Assistant Engineer (AE) & Junior Engineer (JE)",
+        "Screening Test", "Paper II: Mechanical Engineering", "Mechanical Engineering Discipline",
+        "Thermodynamics, Fluid Machinery, Design & Manufacturing",
+        "Thermodynamics: Laws of thermodynamics, Entropy, Exergy, Air standard cycles (Otto, Diesel, Dual, Brayton), Rankine cycle, Refrigeration cycles (Vapour compression & absorption); Heat Transfer: Conduction (Fourier's law), Convection (Natural & Forced), Radiation (Stefan-Boltzmann law), Heat Exchangers (LMTD & NTU methods); Fluid Mechanics & Machinery: Boundary layer theory, Flow through pipes, Pelton wheel, Francis turbine, Kaplan turbine, Centrifugal pumps, Reciprocating pumps, Cavitation; Theory of Machines: Kinematic links and pairs, Gears and Gear Trains, Flywheels, Governors, Balancing of rotating and reciprocating masses, Mechanical Vibrations (Single degree of freedom free/forced vibrations); Machine Design: Design of shafts, Keys, Couplings, Threaded fasteners, Welded joints, Helical springs, Sliding and Rolling contact bearings, Fatigue failure (S-N curve, Goodman/Soderberg criteria); Manufacturing Science: Metal casting processes, Welding (Arc, TIG, MIG, Gas), Metal forming (Rolling, Forging, Extrusion), Metal cutting and Machine tools (Lathe, Milling, Shaping), CNC machining, Unconventional machining (EDM, ECM, USM), Metrology and Inspection; Industrial Engineering & Operations Research: Linear Programming (Simplex method), Transportation models, CPM/PERT network analysis, Inventory control (EOQ models), Forecasting, Production Planning and Control",
+        "100 Marks (Degree / Diploma Standard)", p_engg)
+
+    add("01_APSC", "Assam Public Service Commission (APSC)", "APSC Assistant Engineer (AE) & Junior Engineer (JE)",
+        "Screening Test", "Paper II: Electrical Engineering", "Electrical Engineering Discipline",
+        "Circuits, Machines, Power Systems, Control & Power Electronics",
+        "Circuit Theory & Network Analysis: KCL, KVL, Nodal and Mesh analysis, Network Theorems (Thevenin, Norton, Superposition, Maximum Power Transfer), Transient analysis of RL, RC, RLC circuits, Sinusoidal steady-state analysis, Three-phase circuits, Two-port networks; Electromagnetic Fields: Coulomb's Law, Gauss's Law, Ampere's Law, Biot-Savart Law, Faraday's Law, Maxwell's Equations, Boundary conditions; Electrical Machines: Single phase and Three phase Transformers (Equivalent circuit, Losses, Efficiency, Regulation, Parallel operation), DC Generators and Motors (Characteristics, Starting, Speed control, Braking), Three-phase Induction Motors (Torque-speed characteristics, Starting methods), Synchronous Machines (Alternators, Voltage regulation, Synchronous motors, V-curves); Power Systems: Power generation technologies, Transmission line models and parameters, Corona, Insulators, Underground cables, Power system analysis (Per unit system, Gauss-Seidel & Newton-Raphson load flow), Symmetrical and Unsymmetrical fault analysis, Power System Protection (Overcurrent, Differential, Distance relays, Circuit breakers: Vacuum, SF6), Economic load dispatch; Control Systems: Open-loop and Closed-loop systems, Transfer functions, Block diagram reduction, Signal flow graphs, Time response analysis (P, PI, PID controllers), Routh-Hurwitz stability criterion, Root Locus technique, Frequency response (Bode plots, Nyquist plots), State-space representation; Electrical & Electronic Measurements: PMMC, Moving Iron, Electrodynamometer instruments, Wattmeters, Energy meters, AC bridges (Maxwell, Schering, Wien), Digital multimeters, Oscilloscopes, Instrument transformers (CT/PT); Analog & Digital Electronics: Diodes, BJT, MOSFET amplifiers, Operational Amplifiers (Op-Amps) and applications, Combinational logic circuits, Sequential circuits (Flip-flops, Counters, Shift registers), Microprocessors (8085/8086 architecture); Power Electronics: Power semiconductor devices (Diode, Thyristor/SCR, MOSFET, IGBT), Phase-controlled rectifiers, DC-DC Choppers (Buck, Boost, Buck-Boost), Inverters (VSI, CSI, PWM techniques), AC voltage controllers",
+        "100 Marks (Degree / Diploma Standard)", p_engg)
+
+    # =========================================================================
+    # 02. ADRE (CLASS III & IV)
+    # =========================================================================
+    p_adre_gr3 = "02_ADRE_SLRC/Class_III_Graduate_Level/SYLLABUS.md"
+    p_adre_hs = "02_ADRE_SLRC/Class_III_Higher_Secondary_Level/SYLLABUS.md"
+    p_adre_drv = "02_ADRE_SLRC/Class_III_Driver_Technical/SYLLABUS.md"
+    p_adre_gr4 = "02_ADRE_SLRC/Class_IV_HSLC_ClassVIII/SYLLABUS.md"
+
+    add("02_ADRE_SLRC", "Assam Direct Recruitment Commission (ADRE / SLRC / ASSEB)", "ADRE Class III (Graduate Level)",
+        "Written OMR Exam", "Composite Paper", "Social Studies & Assam Context",
+        "History, Geography, Polity & Socio-Economics of Assam & India",
+        "Indian Freedom Movement & National Leaders; History of Assam: Ancient Kamarupa, Ahom rule (Swargadeos, Paik system, Lachit Borphukan, Saraighat battle), British period, 1857 in Assam (Maniram Dewan), Freedom fighters (Kanaklata, Kushal Konwar, Bhogeswari Phukanani, Gopinath Bordoloi); Geography of Assam: Rivers (Brahmaputra & Barak systems, tributaries), National Parks & Wildlife Sanctuaries (Kaziranga, Manas, etc.), Natural resources (Tea, Oil, Coal, Timber); Indian Constitution & Polity: Preamble, Fundamental Rights & Duties, President, Governor, Assam Legislative Assembly, Panchayati Raj System; Assam Economy & Flagship Schemes: Agriculture, Handloom, Orunodoi 3.0, Mission Basundhara, Nijut Moina, Atmanirbhar Asom",
+        "Class X Standard (~30 Marks)", p_adre_gr3)
+
+    add("02_ADRE_SLRC", "Assam Direct Recruitment Commission (ADRE / SLRC / ASSEB)", "ADRE Class III (Graduate Level)",
+        "Written OMR Exam", "Composite Paper", "General Knowledge & Current Affairs",
+        "National, International & State Level Current Events & Culture",
+        "Current events of Assam, India & World, Sports tournaments and champions, Honours & Prestigious Awards, Eminent personalities of Assam, Sahitya Akademi & Jnanpith awardees of Assam, State symbols of Assam, Cultural festivals (Rongali, Kongali, Bhogali Bihu, Ali-Aye-Ligang, Baishagu), Historical monuments of Assam (Rang Ghar, Kareng Ghar, Talatal Ghar, Kamakhya Temple)",
+        "Class X Standard (~30 Marks)", p_adre_gr3)
+
+    add("02_ADRE_SLRC", "Assam Direct Recruitment Commission (ADRE / SLRC / ASSEB)", "ADRE Class III (Graduate Level)",
+        "Written OMR Exam", "Composite Paper", "General Mathematics & Quantitative Aptitude",
+        "Class X Standard Arithmetic, Algebra & Mensuration",
+        "Number System, Simplification, HCF & LCM, Fractions and Decimals, Square Roots & Cube Roots, Percentage, Ratio & Proportion, Partnership, Average, Profit & Loss, Simple Interest & Compound Interest, Time & Work, Pipes & Cisterns, Speed, Time & Distance, Problems on Trains, Boats & Streams, Mensuration (Perimeter, Area and Volume of 2D/3D figures), Basic Statistics & Data Interpretation",
+        "Class X Standard (~30 Marks)", p_adre_gr3)
+
+    add("02_ADRE_SLRC", "Assam Direct Recruitment Commission (ADRE / SLRC / ASSEB)", "ADRE Class III (Graduate Level)",
+        "Written OMR Exam", "Composite Paper", "Mental Ability & Logical Reasoning",
+        "Verbal & Non-Verbal Analytical Reasoning",
+        "Verbal Reasoning: Analogies, Classification, Number & Alphabet Series, Coding-Decoding, Blood Relations, Direction Sense Test, Seating Arrangements, Syllogisms, Venn Diagrams, Clocks & Calendars; Non-Verbal Reasoning: Pattern Completion, Mirror & Water Images, Embedded Figures, Paper Folding & Cutting, Figure Series",
+        "Analytical (~25 Marks)", p_adre_gr3)
+
+    add("02_ADRE_SLRC", "Assam Direct Recruitment Commission (ADRE / SLRC / ASSEB)", "ADRE Class III (Graduate Level)",
+        "Written OMR Exam", "Composite Paper", "General English",
+        "English Grammar, Vocabulary & Reading Comprehension",
+        "Spotting Errors, Sentence Improvement, Active & Passive Voice, Direct & Indirect Speech, Fill in the Blanks (Prepositions, Articles, Tenses, Subject-Verb Agreement, Modals), Synonyms, Antonyms, One Word Substitution, Idioms & Phrases, Spelling Correction, Reading Comprehension Passages",
+        "Class X Standard (~25 Marks)", p_adre_gr3)
+
+    add("02_ADRE_SLRC", "Assam Direct Recruitment Commission (ADRE / SLRC / ASSEB)", "ADRE Class III (Graduate Level)",
+        "Written OMR Exam", "Composite Paper", "Computer Applications & Knowledge",
+        "Computer Fundamentals, Windows, MS Office & Internet",
+        "Computer Hardware & Software fundamentals, Operating Systems (Windows/Linux), MS Word (Document formatting, Tables, Mail merge), MS Excel (Cell referencing, Basic formulas, Functions, Charts), MS PowerPoint, Internet browsing, Email etiquette, Cyber security basics, Networking concepts, Common keyboard shortcuts",
+        "Applied Basics (~10 Marks)", p_adre_gr3)
+
+    add("02_ADRE_SLRC", "Assam Direct Recruitment Commission (ADRE / SLRC / ASSEB)", "ADRE Class III (Higher Secondary Level)",
+        "Written OMR Exam", "Composite Paper", "Core Subjects (HSLC Level)",
+        "Social Studies, GK, Mathematics, Reasoning & General English",
+        "Assam History (Ahom rule, British rule, Freedom struggle), Assam Geography (Rivers, hills, national parks, flora & fauna), Indian Polity & Constitution basics, Elementary Mathematics (Percentages, Profit-loss, Ratio-proportion, Simple Interest, Time-work, Speed-distance), Logical reasoning series, English grammar (Tenses, Prepositions, Voice, Narration, Vocabulary), Reading Comprehension",
+        "150 Marks (150 MCQs / 0.25 Negative)", p_adre_hs)
+
+    add("02_ADRE_SLRC", "Assam Direct Recruitment Commission (ADRE / SLRC / ASSEB)", "ADRE Class III (Driver Posts)",
+        "Written OMR & Practical", "Driver Test Paper", "Road Safety & Driving Technicals",
+        "Motor Vehicles Act & Maintenance",
+        "Traffic Signs (Mandatory, Cautionary, Informatory signs), Rules of the road, Overtaking regulations, Lane discipline, Parking rules, Motor Vehicles Act 1988 and recent amendments, Vehicle maintenance and basic mechanics (Engine components, Cooling system, Lubrication, Brakes, Battery, Dashboard indicators, Emergency breakdown protocols), Basic Arithmetic, Assam Highway Geography (NH-27, NH-15), Bridges over Brahmaputra river, Basic English & Regional Language",
+        "100 Marks Written + Track Driving Test", p_adre_drv)
+
+    add("02_ADRE_SLRC", "Assam Direct Recruitment Commission (ADRE / SLRC / ASSEB)", "ADRE Class IV (HSLC & Class VIII Level)",
+        "Written OMR Exam", "Class IV Composite Paper", "Elementary Level Subjects",
+        "GK, Elementary Mathematics, English & Reasoning",
+        "General Knowledge of Assam & India, Elementary Arithmetic (Basic operations, Fractions, Percentages, Simple Interest, Average), Elementary English (Nouns, Pronouns, Verbs, Prepositions, Articles, Opposites, Spellings), Basic Mental Ability (Series, Matching, Relations), Assamese/Regional Language basics",
+        "135 Marks (135 MCQs / 0.25 Negative)", p_adre_gr4)
+
+    # =========================================================================
+    # 03. ASSAM POLICE & UNIFORMED (SLPRB)
+    # =========================================================================
+    p_si = "03_Assam_Police_SLPRB/Sub_Inspector_UB_AB_Commando/SYLLABUS.md"
+    p_const = "03_Assam_Police_SLPRB/Constable_UB_AB_Commando/SYLLABUS.md"
+    p_apro = "03_Assam_Police_SLPRB/APRO_Radio_Communication/SYLLABUS.md"
+    p_forest = "03_Assam_Police_SLPRB/Forestry_Cadres_Forester_Guard/SYLLABUS.md"
+
+    add("03_Assam_Police_SLPRB", "State Level Police Recruitment Board (SLPRB Assam)", "Assam Police Sub-Inspector (UB / AB / Commando)",
+        "Stage 1: Written Exam", "SI Written Paper", "Logical Reasoning, Aptitude & Comprehension",
+        "Analytical & Logical Reasoning, Quantitative Aptitude & Reading Comprehension",
+        "Analytical reasoning, Syllogisms, Statements & Assumptions, Blood Relations, Coding-Decoding, Seating Arrangement, Direction Sense, Arithmetic Aptitude, Data Interpretation, Reading Comprehension",
+        "100 Marks (0.50 Negative Marking)", p_si)
+
+    add("03_Assam_Police_SLPRB", "State Level Police Recruitment Board (SLPRB Assam)", "Assam Police Sub-Inspector (UB / AB / Commando)",
+        "Stage 1: Written Exam", "SI Written Paper", "History & Culture of Assam and India",
+        "Assam Heritage, Folklore & Indian History",
+        "History of Assam (Ancient Kamarupa, Ahom rule, Moamoria rebellion, British period, Freedom movement in Assam), Culture, heritage, festivals, tribal communities of Assam, Classical Sattriya & folk dances (Bihu, Bagurumba, Jhumur), Indian History & Freedom Struggle",
+        "100 Marks (0.50 Negative Marking)", p_si)
+
+    add("03_Assam_Police_SLPRB", "State Level Police Recruitment Board (SLPRB Assam)", "Assam Police Sub-Inspector (UB / AB / Commando)",
+        "Stage 1: Written Exam", "SI Written Paper", "General Knowledge & Current Affairs",
+        "Polity, Geography, Science & Current Affairs",
+        "Indian Constitution & Criminal Justice basics, Geography of India and Assam (Rivers, wildlife, national parks, borders), Economy, Science & Technology, Environment, National & International current affairs, Defense exercises, Sports",
+        "100 Marks (0.50 Negative Marking)", p_si)
+
+    add("03_Assam_Police_SLPRB", "State Level Police Recruitment Board (SLPRB Assam)", "Assam Police Constable (UB / AB / Commando)",
+        "Written Examination", "Constable Written Paper", "Elementary Subjects",
+        "Elementary Arithmetic, General English, General Science, Assam GK & Reasoning",
+        "Elementary Arithmetic (Numbers, LCM/HCF, Percentages, Profit-Loss, Time-Work, Speed-Distance, Average), General English (Prepositions, Articles, Tense correction, Synonyms/Antonyms), General Science (Everyday physics, chemistry, biology, nutrition), Indian History & Assam History, Geography of Assam & India, General Knowledge & Current Affairs, Logical Reasoning & Mental Ability",
+        "50 Marks (100 MCQs @ 0.5 Mark each)", p_const)
+
+    add("03_Assam_Police_SLPRB", "State Level Police Recruitment Board (SLPRB Assam)", "APRO Radio & Communication (SI & Constable)",
+        "Written Examination", "Technical & General Paper", "Technical Physics & Communication",
+        "Radio Physics, Electronics, Mathematics & GK",
+        "Physics & Electronics: Mechanics, Sound & Doppler effect, Electromagnetism, AC circuits, EM wave spectrum & propagation (ground, sky, space waves, ionosphere, antennas), Semiconductors, Diodes, BJT, Logic gates, Boolean algebra, Modulation (AM, FM, PM, PCM), Digital communication basics; 10+2 Mathematics (Algebra, Coordinate geometry, Calculus); General Knowledge, Reasoning & English",
+        "100 Marks (50M Tech + 50M General)", p_apro)
+
+    add("03_Assam_Police_SLPRB", "State Level Police Recruitment Board (SLPRB Assam)", "Forest Guard & Forester Grade-I",
+        "Written & Physical Walk", "Forestry Cadre Paper", "Forestry, Environment & General Knowledge",
+        "Wildlife, Ecology, General Arithmetic & Reasoning",
+        "Forestry, Wildlife conservation, National Parks of Assam, Climate change, Biodiversity of North-East, General Mathematics (Class X level), General English & Comprehension, Assam History & Geography, Logical Reasoning; Physical Endurance Walking Test (26 km in 4 hours for Males / 16 km in 4 hours for Females)",
+        "100 Marks Written + Physical Walk", p_forest)
+
+    # =========================================================================
+    # 04. HEALTH & MEDICAL (DME, DHS, NHM)
+    # =========================================================================
+    p_dme_tech = "04_Health_DME_DHS_NHM/Grade_III_Technical_Paramedical/SYLLABUS.md"
+    p_nhm_cho = "04_Health_DME_DHS_NHM/NHM_Community_Health_Officer_CHO/SYLLABUS.md"
+
+    add("04_Health_DME_DHS_NHM", "Directorate of Medical Education (DME) & DHS Assam", "Grade III Technical (Staff Nurse)",
+        "Written OMR Exam", "Staff Nurse Paper", "Nursing Domain & Medical Sciences",
+        "Core Clinical Nursing & General Awareness",
+        "Anatomy & Physiology, Microbiology, Fundamentals of Nursing (Vitals, Medication administration, Wound care, CPR), Medical-Surgical Nursing (CVS, Respiratory, GI, Neuro disorders), Pharmacology, Community Health Nursing & National health programs, Midwifery & Obstetrical Nursing (Antenatal care, Labour management, High-risk pregnancy), Pediatric Nursing (Growth, Neonatal resuscitation, IMNCI guidelines), Mental Health Nursing, General English, Arithmetic, Assam GK",
+        "100 Marks (70% Nursing + 30% General)", p_dme_tech)
+
+    add("04_Health_DME_DHS_NHM", "Directorate of Medical Education (DME) & DHS Assam", "Grade III Technical (Pharmacist)",
+        "Written OMR Exam", "Pharmacist Paper", "Pharmaceutical Sciences",
+        "Pharmacy Domain, Jurisprudence & General Awareness",
+        "Pharmaceutics (Dosage forms, Formulation, Sterilization), Pharmaceutical Chemistry, Pharmacology & Toxicology (CNS, ANS, CVS, Antibiotics, Toxicity), Pharmacognosy, Hospital & Clinical Pharmacy (ADR monitoring, Drug interactions), Drug Store & Inventory Management (ABC/VED analysis), Pharmaceutical Jurisprudence (Drugs & Cosmetics Act 1940 & Rules 1945, Pharmacy Act 1948, NDPS Act, DPCO), General Studies",
+        "100 Marks (70% Pharmacy + 30% General)", p_dme_tech)
+
+    add("04_Health_DME_DHS_NHM", "Directorate of Medical Education (DME) & DHS Assam", "Grade III Technical (Laboratory Technician)",
+        "Written OMR Exam", "Lab Technician Paper", "Medical Laboratory Technology",
+        "Clinical Pathology, Biochemistry, Microbiology & GK",
+        "Hematology & Blood Banking (CBC, ESR, PT/INR, Coagulation, Blood grouping ABO/Rh, Cross-matching), Clinical Biochemistry (Blood glucose, LFT, RFT, Lipid profile, Electrolytes, Spectrophotometry), Medical Microbiology (Culture media, Gram staining, AFB Ziehl-Neelsen staining, Antibiotic susceptibility testing, Virology HIV/Hepatitis, Parasitology Malaria), Histopathology & Cytology, General Studies",
+        "100 Marks (70% Lab Tech + 30% General)", p_dme_tech)
+
+    add("04_Health_DME_DHS_NHM", "National Health Mission (NHM Assam)", "NHM Community Health Officer (CHO)",
+        "CBT / Written Exam", "CHO Comprehensive Paper", "Community Health & Primary Healthcare",
+        "Public Health Programs, Maternal-Child Care & NCDs",
+        "National Health Programs (RMNCH+A, NTEP, NVBDCP, NLEP), Non-Communicable Diseases (NCD) screening (Hypertension, Diabetes, Cancers), Maternal Health & Antenatal care, Child Health & Universal Immunization Program (UIP), Family Planning & Contraceptive methods, Epidemiology & Communicable disease surveillance, Ayushman Bharat Health & Wellness Centres (HWC), Teleconsultation (e-Sanjeevani), Essential drugs list & Minor ailment management, Assam Health Schemes",
+        "100 Marks (60% Core + 40% General)", p_nhm_cho)
+
+    # =========================================================================
+    # 05. EDUCATION & TEACHER RECRUITMENTS (TET, DSE, DHE)
+    # =========================================================================
+    p_tet_lp = "05_Education_TET_Faculty/Assam_TET_LP_UP/SYLLABUS.md"
+    p_sec_tet = "05_Education_TET_Faculty/Secondary_TET_High_School/SYLLABUS.md"
+
+    add("05_Education_TET_Faculty", "Assam State School Education Board (ASSEB) / SSA", "Assam General & Special TET (Paper I - Lower Primary)",
+        "Single OMR Test", "Paper I (Classes I to V)", "Primary Teacher Eligibility Modules",
+        "Child Pedagogy, Languages (I & II), Mathematics & EVS",
+        "Child Development and Pedagogy (Physical, Cognitive, Emotional, Social development, Piaget, Vygotsky, Bruner, Inclusive education, CWSN, Dyslexia, CCE, Diagnostic/Remedial teaching - 30M); Language I Regional Assamese/Bodo/Bengali/Hindi (LSRW skills, Reading comprehension, Grammar Sandhi/Samasa/Karak - 30M); Language II English (LSRW skills, Grammar Parts of speech/Tenses/Voice/Narration, Comprehension - 30M); Mathematics (Numbers, Fractions, Money, Measurement, Geometry, Pedagogy - 30M); Environmental Studies / EVS (Family, Plants, Animals, Food, Water, Assam Environment & Wildlife, Disaster management, Pedagogy - 30M)",
+        "150 Marks (60% Gen / 55% Reserved Qualifying)", p_tet_lp)
+
+    add("05_Education_TET_Faculty", "Assam State School Education Board (ASSEB) / SSA", "Assam General & Special TET (Paper II - Upper Primary)",
+        "Single OMR Test", "Paper II (Classes VI to VIII)", "Upper Primary Teacher Eligibility Modules",
+        "Child Pedagogy, Languages & Science/Maths/Social Studies Domain",
+        "Child Development and Pedagogy (Adolescent development, Learning theories, Inclusive education - 30M); Language I Regional (30M) & Language II English (30M); Subject Domain (60M): Mathematics & Science for Science teachers (Algebra, Geometry, Mensuration, Physics motion/force/optics, Chemistry reactions/acids-bases-metals, Biology cell/physiology/microorganisms) OR Social Studies for Arts teachers (Ancient/Medieval/Modern Indian History, Assam History, Physical & Economic Geography, Indian Constitution & Polity, Pedagogical issues)",
+        "150 Marks (60% Gen / 55% Reserved Qualifying)", p_tet_lp)
+
+    add("05_Education_TET_Faculty", "Directorate of Secondary Education (DSE)", "Assam Secondary TET (High School) & Higher Secondary TET (PGT)",
+        "Written Exam", "Paper I & Paper II", "Secondary & Senior Secondary Pedagogy",
+        "General Studies, Teaching Aptitude & Post-Graduate Domain",
+        "Paper I: General Studies & Current Affairs (Assam & Indian History, Polity, Geography, Current Events, English, Quantitative Aptitude - 100M); Paper II: Pedagogy & Teaching-Learning (Secondary education aims, NEP 2020, Adolescent psychology, Classroom management, Assessment rubrics) & Subject Specialization (Graduate/Post-Graduate domain in Physics, Chemistry, Maths, Botany, Zoology, History, Pol Science, Economics, English, Assamese - 100M)",
+        "200 Marks Total (Paper I: 100M + Paper II: 100M)", p_sec_tet)
+
+    # =========================================================================
+    # 06. JUDICIARY (GAUHATI HIGH COURT)
+    # =========================================================================
+    p_ajs = "06_Judiciary_Gauhati_HC/Assam_Judicial_Service_AJS/SYLLABUS.md"
+
+    add("06_Judiciary_Gauhati_HC", "Gauhati High Court", "Assam Judicial Service (AJS Grade I, II, III)",
+        "Stage 1: Preliminary Exam", "Prelims Law & Aptitude", "Substantive & Procedural Law",
+        "Core Legal Enactments & General Aptitude",
+        "Constitution of India, Code of Civil Procedure (CPC 1908), Code of Criminal Procedure (CrPC / BNSS), Indian Penal Code (IPC / BNS), Indian Evidence Act (IEA / BSA), Indian Contract Act 1872, Transfer of Property Act 1882, Specific Relief Act 1963, Limitation Act 1963, General Knowledge, Aptitude, English, Official Language of Assam proficiency",
+        "100 Marks (100 MCQs)", p_ajs)
+
+    add("06_Judiciary_Gauhati_HC", "Gauhati High Court", "Assam Judicial Service (AJS Grade I, II, III)",
+        "Stage 2: Main Written Exam", "Papers I to IV", "Comprehensive Judicial Studies",
+        "Civil Law, Criminal Law, State Local Acts & Judgment Writing",
+        "Paper I: General English (Translation, Legal Essay, Precis, Grammar - 100M); Paper II: Civil Law I (CPC, TPA, Indian Contract Act, Specific Relief Act, Indian Partnership Act, Sale of Goods Act - 100M); Paper III: Civil Law II (Constitution of India, Law of Torts, Assam Land and Revenue Regulation 1886, Assam Urban Areas Rent Control Act 1972, Limitation Act - 100M); Paper IV: Criminal Law (IPC/BNS, CrPC/BNSS, Indian Evidence Act/BSA, POCSO Act 2012, NI Act 1881 Ch. XVII, Law of Bail, Framing of Charges, Judgment Writing - 100M)",
+        "400 Marks Total Written (4 Papers @ 100M)", p_ajs)
+
+    # =========================================================================
+    # 07. POWER SECTOR (APDCL, AEGCL, APGCL)
+    # =========================================================================
+    p_power = "07_Power_Sector_APDCL/Assistant_Junior_Manager/SYLLABUS.md"
+
+    add("07_Power_Sector_APDCL", "Assam Power Distribution Company Limited (APDCL)", "Assistant Manager & Junior Manager",
+        "CBT / Written Exam", "AM & JM Composite Paper", "Power Sector Technical & General Studies",
+        "General Aptitude & Electrical Engineering Core",
+        "Part A (40 Marks): General English, Quantitative Aptitude, Logical Reasoning, General Awareness of Assam, Power Sector in India & Assam, Renewable Energy Initiatives; Part B (60 Marks): Electrical Engineering (Power Systems generation, transmission, distribution, load flow, fault analysis, Switchgear & Protection, Electrical Machines, Power Electronics, Control Systems, Circuit Theory, Electrical Safety Rules)",
+        "100 Marks (40M General + 60M Technical)", p_power)
+
+    # =========================================================================
+    # 08. PnRD & RURAL DEVELOPMENT
+    # =========================================================================
+    p_pnrd = "08_PnRD_Rural_Development/Panchayat_Core_GPS_TaxCollector/SYLLABUS.md"
+    p_asrlm = "08_PnRD_Rural_Development/ASRLM_Jeevika_Mission/SYLLABUS.md"
+
+    add("08_PnRD_Rural_Development", "Panchayat & Rural Development (P&RD Assam)", "Gaon Panchayat Secretary (GPS) & Tax Collector",
+        "Written OMR Exam", "P&RD Paper", "Rural Governance & Administration",
+        "Assam Panchayati Raj, Rural Schemes & General Studies",
+        "Assam Panchayat Act 1994, 73rd Constitutional Amendment (3-tier PRIs: Gaon Panchayat, Anchalik Panchayat, Zilla Parishad), Flagship Rural Schemes (MGNREGA, PMAY-G, DAY-NRLM, Swachh Bharat Grameen, NSAP), Assam History, Geography & Culture, Quantitative Aptitude, Logical Reasoning, General English",
+        "100 Marks (100 MCQs)", p_pnrd)
+
+    add("08_PnRD_Rural_Development", "Assam State Rural Livelihoods Mission (ASRLM)", "Block Program Manager (BPM) & Coordinators",
+        "Written Exam", "ASRLM Paper", "Rural Livelihoods & Social Mobilization",
+        "SHG Federations, Micro-finance & Poverty Alleviation",
+        "DAY-NRLM core tenets, Self Help Groups (SHGs), Village Organizations (VOs), Cluster Level Federations (CLFs), Micro-finance, Community Investment Fund (CIF), Vulnerability Reduction Fund (VRF), Farm & Non-farm livelihoods, Skill development (DDU-GKY, RSETI), Rural demographic profile of Assam, Poverty alleviation schemes",
+        "100 Marks", p_asrlm)
+
+    # =========================================================================
+    # 09. TRANSPORT, ASTC & IWT
+    # =========================================================================
+    p_trans = "09_Transport_IWT_ASTC/Transport_Enforcement_Branch/SYLLABUS.md"
+    p_iwt = "09_Transport_IWT_ASTC/Inland_Water_Transport_IWT/SYLLABUS.md"
+
+    add("09_Transport_IWT_ASTC", "Transport Department & ASTC", "Assistant Enforcement Inspector (AEI) & Checker",
+        "Written Exam", "Enforcement Paper", "Transport Enforcement & Road Safety",
+        "Motor Vehicles Act, Traffic Enforcement & General Studies",
+        "Motor Vehicles Act 1988 & Amendments, Traffic rules, road signs, vehicle inspection basics, Assam Geography, Rivers, Bridges & National Highways, General English, Arithmetic, Logical Reasoning",
+        "100 Marks", p_trans)
+
+    add("09_Transport_IWT_ASTC", "Directorate of Inland Water Transport (IWT Assam)", "Inland Water Transport Cadres (Master, Engine Driver, AE IWT)",
+        "Written & Practical", "IWT Technical Paper", "Inland Water Navigation & Marine Engineering",
+        "National Waterways NW-2/NW-16, Marine Propulsion & Safety",
+        "River navigation rules on National Waterway 2 (Brahmaputra) & National Waterway 16 (Barak), Marine diesel engine operation, cooling & fuel systems, propeller & steering maintenance, Life-saving appliances, firefighting on vessels, River ports and multi-modal terminals of Assam (Pandu, Dhubri, Neamati, Silghat, Jogighapa)",
+        "100 Marks + Practical Trade Test", p_iwt)
+
+    # =========================================================================
+    # 10. CORPORATIONS, COOPERATIVES & BOARDS
+    # =========================================================================
+    p_bank = "10_Corporations_Cooperatives_Boards/Assam_Cooperative_Apex_Bank/SYLLABUS.md"
+    p_petro = "10_Corporations_Cooperatives_Boards/AGCL_Gas_Company_APL_Petrochem/SYLLABUS.md"
+    p_seri = "10_Corporations_Cooperatives_Boards/Sericulture_Handloom_Textiles/SYLLABUS.md"
+
+    add("10_Corporations_Cooperatives_Boards", "Assam Cooperative Apex Bank Ltd", "Assistant Manager & Assistant / Cashier",
+        "Online / CBT Exam", "Banking Paper", "Banking Aptitude & Financial Awareness",
+        "Cooperative Banking, Quant, Reasoning & English",
+        "Banking Awareness, RBI guidelines, Cooperative banking structure, Current financial affairs, Assam economy; Quantitative Aptitude (Data interpretation, Number series, Arithmetic word problems); Reasoning Ability (Puzzles, Seating arrangement, Syllogism, Blood relations); English Language (Reading comprehension, Cloze test, Error detection); Computer Aptitude",
+        "100-200 Marks CBT", p_bank)
+
+    add("10_Corporations_Cooperatives_Boards", "Assam Gas Company (AGCL) & Assam Petro-chemicals (APL)", "Graduate Engineer Trainee (GET) & Plant Operator",
+        "CBT / Written Exam", "Technical & Aptitude Paper", "Petrochemical & Process Engineering",
+        "Chemical/Mechanical Plant Operations & Hydrocarbons",
+        "Fluid mechanics, Chemical reaction engineering, Heat and mass transfer, Distillation, Methanol & Formaldehyde synthesis, Process instrumentation and control, Plant safety regulations, Assam oil and gas sector (Digboi, Duliajan, Numaligarh, Namrup), Quantitative Aptitude, Reasoning, General English",
+        "100 Marks (70M Technical + 30M Aptitude)", p_petro)
+
+    add("10_Corporations_Cooperatives_Boards", "Directorates of Sericulture & Handloom Textiles", "Demonstrator & Inspector of Sericulture/Handloom",
+        "Written & Practical", "Sericulture & Handloom Paper", "Sericulture & Handloom Technology",
+        "Muga/Eri Silk Biology, Rearing & Traditional Weaving",
+        "Silkworm biology, host plants (Som, Soalu for Muga; Castor, Kesseru for Eri; Mulberry), silkworm diseases (Pebrine, Flacherie), grainage operations, cocoon harvesting & reeling; Handloom mechanisms (Jacquard, Dobby, Fly shuttle looms), Traditional Assamese textiles (Gamosa, Mekhela Chador, Dokhona, Eri chador), Dyeing & printing",
+        "100 Marks Written + 25M Practical", p_seri)
+
+    # =========================================================================
+    # 11. REVENUE & DISASTER MANAGEMENT
+    # =========================================================================
+    p_lot = "11_Revenue_Disaster_Management/Lot_Mandal_Patwari_Land_Records/SYLLABUS.md"
+    p_asdma = "11_Revenue_Disaster_Management/ASDMA_Disaster_Management/SYLLABUS.md"
+
+    add("11_Revenue_Disaster_Management", "Directorate of Land Records & DC Offices", "Lot Mandal (Patwari / Land Record Cadre)",
+        "Written & Practical", "Lot Mandal Paper", "Cadastral Surveying & Land Records",
+        "Assam Land Units, Dharitree Portal & Survey Methods",
+        "Land tenure systems in Assam, Unit conversions (Bigha, Katha, Lessa, Acre, Hectare), Area calculation of irregular land plots, Chain surveying, Plane table surveying, Prismatic compass survey, Field book recording, Dharitree land portal operations, General English, General Knowledge & Assamese language proficiency",
+        "100 Marks Written + 50M Survey Practical", p_lot)
+
+    add("11_Revenue_Disaster_Management", "Assam State Disaster Management Authority (ASDMA)", "Field Officer (Disaster Management)",
+        "Written & Interview", "Disaster Management Paper", "Disaster Management Framework & Mitigation",
+        "DM Act 2005, Assam Hazard Profile (Floods/Earthquakes) & IRS",
+        "Disaster Management Act 2005, Assam Disaster Management Policy, Hazards in Assam (Floods, Riverbank Erosion, Earthquakes - Seismic Zone V, Landslides, Urban Floods), Early warning systems, Incident Response System (IRS), Sendai Framework, Relief & Rehabilitation, General Studies & Reasoning",
+        "100 Marks", p_asdma)
+
+    # =========================================================================
+    # 12. LEGISLATIVE ASSEMBLY SECRETARIAT
+    # =========================================================================
+    p_jaa = "12_Legislative_Assembly_Secretariat/Junior_Admin_Assistant_JAA/SYLLABUS.md"
+    p_rep = "12_Legislative_Assembly_Secretariat/Language_Reporters_Translators/SYLLABUS.md"
+
+    add("12_Legislative_Assembly_Secretariat", "Assam Legislative Assembly Secretariat", "Junior Administrative Assistant (JAA) & Typist",
+        "Written & Typing Test", "Assembly JAA Paper", "Legislative Secretariat Procedures",
+        "Assembly Conduct Rules, Drafting & Official Languages",
+        "Constitution of India (State Legislature structure), Rules of Procedure and Conduct of Business in Assam Legislative Assembly, General English drafting & official correspondence, Assam History & Culture, Assamese/Regional language translation & grammar",
+        "100 Marks Written + 50M Typing", p_jaa)
+
+    add("12_Legislative_Assembly_Secretariat", "Assam Legislative Assembly Secretariat", "Language Reporters & Translation Officers",
+        "Practical & Written", "Reporter & Translation Paper", "Shorthand & Assembly Translation",
+        "Stenography Speed, Transcription & Multilingual Legislative Drafting",
+        "Shorthand speed test at 120/140 wpm in Assamese, English, or Bengali; Transcription on computer; Translation of legislative bills, proceedings, questions, and administrative documents between English and Assamese/Bengali/Bodo",
+        "100 Marks Shorthand/Translation + 50M Written", p_rep)
+
+    return rows
+
+def generate_csv_and_json():
+    os.chdir(BASE_DIR)
+    rows = build_master_dataset()
+
+    fieldnames = [
+        "Category_ID",
+        "Category_Name",
+        "Exam_Name",
+        "Stage",
+        "Paper_Name",
+        "Subject",
+        "Topic",
+        "Subtopics",
+        "Standard_Marks_Weightage",
+        "Source_File"
+    ]
+
+    csv_path = "master_assam_exams_syllabus.csv"
+    json_path = "master_assam_exams_syllabus.json"
+
+    # Write CSV
+    with open(csv_path, "w", encoding="utf-8", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames, quoting=csv.QUOTE_ALL)
+        writer.writeheader()
+        for r in rows:
+            writer.writerow(r)
+
+    # Write JSON
+    with open(json_path, "w", encoding="utf-8") as f:
+        json.dump(rows, f, indent=2, ensure_ascii=False)
+
+    print(f"Master CSV Generated: {csv_path} ({len(rows)} high-granularity rows)")
+    print(f"Master JSON Generated: {json_path}")
+
+if __name__ == "__main__":
+    generate_csv_and_json()

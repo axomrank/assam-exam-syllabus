@@ -1,0 +1,2017 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assamese Vibe Coders | From Idea → Build → Startup</title>
+  <meta name="description" content="Assamese Vibe Coders Community: Don't just learn to code. Build something real. Assam has ideas, let's turn them into products. Code, AI, Ideas, Founders.">
+  
+  <!-- Open Graph / Facebook / WhatsApp -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Assamese Vibe Coders">
+  <meta property="og:url" content="https://assamcoders.web.app/">
+  <meta property="og:title" content="Assamese Vibe Coders — From Idea → Build → Startup">
+  <meta property="og:description" content="Assam has ideas. Let's turn them into products. A community for developers, founders, designers, and AI builders across Assam. Build together instead of building alone.">
+  <meta property="og:image" content="https://assamcoders.web.app/assets/og_preview.jpg">
+  <meta property="og:image:secure_url" content="https://assamcoders.web.app/assets/og_preview.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
+  <meta property="og:image:alt" content="Assamese Vibe Coders Logo">
+
+  <!-- WhatsApp / Mobile / Google Fallback Tags -->
+  <meta itemprop="name" content="Assamese Vibe Coders">
+  <meta itemprop="description" content="Assam has ideas. Let's turn them into products. Join developers, founders, and AI builders across Assam.">
+  <meta itemprop="image" content="https://assamcoders.web.app/assets/og_preview.jpg">
+  <link rel="image_src" href="https://assamcoders.web.app/assets/og_preview.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@AssamCoders">
+  <meta name="twitter:title" content="Assamese Vibe Coders Community">
+  <meta name="twitter:description" content="Assam has ideas. Turning them into products. Join builders across Assam.">
+  <meta name="twitter:image" content="https://assamcoders.web.app/assets/og_preview.jpg">
+
+  <!-- Favicon & Touch Icons -->
+  <link rel="icon" type="image/png" sizes="256x256" href="/assets/favicon.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            crimson: {
+              50: '#fdf2f2',
+              100: '#fde8e8',
+              200: '#fbd5d5',
+              600: '#c81e1e',
+              700: '#9b1c1c',
+              800: '#8b1524',
+              900: '#771d1d'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            display: ['Outfit', '"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            assamese: ['"Anek Bangla"', '"Noto Sans Bengali"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@400;600;700&family=Outfit:wght@400;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    html, body {
+      overflow-x: hidden;
+      max-width: 100vw;
+      width: 100%;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: #f8fafc; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    
+    .hero-bg-cover {
+      background-image: linear-gradient(to right, rgba(15, 23, 42, 0.92) 0%, rgba(15, 23, 42, 0.82) 45%, rgba(15, 23, 42, 0.65) 100%), url('/assets/hero_bg.jpg');
+      background-size: cover;
+      background-position: center right;
+    }
+    
+    .card-preview-shadow {
+      box-shadow: 0 25px 50px -12px rgba(139, 21, 36, 0.22), 0 0 0 1px rgba(0, 0, 0, 0.05);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans antialiased min-h-screen flex flex-col selection:bg-rose-100 selection:text-rose-900 overflow-x-hidden w-full max-w-full">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-slate-950 text-slate-300 text-[11px] font-semibold tracking-wider py-1.5 px-3 sm:px-4 text-center border-b border-slate-800 flex items-center justify-between overflow-hidden">
+    <div class="hidden md:flex items-center gap-3 text-slate-400">
+      <span>PEOPLE</span> <span>×</span>
+      <span>IDEAS</span> <span>×</span>
+      <span>CODE</span> <span>×</span>
+      <span>IMPACT</span>
+    </div>
+    <div class="mx-auto md:mx-0 flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 text-[10px] sm:text-[11px] text-center">
+      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+      <span class="text-white font-bold">GUWAHATI • ASSAM • TO THE WORLD</span>
+      <span class="text-slate-500">•</span>
+      <span class="text-rose-400 font-assamese">অসমৰ পৰা Build</span>
+    </div>
+    <div class="hidden md:flex items-center gap-2 text-slate-400">
+      <a href="https://chat.whatsapp.com/JoLzJ2lg0vfL4w9qfyP95A" target="_blank" class="hover:text-emerald-400 transition-colors flex items-center gap-1 font-bold">
+        <span>WhatsApp Community</span>
+        <span>↗</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 w-full overflow-hidden">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-2">
+      <a href="#" class="flex items-center gap-2.5 sm:gap-3 group shrink min-w-0">
+        <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl overflow-hidden shadow-sm border border-slate-200 group-hover:scale-105 transition-transform bg-white flex items-center justify-center p-0.5 shrink-0">
+          <img src="/assets/logo.jpg" alt="Assamese Vibe Coders Logo" class="w-full h-full object-contain">
+        </div>
+        <div class="min-w-0">
+          <div class="flex items-center gap-1.5 sm:gap-2">
+            <span class="font-black text-base sm:text-xl tracking-tight text-slate-900 font-display truncate">Assam<span class="text-rose-800">Coders</span></span>
+            <span class="text-[9px] sm:text-[10px] font-bold tracking-wider bg-rose-100 text-rose-900 px-1.5 sm:px-2 py-0.5 rounded-full uppercase hidden xs:inline-block sm:inline-block shrink-0">
+              Community
+            </span>
+          </div>
+          <p class="text-[11px] text-slate-500 hidden sm:block truncate">Assamese Vibe Coders</p>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-600">
+        <a href="#wall" class="hover:text-rose-800 transition-colors">Directory</a>
+        <a href="#manifesto" class="hover:text-rose-800 transition-colors">Manifesto</a>
+        <a href="javascript:void(0)" onclick="openProblemBankModal()" class="hover:text-rose-800 transition-colors flex items-center gap-1.5">
+          <span>NESFIC Problem Bank</span>
+          <span class="bg-amber-100 text-amber-900 text-[10px] font-extrabold px-1.5 py-0.5 rounded-full">62</span>
+        </a>
+      </nav>
+
+      <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+        <button onclick="openSyncSettingsModal()" class="p-1.5 sm:p-2 text-slate-500 hover:text-slate-800 hover:bg-slate-100 rounded-lg transition-colors" title="Google Sheet Sync & Settings">
+          <i data-lucide="sheet" class="w-4 h-4 sm:w-5 sm:h-5"></i>
+        </button>
+        <button onclick="openJoinCommunityModal()" class="inline-flex items-center gap-1.5 sm:gap-2 bg-gradient-to-r from-rose-800 to-red-700 hover:from-rose-900 hover:to-red-800 text-white font-bold text-xs sm:text-sm px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl shadow-md shadow-rose-900/20 hover:shadow-lg transition-all whitespace-nowrap">
+          <i data-lucide="user-plus" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
+          <span class="hidden sm:inline">Add yourself to Community</span>
+          <span class="sm:hidden">+ Add</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section (With Full Cinematic Sunset Brahmaputra Background Image) -->
+  <section class="relative overflow-hidden pt-12 pb-16 sm:pt-20 sm:pb-28 hero-bg-cover text-white border-b border-slate-800">
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <!-- Left Hero Column -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <!-- Category Badges -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2.5">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs font-black tracking-wider uppercase">
+              <img src="/assets/favicon.png" alt="Icon" class="w-4 h-4 rounded-full">
+              <span>Assamese Vibe Coders</span>
+            </div>
+            <span class="px-3 py-1 rounded-full bg-rose-500/20 backdrop-blur-md border border-rose-400/40 text-rose-200 text-xs font-bold font-assamese">
+              🌱 অসমৰ পৰা build কৰোঁ
+            </span>
+          </div>
+
+          <!-- Bold Hero Headline -->
+          <div class="space-y-2">
+            <div class="text-4xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight font-display uppercase leading-[0.95]">
+              FROM <br />
+              <span class="text-slate-200">IDEA → BUILD →</span> <br />
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-rose-300 to-amber-300">
+                STARTUP.
+              </span>
+            </div>
+            <div class="pt-2 text-xl sm:text-2xl font-serif text-slate-200 font-semibold italic">
+              Assamese Vibe Coders Community
+            </div>
+            <div class="text-xs sm:text-sm font-bold tracking-widest text-slate-300 uppercase">
+              Code &nbsp;•&nbsp; AI &nbsp;•&nbsp; Ideas &nbsp;•&nbsp; Founders
+            </div>
+          </div>
+
+          <!-- Formula Step Badges -->
+          <div class="p-3 sm:p-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15 shadow-lg flex items-center gap-2 sm:gap-4 text-xs font-black text-white flex-wrap justify-center lg:justify-start max-w-full">
+            <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-amber-400/20 text-amber-200 border border-amber-300/30">
+              <span>💡</span> <span>IDEA</span>
+            </div>
+            <span class="text-slate-400 font-bold">→</span>
+            <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-blue-400/20 text-blue-200 border border-blue-300/30">
+              <span>&lt;/&gt;</span> <span>PROTOTYPE</span>
+            </div>
+            <span class="text-slate-400 font-bold">→</span>
+            <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-400/20 text-purple-200 border border-purple-300/30">
+              <span>🚀</span> <span>STARTUP</span>
+            </div>
+            <span class="text-slate-400 font-bold">→</span>
+            <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-400/20 text-emerald-200 border border-emerald-300/30">
+              <span>📈</span> <span>SCALE</span>
+            </div>
+          </div>
+
+          <!-- Big Value Proposition -->
+          <div class="space-y-2">
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight font-display">
+              Don't just learn to code. <br />
+              <span class="text-rose-400">Build something real.</span>
+            </h2>
+            <p class="text-sm sm:text-base text-slate-300 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+              Assam has no shortage of ideas. The challenge is turning more of them into active products. Share your half-built projects, find someone who can code or design, and <strong>build together instead of building alone.</strong>
+            </p>
+          </div>
+
+          <!-- CTAs -->
+          <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 w-full">
+            
+            <!-- WhatsApp Join Button -->
+            <a href="https://chat.whatsapp.com/JoLzJ2lg0vfL4w9qfyP95A" target="_blank" rel="noopener noreferrer"
+              class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 sm:gap-3 bg-emerald-700 hover:bg-emerald-600 text-white font-black text-xs sm:text-sm px-4 sm:px-6 py-3.5 rounded-2xl shadow-xl shadow-emerald-950/40 hover:-translate-y-0.5 transition-all border border-emerald-500/30 text-center">
+              <i data-lucide="message-circle" class="w-5 h-5 text-emerald-200 shrink-0"></i>
+              <span class="tracking-wide uppercase text-center leading-snug">JOIN THE COMMUNITY WHATSAPP GROUP</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 shrink-0"></i>
+            </a>
+
+            <!-- Add yourself to community popup button -->
+            <button onclick="openJoinCommunityModal()" 
+              class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-rose-700 hover:bg-rose-600 text-white font-bold text-sm px-6 py-3.5 rounded-2xl shadow-xl shadow-rose-950/40 hover:-translate-y-0.5 transition-all border border-rose-500/30">
+              <i data-lucide="user-plus" class="w-4 h-4"></i>
+              <span>Add yourself to Community</span>
+            </button>
+
+          </div>
+
+          <div class="text-[11px] text-slate-400 font-mono break-all max-w-full">
+            Direct Link: <a href="https://chat.whatsapp.com/JoLzJ2lg0vfL4w9qfyP95A" target="_blank" class="text-emerald-400 underline font-semibold break-all">https://chat.whatsapp.com/JoLzJ2lg0vfL4w9qfyP95A</a>
+          </div>
+
+          <!-- Ecosystem Opportunity Card -->
+          <div class="p-3.5 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15 shadow-sm max-w-xl mx-auto lg:mx-0 flex items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-xl bg-emerald-500/20 text-emerald-300 flex items-center justify-center text-lg font-bold shrink-0 border border-emerald-400/30">
+                🌱
+              </div>
+              <div class="text-left">
+                <div class="text-xs font-bold text-white">Explore MASI recognition & Assam startup opportunities</div>
+                <div class="text-[10px] uppercase tracking-wider font-extrabold text-slate-400">Ecosystem Opportunity — Not Affiliated</div>
+              </div>
+            </div>
+            <button onclick="openProblemBankModal()" class="shrink-0 p-2 text-slate-300 hover:text-white hover:bg-white/10 rounded-xl transition-colors">
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Right Hero Column: Interactive Card + Ecosystem Stats -->
+        <div class="lg:col-span-5 flex flex-col items-center gap-6">
+          
+          <!-- Sample Interactive Card Container -->
+          <div class="w-full max-w-sm sm:max-w-md bg-white p-3.5 rounded-3xl border border-slate-200 card-preview-shadow text-slate-900">
+            
+            <div class="flex items-center justify-between px-2 pb-2.5 mb-2 border-b border-slate-100">
+              <div class="flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span class="text-xs font-bold text-slate-900 uppercase tracking-wider">Assam Builder Card</span>
+              </div>
+              <span class="text-[10px] font-bold text-rose-800 bg-rose-50 px-2 py-0.5 rounded-full border border-rose-200">
+                Click Company to Visit Site ↗
+              </span>
+            </div>
+
+            <!-- Card Visual with Interactive Clickable Company Link -->
+            <div class="relative w-full aspect-square rounded-2xl overflow-hidden border border-slate-200 bg-white group cursor-pointer" onclick="window.open('https://axomrank.web.app', '_blank')">
+              <img src="/assets/sample_card.jpg" alt="Sample Builder Card" class="w-full h-full object-cover">
+              
+              <!-- Interactive Hover Overlay -->
+              <div class="absolute inset-0 bg-slate-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4">
+                <div class="bg-white/95 backdrop-blur-md px-4 py-2 rounded-xl text-xs font-bold text-slate-900 shadow-xl flex items-center gap-2">
+                  <span>Visit axomrank.web.app</span>
+                  <i data-lucide="external-link" class="w-4 h-4 text-rose-700"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Footer of card -->
+            <div class="mt-3 flex items-center justify-between px-1 text-xs">
+              <div class="text-slate-600">
+                <span class="font-bold text-slate-900">AxomRank</span> • Founder Angsuman Das
+              </div>
+              <button onclick="openJoinCommunityModal()" class="font-bold text-rose-800 hover:text-rose-950 flex items-center gap-1">
+                <span>Add Yours</span>
+                <i data-lucide="plus" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+
+          </div>
+
+          <!-- Startup Ecosystem Stats Box -->
+          <div class="w-full max-w-sm sm:max-w-md p-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 shadow-md flex items-center justify-between gap-4 text-white">
+            <div>
+              <div class="text-[11px] font-bold text-slate-300 uppercase tracking-wider">Assam's Startup Ecosystem</div>
+              <div class="text-2xl font-black text-rose-400 font-display">600+ <span class="text-white text-sm font-bold">Startups</span></div>
+              <div class="text-[11px] text-slate-300 mt-0.5">Same People, Bigger Builds ↗</div>
+            </div>
+            <div class="grid grid-cols-2 gap-2 text-[11px] font-semibold text-slate-200 border-l border-white/20 pl-4">
+              <span class="flex items-center gap-1">👥 Mentors</span>
+              <span class="flex items-center gap-1">💾 Investors</span>
+              <span class="flex items-center gap-1">📅 Programs</span>
+              <span class="flex items-center gap-1">📈 Growth</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DIRECTORY SECTION: Positioned Immediately Below Hero Section -->
+  <section id="wall" class="py-12 sm:py-20 bg-white border-b border-slate-200 overflow-hidden w-full">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 sm:mb-10">
+        <div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs uppercase tracking-widest font-black text-rose-800 font-display">Directory</span>
+            <span class="text-slate-300">•</span>
+            <span class="text-xs font-bold text-slate-500 font-assamese">অসমৰ পৰা Build</span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 font-display tracking-tight break-words">
+            Assamese Vibe Coders Community
+          </h2>
+          <p class="mt-2 text-slate-600 text-sm max-w-xl">
+            Click on any company name to visit their platform directly. Connect, brainstorm, and build together!
+          </p>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-3 w-full md:w-auto">
+          <!-- Filter search input -->
+          <div class="relative w-full sm:w-64">
+            <input type="text" id="wallSearchInput" oninput="filterWallCards()" placeholder="Search builder, company, problem..."
+              class="w-full pl-9 pr-3 py-2 text-xs rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-rose-500">
+            <div class="absolute left-3 top-2.5 text-slate-400">
+              <i data-lucide="search" class="w-3.5 h-3.5"></i>
+            </div>
+          </div>
+          
+          <div class="flex items-center gap-2 w-full sm:w-auto">
+            <button onclick="exportWallCSV()" class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl border border-slate-300 bg-white hover:bg-slate-50 text-slate-700 text-xs font-semibold shadow-sm transition-all whitespace-nowrap">
+              <i data-lucide="file-spreadsheet" class="w-3.5 h-3.5 text-emerald-600"></i>
+              <span>Export CSV</span>
+            </button>
+
+            <button onclick="openJoinCommunityModal()" class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-xl bg-rose-800 hover:bg-rose-900 text-white text-xs font-bold shadow-sm transition-all whitespace-nowrap">
+              <i data-lucide="user-plus" class="w-3.5 h-3.5"></i>
+              <span>+ Add Yourself</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Cards Grid -->
+      <div id="wallCardsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+        <!-- Rendered dynamically via JavaScript -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Community Manifesto -->
+  <section id="manifesto" class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <div class="text-xs uppercase tracking-widest font-black text-rose-800 mb-2 font-display">Our Core Philosophy</div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight font-display">
+          Not another group for motivational posts.<br />
+          <span class="text-rose-800">A place to find your people and actually build.</span>
+        </h2>
+        <p class="mt-4 text-slate-600 leading-relaxed text-sm sm:text-base">
+          People here share half-built projects, startup ideas, and real problems — find someone who can code, design, validate or improve them — and <strong>build together instead of building alone.</strong>
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <div class="p-6 rounded-2xl bg-white border border-slate-200 hover:border-rose-300 transition-all hover:shadow-md group">
+          <div class="w-12 h-12 rounded-xl bg-rose-100 text-rose-800 flex items-center justify-center font-black text-xl mb-4 group-hover:scale-110 transition-transform">
+            ⚡
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 font-display mb-2">Build In Public</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Share prototypes, live repos, and unfinished projects. Real builder feedback accelerates your product far faster than working in isolation.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-white border border-slate-200 hover:border-rose-300 transition-all hover:shadow-md group">
+          <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-900 flex items-center justify-center font-black text-xl mb-4 group-hover:scale-110 transition-transform">
+            🏛️
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 font-display mb-2">NESFIC 2026 Problem Bank</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Solve 62 published challenges from the Government of Assam across Irrigation, PWD, AI, GIS, Health, and Disaster Management.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-white border border-slate-200 hover:border-rose-300 transition-all hover:shadow-md group">
+          <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-900 flex items-center justify-center font-black text-xl mb-4 group-hover:scale-110 transition-transform">
+            🤝
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 font-display mb-2">Find Co-Founders & Coders</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Connect directly with developers, product designers, and founders across Guwahati, Dibrugarh, Jorhat, Silchar, and beyond.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- POPUP MODAL: Add Yourself to Community / Form Studio -->
+  <div id="joinCommunityModal" class="fixed inset-0 z-50 hidden bg-slate-950/75 backdrop-blur-md flex items-center justify-center p-3 sm:p-5 overflow-y-auto">
+    <div class="bg-white w-full max-w-5xl rounded-3xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col max-h-[95vh] my-auto">
+      
+      <!-- Modal Header -->
+      <div class="p-5 sm:p-6 bg-slate-50 border-b border-slate-200 flex items-center justify-between shrink-0">
+        <div class="flex items-center gap-3">
+          <img src="/assets/favicon.png" alt="Logo" class="w-9 h-9 rounded-xl shadow-sm">
+          <div>
+            <h3 class="text-lg sm:text-xl font-black text-slate-900 font-display">Add Yourself to Assamese Vibe Coders</h3>
+            <p class="text-xs text-slate-600 mt-0.5">Only <strong>Name</strong> and <strong>Idea</strong> are necessary. Target problem and photos are optional. Zero signup needed!</p>
+          </div>
+        </div>
+        <button onclick="closeJoinCommunityModal()" class="p-2 text-slate-400 hover:text-slate-700 rounded-xl hover:bg-slate-200/60 transition-colors">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Modal Body (Split Form + Live Preview Canvas) -->
+      <div class="p-5 sm:p-6 overflow-y-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Form Controls (7 cols) -->
+        <div class="lg:col-span-7 space-y-5">
+          
+          <!-- Avatar Upload -->
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+              Profile Photo <span class="text-slate-500 normal-case font-normal">(Optional — upload headshot or avatar)</span>
+            </label>
+            <div class="flex items-center gap-4">
+              <div class="relative w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden bg-slate-100 border-2 border-dashed border-slate-300 flex items-center justify-center shrink-0">
+                <img id="avatarThumb" src="/assets/default_avatar.svg" alt="Preview Thumbnail" class="w-full h-full object-cover">
+              </div>
+              <div class="space-y-1.5">
+                <div class="flex flex-wrap items-center gap-2">
+                  <label class="cursor-pointer inline-flex items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold px-3 py-1.5 rounded-xl border border-slate-200 transition-colors">
+                    <i data-lucide="upload" class="w-3.5 h-3.5 text-slate-600"></i>
+                    <span>Upload Photo</span>
+                    <input type="file" id="avatarFileInput" accept="image/*" class="hidden">
+                  </label>
+                  <button type="button" onclick="clearAvatar()" class="text-xs font-semibold text-slate-500 hover:text-slate-800 px-2 py-1 rounded-lg hover:bg-slate-100 transition-colors">
+                    Reset Default
+                  </button>
+                  <span id="avatarUploadStatus" class="text-[11px]"></span>
+                </div>
+                <p class="text-[11px] text-slate-500">JPG, PNG, WebP. Hosted securely on ImgBB.</p>
+              </div>
+            </div>
+          </div>
+
+          <hr class="border-slate-100">
+
+          <!-- Core Details (Empty defaults) -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="inputName" class="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-1">
+                Your Name <span class="text-rose-600">*</span>
+              </label>
+              <input type="text" id="inputName" value="" placeholder="e.g. Priyam Hazarika" required
+                class="w-full px-3.5 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-rose-500 text-slate-900 font-semibold text-sm">
+            </div>
+
+            <div>
+              <label for="inputRole" class="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-1">
+                Role / Title <span class="text-slate-500 font-normal">(Optional)</span>
+              </label>
+              <input type="text" id="inputRole" value="" placeholder="e.g. Founder & Fullstack AI Dev"
+                class="w-full px-3.5 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-rose-500 text-slate-900 text-sm">
+            </div>
+          </div>
+
+          <!-- Startup / Idea Info (Required Idea) -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="inputIdea" class="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-1">
+                Startup / Idea Name <span class="text-rose-600">*</span>
+              </label>
+              <input type="text" id="inputIdea" value="" placeholder="e.g. Brahmaputra Sentinel / AgroSync" required
+                class="w-full px-3.5 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-rose-500 text-slate-900 font-bold text-sm">
+            </div>
+
+            <div>
+              <label for="inputTagline" class="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-1">
+                Tagline / Pitch <span class="text-slate-500 font-normal">(Optional)</span>
+              </label>
+              <input type="text" id="inputTagline" value="" placeholder="e.g. REAL-TIME RIVER IOT & PREDICTIVE AI"
+                class="w-full px-3.5 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-rose-500 text-slate-900 text-sm tracking-wide">
+            </div>
+          </div>
+
+          <!-- Target Problem (NESFIC Selector or Custom) -->
+          <div>
+            <div class="flex items-center justify-between mb-1">
+              <label for="inputProblem" class="block text-xs font-bold text-slate-800 uppercase tracking-wider">
+                Target Problem Statement <span class="text-slate-500 font-normal">(Optional)</span>
+              </label>
+              <button type="button" onclick="openProblemBankModal()" class="text-xs font-bold text-rose-700 hover:text-rose-900 flex items-center gap-1 hover:underline">
+                <i data-lucide="layers" class="w-3.5 h-3.5"></i>
+                <span>Pick from 62 NESFIC Problems</span>
+              </button>
+            </div>
+            
+            <div class="relative">
+              <input type="text" id="inputProblem" value="" placeholder="e.g. NESFIC-D-01 or AI Irrigation Scheduler"
+                class="w-full pl-9 pr-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-rose-500 text-slate-900 text-sm font-medium">
+              <div class="absolute left-3 top-2.5 text-slate-400">
+                💡
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact & Links (Optional) -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="inputWebsite" class="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-1">
+                Company Website <span class="text-slate-500 font-normal">(Clickable on card)</span>
+              </label>
+              <div class="relative">
+                <div class="absolute left-3 top-2.5 text-slate-400">
+                  <i data-lucide="globe" class="w-3.5 h-3.5"></i>
+                </div>
+                <input type="text" id="inputWebsite" value="" placeholder="e.g. myproject.in or github.com/user"
+                  class="w-full pl-9 pr-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-rose-500 text-slate-900 text-sm">
+              </div>
+            </div>
+
+            <div>
+              <label for="inputPhone" class="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-1">
+                Phone / WhatsApp <span class="text-slate-500 font-normal">(Optional)</span>
+              </label>
+              <div class="relative">
+                <div class="absolute left-3 top-2.5 text-slate-400">
+                  <i data-lucide="phone" class="w-3.5 h-3.5"></i>
+                </div>
+                <input type="text" id="inputPhone" value="" placeholder="e.g. +91 98765 43210"
+                  class="w-full pl-9 pr-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-rose-500 text-slate-900 text-sm">
+              </div>
+            </div>
+          </div>
+
+          <!-- Theme Presets -->
+          <div>
+            <label class="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-1.5">
+              Card Landmark Theme Preset
+            </label>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+              <button type="button" onclick="selectTheme('crimson')" id="themeBtn-crimson"
+                class="flex flex-col items-center gap-1 p-2 rounded-xl border-2 border-rose-800 bg-rose-50/60 text-slate-900 font-semibold text-xs text-center">
+                <span class="w-4 h-4 rounded-full bg-rose-800 shadow-inner"></span>
+                <span>Rang Ghar Crimson</span>
+              </button>
+
+              <button type="button" onclick="selectTheme('kaziranga')" id="themeBtn-kaziranga"
+                class="flex flex-col items-center gap-1 p-2 rounded-xl border-2 border-slate-200 hover:border-emerald-700 bg-white text-slate-700 font-semibold text-xs text-center">
+                <span class="w-4 h-4 rounded-full bg-emerald-800 shadow-inner"></span>
+                <span>Kaziranga Forest</span>
+              </button>
+
+              <button type="button" onclick="selectTheme('brahmaputra')" id="themeBtn-brahmaputra"
+                class="flex flex-col items-center gap-1 p-2 rounded-xl border-2 border-slate-200 hover:border-blue-700 bg-white text-slate-700 font-semibold text-xs text-center">
+                <span class="w-4 h-4 rounded-full bg-blue-800 shadow-inner"></span>
+                <span>Brahmaputra Blue</span>
+              </button>
+
+              <button type="button" onclick="selectTheme('emerald')" id="themeBtn-emerald"
+                class="flex flex-col items-center gap-1 p-2 rounded-xl border-2 border-slate-200 hover:border-teal-700 bg-white text-slate-700 font-semibold text-xs text-center">
+                <span class="w-4 h-4 rounded-full bg-teal-800 shadow-inner"></span>
+                <span>Tea Garden Emerald</span>
+              </button>
+            </div>
+          </div>
+
+          <div id="submitStatusMsg" class="hidden text-xs font-semibold p-3 rounded-xl transition-all"></div>
+
+        </div>
+
+        <!-- Live Canvas Preview (5 cols) -->
+        <div class="lg:col-span-5 bg-slate-50 p-4 rounded-2xl border border-slate-200 flex flex-col items-center">
+          <div class="w-full flex items-center justify-between pb-2 mb-2 border-b border-slate-200 text-xs">
+            <span class="font-bold text-slate-900">Your Live Builder Card</span>
+            <span class="text-slate-500 font-mono text-[11px]">1024 x 1024 HD</span>
+          </div>
+
+          <div class="relative w-full aspect-square max-w-sm rounded-xl overflow-hidden shadow-sm bg-white border border-slate-200">
+            <canvas id="cardCanvas" width="1024" height="1024" class="w-full h-full object-contain block"></canvas>
+          </div>
+
+          <p class="text-[11px] text-slate-500 text-center mt-2">
+            Clicking on your company name on the web directly takes visitors to your site!
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="p-3.5 sm:p-5 bg-slate-50 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-3 shrink-0 w-full">
+        <div class="text-xs text-slate-500 hidden sm:block">
+          No signup required. Card can be shared as JPG or permalink.
+        </div>
+        
+        <div class="flex items-center gap-2 w-full sm:w-auto flex-wrap">
+          <button type="button" onclick="closeJoinCommunityModal()" class="flex-1 sm:flex-initial px-3 sm:px-4 py-2.5 rounded-xl border border-slate-300 text-slate-700 hover:bg-slate-100 font-semibold text-xs transition-colors text-center">
+            Cancel
+          </button>
+          <button type="button" onclick="downloadCardJPG()" class="flex-1 sm:flex-initial px-3 sm:px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-black text-white font-bold text-xs transition-colors flex items-center justify-center gap-1.5 text-center">
+            <i data-lucide="download" class="w-3.5 h-3.5"></i>
+            <span>Download</span>
+          </button>
+          <button type="button" onclick="submitToWallAndSheet()" id="btnSubmitWall"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-rose-800 hover:bg-rose-900 text-white font-black text-xs sm:text-sm px-5 py-2.5 rounded-xl shadow-md transition-all text-center">
+            <i data-lucide="user-plus" class="w-4 h-4"></i>
+            <span>Add to Community</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Problem Bank Modal (62 NESFIC Challenges) -->
+  <div id="problemModal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white w-full max-w-4xl rounded-2xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col max-h-[90vh]">
+      
+      <!-- Modal Header -->
+      <div class="p-6 bg-slate-50 border-b border-slate-200 flex items-center justify-between">
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-xl">🏛️</span>
+            <h3 class="text-lg sm:text-xl font-bold text-slate-900 font-display">Government of Assam NESFIC 2026 Problem Bank</h3>
+          </div>
+          <p class="text-xs text-slate-600 mt-1">62 Published Challenges across Irrigation, PWD, AI, GIS, Health & Rural Dev.</p>
+        </div>
+        <button onclick="closeProblemBankModal()" class="p-2 text-slate-400 hover:text-slate-700 rounded-lg hover:bg-slate-200/60">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Search & Filters -->
+      <div class="p-4 border-b border-slate-200 bg-white flex flex-col sm:flex-row gap-3">
+        <div class="relative flex-1">
+          <input type="text" id="problemSearchInput" oninput="filterProblemsList()" placeholder="Search challenge by ID, keywords, themes (e.g. water, AI, road)..."
+            class="w-full pl-9 pr-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-rose-500">
+          <div class="absolute left-3 top-3 text-slate-400">
+            <i data-lucide="search" class="w-4 h-4"></i>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <button onclick="filterProblemsByTheme('All')" class="px-3 py-2 rounded-xl text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700">All</button>
+          <button onclick="filterProblemsByTheme('AI & Machine Learning')" class="px-3 py-2 rounded-xl text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700">AI / ML</button>
+          <button onclick="filterProblemsByTheme('Water & Irrigation')" class="px-3 py-2 rounded-xl text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700">Water</button>
+          <button onclick="filterProblemsByTheme('Roads & Transport')" class="px-3 py-2 rounded-xl text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700">Roads</button>
+        </div>
+      </div>
+
+      <!-- Problems List Container -->
+      <div id="problemsListContainer" class="p-4 sm:p-6 overflow-y-auto space-y-3 divide-y divide-slate-100 flex-1">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="p-4 bg-slate-50 border-t border-slate-200 flex items-center justify-between text-xs text-slate-600">
+        <span id="problemCountLabel">Loading challenges...</span>
+        <button onclick="closeProblemBankModal()" class="px-4 py-2 bg-slate-200 hover:bg-slate-300 text-slate-800 font-semibold rounded-xl transition-colors">
+          Close
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Google Sheets Sync & Settings Modal -->
+  <div id="syncSettingsModal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white w-full max-w-2xl rounded-2xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col max-h-[90vh]">
+      
+      <div class="p-6 bg-slate-50 border-b border-slate-200 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold">
+            <i data-lucide="sheet" class="w-4 h-4"></i>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-slate-900 font-display">Google Sheets Live Sync Configuration</h3>
+            <p class="text-xs text-slate-600">Collect every builder submission directly as rows in your own Google Sheet.</p>
+          </div>
+        </div>
+        <button onclick="closeSyncSettingsModal()" class="p-2 text-slate-400 hover:text-slate-700 rounded-lg">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div class="p-6 overflow-y-auto space-y-6 text-sm text-slate-700">
+        
+        <div>
+          <label for="webhookUrlInput" class="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-1.5">
+            Google Apps Script Webhook URL
+          </label>
+          <div class="flex gap-2">
+            <input type="url" id="webhookUrlInput" placeholder="https://script.google.com/macros/s/AKfycbx.../exec"
+              class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 text-xs font-mono">
+            <button onclick="saveWebhookUrl()" class="px-4 py-2.5 bg-emerald-700 hover:bg-emerald-800 text-white font-semibold rounded-xl text-xs shrink-0">
+              Save URL
+            </button>
+          </div>
+          <p class="text-[11px] text-slate-600 mt-1">Saved automatically in browser storage. Every card created will append a row immediately.</p>
+        </div>
+
+        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-3">
+          <div class="flex items-center justify-between">
+            <div class="text-xs font-bold text-slate-900 uppercase tracking-wider">How to setup in 30 seconds:</div>
+            <button onclick="copyAppsScriptCode()" class="text-xs font-bold text-rose-700 hover:text-rose-900 flex items-center gap-1">
+              <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+              <span id="copyScriptBtnText">Copy Apps Script Code</span>
+            </button>
+          </div>
+          <ol class="list-decimal list-inside space-y-1.5 text-xs text-slate-600 leading-relaxed">
+            <li>Create a new <a href="https://sheets.new" target="_blank" class="text-emerald-700 font-semibold underline">Google Sheet</a>.</li>
+            <li>Click <strong>Extensions</strong> → <strong>Apps Script</strong>.</li>
+            <li>Delete existing code, paste the script below, and click <strong>Deploy</strong> → <strong>New deployment</strong>.</li>
+            <li>Select type <strong>Web App</strong>, set <em>Who has access</em> to <strong>Anyone</strong>, click Deploy, and paste the URL above!</li>
+          </ol>
+
+          <pre id="appsScriptSnippet" class="p-3 bg-slate-900 text-slate-100 rounded-lg text-[11px] font-mono overflow-x-auto">function doPost(e) {
+  try {
+    var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+    var data = JSON.parse(e.postData.contents);
+    sheet.appendRow([
+      new Date(),
+      data.name || '',
+      data.role || '',
+      data.idea || '',
+      data.tagline || '',
+      data.problem || '',
+      data.website || '',
+      data.phone || '',
+      data.theme || '',
+      data.shareUrl || ''
+    ]);
+    return ContentService.createTextOutput(JSON.stringify({ status: 'success' }))
+      .setMimeType(ContentService.MimeType.JSON);
+  } catch(err) {
+    return ContentService.createTextOutput(JSON.stringify({ status: 'error', error: err.toString() }))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+}</pre>
+        </div>
+
+        <div class="pt-2 flex items-center justify-between border-t border-slate-200">
+          <button onclick="testWebhook()" class="text-xs font-semibold text-emerald-700 hover:underline flex items-center gap-1">
+            <i data-lucide="send" class="w-3.5 h-3.5"></i>
+            <span>Send Test Row to Sheet</span>
+          </button>
+          <button onclick="exportWallCSV()" class="text-xs font-bold text-slate-800 bg-slate-100 hover:bg-slate-200 px-3 py-2 rounded-xl transition-colors">
+            Download Offline CSV Backup
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Share Permaview Modal (When clicked from Wall or Link) -->
+  <div id="cardViewModal" class="fixed inset-0 z-50 hidden bg-slate-900/70 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white w-full max-w-lg rounded-2xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col">
+      <div class="p-4 bg-slate-50 border-b border-slate-200 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span class="text-rose-700 font-black">🌱</span>
+          <h4 id="cardViewTitle" class="font-bold text-slate-900 text-sm font-display">Assamese Builder Card</h4>
+        </div>
+        <button onclick="closeCardViewModal()" class="p-1.5 text-slate-400 hover:text-slate-700 rounded-lg">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div class="p-5 flex flex-col items-center">
+        <!-- Interactive Card Preview -->
+        <div class="relative w-full aspect-square max-w-sm rounded-xl overflow-hidden border border-slate-200 shadow-md group cursor-pointer" onclick="handleActiveModalCardClick()">
+          <img id="cardViewImg" src="" alt="Builder Card" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-slate-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4">
+            <div id="cardViewOverlayBadge" class="bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-xl text-xs font-bold text-slate-900 shadow-xl flex items-center gap-2">
+              <span>Click to visit company website</span>
+              <i data-lucide="external-link" class="w-3.5 h-3.5 text-rose-700"></i>
+            </div>
+          </div>
+        </div>
+
+        <div id="cardViewCompanyAction" class="w-full mt-3 text-center"></div>
+
+        <div class="w-full mt-3 flex items-center gap-3">
+          <a id="cardViewDownloadBtn" href="#" download="AssamCoders_Card.jpg" class="flex-1 inline-flex items-center justify-center gap-2 bg-rose-800 hover:bg-rose-900 text-white text-xs font-bold py-2.5 px-4 rounded-xl shadow-sm transition-all">
+            <i data-lucide="download" class="w-4 h-4"></i>
+            <span>Download JPG</span>
+          </a>
+          <button id="cardViewCopyLinkBtn" onclick="copyActiveCardLink()" class="flex-1 inline-flex items-center justify-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold py-2.5 px-4 rounded-xl border border-slate-200 transition-all">
+            <i data-lucide="link" class="w-4 h-4"></i>
+            <span>Copy Link</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="mt-auto bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        
+        <div class="md:col-span-2 space-y-3">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg overflow-hidden bg-white p-0.5">
+              <img src="/assets/logo.jpg" alt="Logo" class="w-full h-full object-contain">
+            </div>
+            <span class="text-lg font-black text-white font-display">Assam<span class="text-rose-500">Coders</span></span>
+          </div>
+          <p class="text-xs text-slate-400 max-w-md leading-relaxed">
+            Assamese Vibe Coders is an action-first collective for developers, students, founders, designers, and AI builders across Assam and beyond.
+          </p>
+          <div class="pt-2">
+            <a href="https://chat.whatsapp.com/JoLzJ2lg0vfL4w9qfyP95A" target="_blank" class="inline-flex items-center gap-2 bg-emerald-800 hover:bg-emerald-700 text-white text-xs font-bold px-3 py-1.5 rounded-lg transition-colors">
+              <i data-lucide="message-circle" class="w-3.5 h-3.5 text-emerald-300"></i>
+              <span>Join WhatsApp Group</span>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div class="text-xs uppercase font-bold text-white tracking-wider mb-3">Explore</div>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#wall" class="hover:text-white transition-colors">Community Directory</a></li>
+            <li><a href="#manifesto" class="hover:text-white transition-colors">Community Manifesto</a></li>
+            <li><a href="javascript:void(0)" onclick="openProblemBankModal()" class="hover:text-white transition-colors">NESFIC 2026 Problem Bank (62)</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="text-xs uppercase font-bold text-white tracking-wider mb-3">Resources</div>
+          <ul class="space-y-2 text-xs">
+            <li><a href="https://axomrank.web.app" target="_blank" class="hover:text-white transition-colors">Axomrank Platform ↗</a></li>
+            <li><a href="javascript:void(0)" onclick="openSyncSettingsModal()" class="hover:text-white transition-colors">Google Sheet Webhook Sync</a></li>
+            <li><a href="javascript:void(0)" onclick="openJoinCommunityModal()" class="text-rose-400 font-bold hover:text-rose-300 transition-colors">+ Add to Community</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-6 border-t border-slate-800 text-center text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <span>© 2026 Assamese Vibe Coders • অসমৰ পৰা build কৰোঁ.</span>
+        <span>Hosted on Firebase: <code>assamcoders.web.app</code></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- App Core JavaScript Logic -->
+  <script>
+    // Global State & ImgBB Configuration
+    const IMGBB_API_KEY = '783e3b5d9b1ee7702c93d32027671ae6';
+    let currentTheme = 'crimson';
+    let allProblems = [];
+    let cachedThemeImages = {};
+    let localWallData = [];
+    let activeViewCardData = null;
+
+    // Studio Avatar State
+    let studioAvatarImg = null;
+    let customUploadedAvatarUrl = null;
+    let isUploadingAvatar = false;
+    const defaultAvatarImg = new Image();
+    defaultAvatarImg.src = '/assets/default_avatar.svg';
+
+    // Theme Configs
+    const THEMES = {
+      crimson: {
+        name: 'Rang Ghar Crimson',
+        bg: '/assets/card_bg_crimson.png',
+        primary: '#8b1524',
+        accent: '#9b1c1c',
+        badgeBg: 'rgba(254, 226, 226, 0.75)',
+        badgeText: '#991b1b',
+        btnBorder: 'border-rose-800',
+        btnBg: 'bg-rose-50/60'
+      },
+      kaziranga: {
+        name: 'Kaziranga Forest',
+        bg: '/assets/card_bg_kaziranga.png',
+        primary: '#1e5e3a',
+        accent: '#16472b',
+        badgeBg: 'rgba(209, 250, 229, 0.75)',
+        badgeText: '#065f46',
+        btnBorder: 'border-emerald-800',
+        btnBg: 'bg-emerald-50/60'
+      },
+      brahmaputra: {
+        name: 'Brahmaputra Blue',
+        bg: '/assets/card_bg_brahmaputra.png',
+        primary: '#1e3a8a',
+        accent: '#172554',
+        badgeBg: 'rgba(219, 234, 254, 0.75)',
+        badgeText: '#1e40af',
+        btnBorder: 'border-blue-800',
+        btnBg: 'bg-blue-50/60'
+      },
+      emerald: {
+        name: 'Tea Garden Emerald',
+        bg: '/assets/card_bg_emerald.png',
+        primary: '#047857',
+        accent: '#064e3b',
+        badgeBg: 'rgba(204, 251, 241, 0.75)',
+        badgeText: '#0f766e',
+        btnBorder: 'border-teal-800',
+        btnBg: 'bg-teal-50/60'
+      }
+    };
+
+    function preloadThemeImages() {
+      Object.keys(THEMES).forEach(k => {
+        const img = new Image();
+        img.onload = () => {
+          renderWall();
+          renderStudioCanvas();
+        };
+        img.src = THEMES[k].bg;
+        cachedThemeImages[k] = img;
+      });
+    }
+
+    // Default Seed Wall Data
+    const SEED_WALL_CARDS = [
+      {
+        id: 'angsuman-axomrank',
+        name: 'Angsuman Das',
+        role: 'Founder Axomrank',
+        idea: 'AxomRank',
+        tagline: 'PREPARE SMARTER. RANK HIGHER.',
+        problem: 'NESFIC-D-20',
+        website: 'axomrank.web.app',
+        phone: '+91 78965 05109',
+        theme: 'crimson',
+        avatarUrl: '/assets/avatar_angsuman.jpg',
+        timestamp: '2026-10-02T10:00:00Z'
+      },
+      {
+        id: 'bidisha-brahmaai',
+        name: 'Bidisha Borah',
+        role: 'AI Researcher & Dev',
+        idea: 'BrahmaFlood AI',
+        tagline: 'SATELLITE & IOT RIVER MONITORING',
+        problem: 'NESFIC-D-01',
+        website: 'https://brahmaflood.dev',
+        phone: '+91 94350 12345',
+        theme: 'brahmaputra',
+        avatarUrl: '/assets/default_avatar.svg',
+        timestamp: '2026-10-02T11:30:00Z'
+      },
+      {
+        id: 'rahul-tea-optima',
+        name: 'Rahul Phukan',
+        role: 'Fullstack Builder',
+        idea: 'ChaiTech Agritech',
+        tagline: 'DRONE SPECTRAL SOIL SENSING',
+        problem: 'NESFIC-D-07',
+        website: 'https://chaitech.in',
+        phone: '+91 88760 99881',
+        theme: 'kaziranga',
+        avatarUrl: '/assets/default_avatar.svg',
+        timestamp: '2026-10-02T13:15:00Z'
+      }
+    ];
+
+    // Initialize Application
+    window.addEventListener('DOMContentLoaded', async () => {
+      lucide.createIcons();
+      preloadThemeImages();
+
+      defaultAvatarImg.onload = () => {
+        if (!studioAvatarImg) {
+          studioAvatarImg = defaultAvatarImg;
+          renderStudioCanvas();
+        }
+      };
+      studioAvatarImg = defaultAvatarImg;
+
+      loadLocalWall();
+      initWebhookSettings();
+      loadNesficProblems();
+
+      ['inputName', 'inputRole', 'inputIdea', 'inputTagline', 'inputProblem', 'inputWebsite', 'inputPhone'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.addEventListener('input', () => renderStudioCanvas());
+      });
+
+      const fileInput = document.getElementById('avatarFileInput');
+      if (fileInput) fileInput.addEventListener('change', handleAvatarUpload);
+
+      handleUrlHash();
+      window.addEventListener('hashchange', handleUrlHash);
+
+      renderStudioCanvas();
+
+      // AUTO-POPUP: Automatically show the Join Community form popup on load as requested!
+      setTimeout(() => {
+        // If not already navigated to a specific hash view, show popup
+        if (!window.location.hash || window.location.hash === '#join') {
+          openJoinCommunityModal();
+        }
+      }, 500);
+    });
+
+    // Modal Controls for Join Community Form Popup
+    function openJoinCommunityModal() {
+      const modal = document.getElementById('joinCommunityModal');
+      if (modal) {
+        modal.classList.remove('hidden');
+        renderStudioCanvas();
+        lucide.createIcons();
+      }
+    }
+
+    function closeJoinCommunityModal() {
+      const modal = document.getElementById('joinCommunityModal');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    // Theme Selection
+    function selectTheme(themeKey) {
+      if (!THEMES[themeKey]) return;
+      currentTheme = themeKey;
+
+      Object.keys(THEMES).forEach(k => {
+        const btn = document.getElementById(`themeBtn-${k}`);
+        if (btn) {
+          if (k === themeKey) {
+            btn.className = `flex flex-col items-center gap-1 p-2 rounded-xl border-2 ${THEMES[k].btnBorder} ${THEMES[k].btnBg} text-slate-900 font-semibold text-xs text-center`;
+          } else {
+            btn.className = `flex flex-col items-center gap-1 p-2 rounded-xl border-2 border-slate-200 hover:border-slate-400 bg-white text-slate-700 font-semibold text-xs text-center`;
+          }
+        }
+      });
+
+      renderStudioCanvas();
+    }
+
+    // Avatar Upload with ImgBB Integration
+    async function handleAvatarUpload(e) {
+      const file = e.target.files[0];
+      if (!file) return;
+
+      const localUrl = URL.createObjectURL(file);
+      document.getElementById('avatarThumb').src = localUrl;
+
+      const img = new Image();
+      img.onload = () => {
+        studioAvatarImg = img;
+        renderStudioCanvas();
+      };
+      img.src = localUrl;
+
+      const statusEl = document.getElementById('avatarUploadStatus');
+      if (statusEl) {
+        statusEl.innerHTML = `<span class="text-amber-700 font-semibold flex items-center gap-1"><i data-lucide="loader-2" class="w-3 h-3 animate-spin"></i> Uploading...</span>`;
+        lucide.createIcons();
+      }
+
+      isUploadingAvatar = true;
+      const formData = new FormData();
+      formData.append('image', file);
+
+      try {
+        const res = await fetch(`https://api.imgbb.com/1/upload?key=${IMGBB_API_KEY}`, {
+          method: 'POST',
+          body: formData
+        });
+        const data = await res.json();
+        isUploadingAvatar = false;
+
+        if (data && data.success && data.data && data.data.url) {
+          customUploadedAvatarUrl = data.data.url;
+          if (statusEl) {
+            statusEl.innerHTML = `<span class="text-emerald-700 font-semibold flex items-center gap-1"><i data-lucide="check-circle" class="w-3 h-3"></i> Saved on ImgBB</span>`;
+            lucide.createIcons();
+          }
+        } else {
+          console.warn('ImgBB response not success:', data);
+          if (statusEl) {
+            statusEl.innerHTML = `<span class="text-slate-500">Local photo ready</span>`;
+          }
+        }
+      } catch (err) {
+        isUploadingAvatar = false;
+        console.warn('ImgBB upload error:', err);
+        if (statusEl) {
+          statusEl.innerHTML = `<span class="text-slate-500">Local photo ready</span>`;
+        }
+      }
+    }
+
+    function clearAvatar() {
+      customUploadedAvatarUrl = null;
+      studioAvatarImg = defaultAvatarImg;
+      document.getElementById('avatarThumb').src = '/assets/default_avatar.svg';
+      const statusEl = document.getElementById('avatarUploadStatus');
+      if (statusEl) statusEl.innerHTML = '';
+      const fileInput = document.getElementById('avatarFileInput');
+      if (fileInput) fileInput.value = '';
+      renderStudioCanvas();
+    }
+
+    // Pure Card Drawing Engine: Draws any cardData onto any 2D canvas with its own avatarImg
+    function drawCard(ctx, cardData, avatarImgObj) {
+      const theme = THEMES[cardData.theme || 'crimson'] || THEMES.crimson;
+
+      // Base background
+      ctx.fillStyle = '#ffffff';
+      ctx.fillRect(0, 0, 1024, 1024);
+
+      // Theme background
+      const bgImg = cachedThemeImages[cardData.theme || 'crimson'];
+      if (bgImg && bgImg.complete && bgImg.naturalWidth > 0) {
+        ctx.drawImage(bgImg, 0, 0, 1024, 1024);
+      }
+
+      const rawName = (cardData.name || '').trim();
+      const rawIdea = (cardData.idea || '').trim();
+      const name = rawName || 'Your Name';
+      const role = (cardData.role || '').trim();
+      const idea = rawIdea || 'Your Startup / Idea';
+      const tagline = (cardData.tagline || '').trim();
+      const problem = (cardData.problem || '').trim();
+      const website = (cardData.website || '').trim();
+      const phone = (cardData.phone || '').trim();
+
+      // Profile Photo (Top-Left, 290x290 at x=88, y=78, rx=28)
+      const photoX = 88;
+      const photoY = 78;
+      const photoSize = 290;
+      const radius = 28;
+
+      ctx.save();
+      ctx.shadowColor = 'rgba(0, 0, 0, 0.12)';
+      ctx.shadowBlur = 18;
+      ctx.shadowOffsetY = 8;
+      ctx.fillStyle = '#f8fafc';
+      roundRect(ctx, photoX, photoY, photoSize, photoSize, radius);
+      ctx.fill();
+      ctx.restore();
+
+      const activeImg = (avatarImgObj && avatarImgObj.complete && avatarImgObj.naturalWidth > 0) ? avatarImgObj : defaultAvatarImg;
+      if (activeImg && activeImg.complete && activeImg.naturalWidth > 0) {
+        ctx.save();
+        roundRect(ctx, photoX, photoY, photoSize, photoSize, radius);
+        ctx.clip();
+        
+        const iw = activeImg.naturalWidth;
+        const ih = activeImg.naturalHeight;
+        const minDim = Math.min(iw, ih);
+        const sx = (iw - minDim) / 2;
+        const sy = (ih - minDim) / 2;
+        ctx.drawImage(activeImg, sx, sy, minDim, minDim, photoX, photoY, photoSize, photoSize);
+        ctx.restore();
+      }
+
+      ctx.save();
+      ctx.strokeStyle = 'rgba(0, 0, 0, 0.08)';
+      ctx.lineWidth = 2;
+      roundRect(ctx, photoX, photoY, photoSize, photoSize, radius);
+      ctx.stroke();
+      ctx.restore();
+
+      // Name
+      ctx.save();
+      ctx.fillStyle = rawName ? '#0f172a' : '#94a3b8';
+      ctx.font = '800 48px "Plus Jakarta Sans", sans-serif';
+      ctx.fillText(name, photoX, 440);
+
+      // Role
+      let curY = 485;
+      if (role) {
+        ctx.fillStyle = '#475569';
+        ctx.font = '500 24px "Plus Jakarta Sans", sans-serif';
+        ctx.fillText(role, photoX, curY);
+        curY += 28;
+      }
+
+      // Red Accent Separator Line
+      ctx.fillStyle = theme.primary;
+      ctx.fillRect(photoX, curY + 14, 52, 4);
+      curY += 60;
+
+      // Startup / Idea Name
+      ctx.fillStyle = rawIdea ? '#090d16' : '#94a3b8';
+      ctx.font = '800 46px "Outfit", "Plus Jakarta Sans", sans-serif';
+      ctx.fillText(idea, photoX, curY);
+
+      const ideaMetrics = ctx.measureText(idea);
+      const arrowX = photoX + ideaMetrics.width + 12;
+      if (arrowX < 550) {
+        drawUpRightArrow(ctx, arrowX, curY - 26, theme.primary);
+      }
+
+      // Tagline
+      if (tagline) {
+        curY += 36;
+        ctx.fillStyle = '#64748b';
+        ctx.font = '700 15px "Plus Jakarta Sans", sans-serif';
+        ctx.letterSpacing = '1.8px';
+        ctx.fillText(tagline.toUpperCase(), photoX, curY);
+        ctx.letterSpacing = '0px';
+      }
+
+      // Problem Badge
+      if (problem) {
+        curY += 56;
+        const badgeText = `Problem: ${problem}`;
+        ctx.font = '700 20px "Plus Jakarta Sans", sans-serif';
+        const bMetrics = ctx.measureText(badgeText);
+        const badgeWidth = Math.min(520, bMetrics.width + 80);
+        const badgeHeight = 56;
+        const badgeX = photoX;
+        const badgeY = curY - 38;
+
+        ctx.save();
+        ctx.fillStyle = theme.badgeBg;
+        roundRect(ctx, badgeX, badgeY, badgeWidth, badgeHeight, 16);
+        ctx.fill();
+
+        ctx.font = '22px sans-serif';
+        ctx.fillText('💡', badgeX + 16, badgeY + 36);
+
+        ctx.fillStyle = theme.badgeText;
+        ctx.font = '700 20px "Plus Jakarta Sans", sans-serif';
+        ctx.fillText(badgeText, badgeX + 54, badgeY + 36);
+        ctx.restore();
+
+        curY += 40;
+      }
+
+      // Website & Phone Links
+      const linkBaseY = 835;
+
+      if (website) {
+        drawIconCircle(ctx, photoX + 16, linkBaseY, 18, theme.badgeBg, theme.primary);
+        drawGlobeIcon(ctx, photoX + 16, linkBaseY, theme.primary);
+
+        ctx.fillStyle = '#1e293b';
+        ctx.font = '600 22px "Plus Jakarta Sans", sans-serif';
+        ctx.fillText(website, photoX + 52, linkBaseY + 7);
+      }
+
+      if (phone) {
+        const phoneY = linkBaseY + 68;
+        drawIconCircle(ctx, photoX + 16, phoneY, 18, theme.badgeBg, theme.primary);
+        drawPhoneIcon(ctx, photoX + 16, phoneY, theme.primary);
+
+        ctx.fillStyle = '#1e293b';
+        ctx.font = '500 22px "Plus Jakarta Sans", sans-serif';
+        ctx.fillText(phone, photoX + 52, phoneY + 7);
+      }
+
+      ctx.restore();
+    }
+
+    function renderStudioCanvas() {
+      const canvas = document.getElementById('cardCanvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      canvas.width = 1024;
+      canvas.height = 1024;
+
+      const formData = {
+        name: document.getElementById('inputName').value,
+        role: document.getElementById('inputRole').value,
+        idea: document.getElementById('inputIdea').value,
+        tagline: document.getElementById('inputTagline').value,
+        problem: document.getElementById('inputProblem').value,
+        website: document.getElementById('inputWebsite').value,
+        phone: document.getElementById('inputPhone').value,
+        theme: currentTheme
+      };
+
+      drawCard(ctx, formData, studioAvatarImg || defaultAvatarImg);
+    }
+
+    function roundRect(ctx, x, y, width, height, radius) {
+      ctx.beginPath();
+      ctx.moveTo(x + radius, y);
+      ctx.lineTo(x + width - radius, y);
+      ctx.quadraticCurveTo(x + width, y, x + width, y + radius);
+      ctx.lineTo(x + width, y + height - radius);
+      ctx.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
+      ctx.lineTo(x + radius, y + height);
+      ctx.quadraticCurveTo(x, y + height, x, y + height - radius);
+      ctx.lineTo(x, y + radius);
+      ctx.quadraticCurveTo(x, y, x + radius, y);
+      ctx.closePath();
+    }
+
+    function drawUpRightArrow(ctx, x, y, color) {
+      ctx.save();
+      ctx.strokeStyle = color;
+      ctx.fillStyle = color;
+      ctx.lineWidth = 3.5;
+      ctx.lineCap = 'round';
+      ctx.lineJoin = 'round';
+      
+      ctx.beginPath();
+      ctx.moveTo(x, y + 18);
+      ctx.lineTo(x + 18, y);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.moveTo(x + 7, y);
+      ctx.lineTo(x + 18, y);
+      ctx.lineTo(x + 18, y + 11);
+      ctx.stroke();
+      ctx.restore();
+    }
+
+    function drawIconCircle(ctx, cx, cy, r, bgColor, borderColor) {
+      ctx.save();
+      ctx.beginPath();
+      ctx.arc(cx, cy, r, 0, Math.PI * 2);
+      ctx.fillStyle = bgColor;
+      ctx.fill();
+      ctx.restore();
+    }
+
+    function drawGlobeIcon(ctx, cx, cy, color) {
+      ctx.save();
+      ctx.strokeStyle = color;
+      ctx.lineWidth = 1.8;
+      ctx.beginPath();
+      ctx.arc(cx, cy, 9, 0, Math.PI * 2);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.moveTo(cx - 9, cy);
+      ctx.lineTo(cx + 9, cy);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.ellipse(cx, cy, 4.5, 9, 0, 0, Math.PI * 2);
+      ctx.stroke();
+      ctx.restore();
+    }
+
+    function drawPhoneIcon(ctx, cx, cy, color) {
+      ctx.save();
+      ctx.fillStyle = color;
+      ctx.strokeStyle = color;
+      ctx.lineWidth = 1.8;
+      ctx.lineCap = 'round';
+      
+      ctx.beginPath();
+      ctx.arc(cx, cy, 8, 0.4, 2.2);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.arc(cx - 4, cy - 3, 2.5, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.beginPath();
+      ctx.arc(cx + 4, cy + 4, 2.5, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.restore();
+    }
+
+    function downloadCardJPG() {
+      const canvas = document.getElementById('cardCanvas');
+      renderStudioCanvas();
+
+      const name = document.getElementById('inputName').value.trim() || 'AssamBuilder';
+      const cleanName = name.replace(/[^a-zA-Z0-9_-]/g, '_');
+      const filename = `AssamCoders_${cleanName}.jpg`;
+
+      const link = document.createElement('a');
+      link.download = filename;
+      link.href = canvas.toDataURL('image/jpeg', 0.95);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    function generateCardPayload() {
+      return {
+        name: document.getElementById('inputName').value.trim(),
+        role: document.getElementById('inputRole').value.trim(),
+        idea: document.getElementById('inputIdea').value.trim(),
+        tagline: document.getElementById('inputTagline').value.trim(),
+        problem: document.getElementById('inputProblem').value.trim(),
+        website: document.getElementById('inputWebsite').value.trim(),
+        phone: document.getElementById('inputPhone').value.trim(),
+        theme: currentTheme,
+        timestamp: new Date().toISOString()
+      };
+    }
+
+    function copyCardShareLink() {
+      const payload = generateCardPayload();
+      const jsonStr = JSON.stringify(payload);
+      const encoded = btoa(encodeURIComponent(jsonStr));
+      const shareUrl = `${window.location.origin}${window.location.pathname}#/c/${encoded}`;
+
+      navigator.clipboard.writeText(shareUrl).then(() => {
+        showStatusMessage('✅ Shareable community card link copied to clipboard!', 'bg-emerald-50 text-emerald-800 border border-emerald-200');
+      }).catch(() => {
+        prompt('Copy your card link:', shareUrl);
+      });
+    }
+
+    async function submitToWallAndSheet() {
+      const payload = generateCardPayload();
+      if (!payload.name || !payload.idea) {
+        alert('Please provide at least your Name and Startup/Idea name to add yourself to the community.');
+        return;
+      }
+
+      if (isUploadingAvatar) {
+        alert('Please wait a moment while your profile photo finishes uploading to ImgBB...');
+        return;
+      }
+
+      const btn = document.getElementById('btnSubmitWall');
+      btn.disabled = true;
+      btn.innerHTML = `<i data-lucide="loader-2" class="w-4 h-4 animate-spin"></i><span>Adding to Community...</span>`;
+      lucide.createIcons();
+
+      const cardId = payload.name.toLowerCase().replace(/[^a-z0-9]/g, '-') + '-' + Date.now().toString(36);
+      payload.id = cardId;
+      payload.avatarUrl = customUploadedAvatarUrl || '/assets/default_avatar.svg';
+
+      saveCardToLocalWall(payload);
+
+      const webhookUrl = localStorage.getItem('assamcoders_webhook_url');
+      if (webhookUrl && webhookUrl.startsWith('http')) {
+        try {
+          await fetch(webhookUrl, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'text/plain' },
+            body: JSON.stringify({
+              ...payload,
+              avatarUrl: payload.avatarUrl,
+              shareUrl: `${window.location.origin}${window.location.pathname}#/c/${btoa(encodeURIComponent(JSON.stringify(payload)))}`
+            })
+          });
+        } catch (err) {
+          console.warn('Webhook delivery warning:', err);
+        }
+      }
+
+      renderWall();
+
+      showStatusMessage('🎉 Welcome to Assamese Vibe Coders! You have been added to the community directory.', 'bg-emerald-100 text-emerald-900 border border-emerald-300');
+      btn.disabled = false;
+      btn.innerHTML = `<i data-lucide="user-plus" class="w-4 h-4"></i><span>Add yourself to Community</span>`;
+      lucide.createIcons();
+
+      setTimeout(() => {
+        closeJoinCommunityModal();
+        const wallEl = document.getElementById('wall');
+        if (wallEl) wallEl.scrollIntoView({ behavior: 'smooth' });
+      }, 900);
+    }
+
+    function showStatusMessage(text, classes) {
+      const el = document.getElementById('submitStatusMsg');
+      el.className = `text-xs font-semibold p-3 rounded-xl transition-all ${classes}`;
+      el.innerHTML = text;
+      el.classList.remove('hidden');
+      setTimeout(() => el.classList.add('hidden'), 5000);
+    }
+
+    function loadLocalWall() {
+      const stored = localStorage.getItem('assamcoders_wall_cards');
+      if (stored) {
+        try {
+          const userCards = JSON.parse(stored);
+          localWallData = [...userCards, ...SEED_WALL_CARDS];
+        } catch(e) {
+          localWallData = [...SEED_WALL_CARDS];
+        }
+      } else {
+        localWallData = [...SEED_WALL_CARDS];
+      }
+      renderWall();
+    }
+
+    function saveCardToLocalWall(card) {
+      const stored = localStorage.getItem('assamcoders_wall_cards');
+      let userCards = [];
+      if (stored) {
+        try { userCards = JSON.parse(stored); } catch(e) {}
+      }
+      userCards = userCards.filter(c => c.id !== card.id);
+      userCards.unshift(card);
+      localStorage.setItem('assamcoders_wall_cards', JSON.stringify(userCards));
+      localWallData = [...userCards, ...SEED_WALL_CARDS];
+    }
+
+    function renderWall(filteredCards = null) {
+      const container = document.getElementById('wallCardsGrid');
+      if (!container) return;
+
+      const cards = filteredCards || localWallData;
+      if (cards.length === 0) {
+        container.innerHTML = `
+          <div class="col-span-full py-16 text-center text-slate-500 bg-white rounded-3xl border border-slate-200">
+            <p class="text-base font-semibold text-slate-700">No builders found matching your search.</p>
+            <p class="text-xs text-slate-500 mt-1">Try another keyword or add your startup idea now!</p>
+            <button onclick="openJoinCommunityModal()" class="mt-4 px-5 py-2.5 bg-rose-800 text-white rounded-xl text-xs font-bold hover:bg-rose-900 transition-colors shadow-sm">
+              + Add Yourself to Community
+            </button>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = cards.map(c => {
+        const theme = THEMES[c.theme] || THEMES.crimson;
+        const targetUrl = c.website ? (c.website.startsWith('http') ? c.website : `https://${c.website}`) : null;
+        
+        return `
+          <div class="bg-white rounded-3xl border border-slate-200 shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col group min-w-0 w-full max-w-full">
+            
+            <!-- Direct Visual Builder Card (1:1 High-Res Graphical Card) -->
+            <div class="relative w-full aspect-square bg-slate-100 overflow-hidden cursor-pointer" 
+                 onclick="handleWallCardClick('${c.id}')" 
+                 title="${targetUrl ? `Click to visit ${escapeHtml(c.idea)} website` : `View ${escapeHtml(c.name)}'s card`}">
+              
+              <canvas id="wallCardCanvas_${c.id}" width="1024" height="1024" class="w-full h-full max-w-full object-cover block transition-transform duration-300 group-hover:scale-[1.01]"></canvas>
+              
+              ${targetUrl ? `
+                <div class="absolute inset-0 bg-slate-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4 pointer-events-none">
+                  <div class="bg-white/95 backdrop-blur-md px-4 py-2 rounded-xl text-xs font-bold text-slate-900 shadow-xl flex items-center gap-2">
+                    <span>Visit ${escapeHtml(c.idea)} Website</span>
+                    <i data-lucide="external-link" class="w-4 h-4 text-rose-700"></i>
+                  </div>
+                </div>
+              ` : ''}
+            </div>
+
+            <!-- Card Bottom Bar: Company Name & Direct Interactive Links -->
+            <div class="p-4 sm:p-5 flex flex-col justify-between gap-3 border-t border-slate-100 bg-white flex-1 min-w-0">
+              
+              <div class="flex items-start justify-between gap-2">
+                <div class="min-w-0 flex-1">
+                  ${targetUrl ? `
+                    <a href="${targetUrl}" target="_blank" rel="noopener noreferrer" 
+                       class="font-black text-slate-950 text-lg sm:text-xl hover:text-rose-700 transition-colors inline-flex items-center gap-1 group/name break-words max-w-full">
+                      <span class="break-words">${escapeHtml(c.idea)}</span>
+                      <span class="text-xs text-rose-700 group-hover/name:translate-x-0.5 group-hover/name:-translate-y-0.5 transition-transform shrink-0">↗</span>
+                    </a>
+                  ` : `
+                    <div class="font-black text-slate-950 text-lg sm:text-xl break-words">${escapeHtml(c.idea)}</div>
+                  `}
+                  
+                  <div class="text-xs text-slate-600 font-medium mt-0.5 truncate">
+                    <span class="font-bold text-slate-900">${escapeHtml(c.name)}</span>
+                    ${c.role ? ` · <span class="text-slate-500">${escapeHtml(c.role)}</span>` : ''}
+                  </div>
+                </div>
+
+                ${c.problem ? `
+                  <span class="shrink-0 text-[10px] font-bold px-2 sm:px-2.5 py-1 rounded-lg" style="background-color: ${theme.badgeBg}; color: ${theme.badgeText};" title="NESFIC Problem">
+                    💡 ${escapeHtml(c.problem)}
+                  </span>
+                ` : ''}
+              </div>
+
+              <!-- Interactive Actions Row -->
+              <div class="pt-3 border-t border-slate-100 flex flex-wrap items-center justify-between gap-2 text-xs">
+                <div class="flex items-center gap-1.5 sm:gap-2 flex-wrap">
+                  ${targetUrl ? `
+                    <a href="${targetUrl}" target="_blank" rel="noopener noreferrer" 
+                       class="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-black text-white font-bold transition-colors shadow-sm whitespace-nowrap">
+                      <i data-lucide="globe" class="w-3.5 h-3.5"></i>
+                      <span>Visit Site</span>
+                    </a>
+                  ` : ''}
+
+                  ${c.phone ? `
+                    <a href="https://wa.me/${c.phone.replace(/[^0-9]/g, '')}" target="_blank" rel="noopener noreferrer" 
+                       class="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 font-bold transition-colors whitespace-nowrap"
+                       title="Chat with Founder">
+                      <i data-lucide="message-circle" class="w-3.5 h-3.5 text-emerald-600"></i>
+                      <span>Chat</span>
+                    </a>
+                  ` : ''}
+                </div>
+
+                <div class="flex items-center gap-1 sm:gap-1.5 shrink-0">
+                  <button onclick="downloadWallCard('${c.id}')" title="Download High-Res Card (JPG)" 
+                          class="p-2 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-100 border border-slate-200 transition-colors">
+                    <i data-lucide="download" class="w-3.5 h-3.5"></i>
+                  </button>
+                  <button onclick="shareWallCard('${c.id}')" title="Share Card Link" 
+                          class="p-2 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-100 border border-slate-200 transition-colors">
+                    <i data-lucide="share-2" class="w-3.5 h-3.5"></i>
+                  </button>
+                  <button onclick="previewWallCard('${c.id}')" title="Zoom / Enlarge" 
+                          class="p-2 rounded-xl text-rose-700 hover:text-rose-900 hover:bg-rose-50 border border-rose-200 transition-colors">
+                    <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        `;
+      }).join('');
+
+      lucide.createIcons();
+
+      // Immediately paint each card onto its corresponding 1024x1024 visual canvas
+      cards.forEach(c => {
+        const canvas = document.getElementById(`wallCardCanvas_${c.id}`);
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+
+        const avatarImg = new Image();
+        avatarImg.crossOrigin = 'anonymous';
+
+        const paint = (imgToDraw) => {
+          drawCard(ctx, c, imgToDraw);
+        };
+
+        avatarImg.onload = () => paint(avatarImg);
+        avatarImg.onerror = () => paint(defaultAvatarImg);
+        avatarImg.src = c.avatarUrl || '/assets/default_avatar.svg';
+      });
+    }
+
+    function handleWallCardClick(cardId) {
+      const card = localWallData.find(c => c.id === cardId);
+      if (!card) return;
+      if (card.website) {
+        const url = card.website.startsWith('http') ? card.website : `https://${card.website}`;
+        window.open(url, '_blank');
+      } else {
+        previewWallCard(cardId);
+      }
+    }
+
+    function downloadWallCard(cardId) {
+      const card = localWallData.find(c => c.id === cardId);
+      if (!card) return;
+      const canvas = document.getElementById(`wallCardCanvas_${cardId}`);
+      if (!canvas) return;
+
+      const cleanName = (card.name || 'Member').replace(/[^a-zA-Z0-9_-]/g, '_');
+      const filename = `AssamCoders_${cleanName}.jpg`;
+
+      const link = document.createElement('a');
+      link.download = filename;
+      link.href = canvas.toDataURL('image/jpeg', 0.95);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    function shareWallCard(cardId) {
+      const card = localWallData.find(c => c.id === cardId);
+      if (!card) return;
+      const jsonStr = JSON.stringify(card);
+      const encoded = btoa(encodeURIComponent(jsonStr));
+      const shareUrl = `${window.location.origin}${window.location.pathname}#/c/${encoded}`;
+      navigator.clipboard.writeText(shareUrl).then(() => {
+        alert(`✅ Link to ${card.name}'s card copied to clipboard!`);
+      }).catch(() => {
+        prompt('Copy your card link:', shareUrl);
+      });
+    }
+
+    function filterWallCards() {
+      const q = (document.getElementById('wallSearchInput').value || '').toLowerCase().trim();
+      if (!q) {
+        renderWall(localWallData);
+        return;
+      }
+      const filtered = localWallData.filter(c => 
+        (c.name && c.name.toLowerCase().includes(q)) ||
+        (c.idea && c.idea.toLowerCase().includes(q)) ||
+        (c.problem && c.problem.toLowerCase().includes(q)) ||
+        (c.role && c.role.toLowerCase().includes(q))
+      );
+      renderWall(filtered);
+    }
+
+    function previewWallCard(cardId) {
+      const card = localWallData.find(c => c.id === cardId);
+      if (!card) return;
+      activeViewCardData = card;
+
+      const modal = document.getElementById('cardViewModal');
+      document.getElementById('cardViewTitle').innerText = `${card.name}'s Community Card`;
+      const imgEl = document.getElementById('cardViewImg');
+
+      const canvas = document.createElement('canvas');
+      canvas.width = 1024;
+      canvas.height = 1024;
+      const ctx = canvas.getContext('2d');
+
+      const cardAvatar = new Image();
+      cardAvatar.crossOrigin = 'anonymous';
+
+      const finishRender = (avatarToDraw) => {
+        drawCard(ctx, card, avatarToDraw);
+        const dataUrl = canvas.toDataURL('image/jpeg', 0.95);
+        imgEl.src = dataUrl;
+        document.getElementById('cardViewDownloadBtn').href = dataUrl;
+        document.getElementById('cardViewDownloadBtn').download = `AssamCoders_${(card.name || 'Member').replace(/[^a-zA-Z0-9]/g, '_')}.jpg`;
+      };
+
+      cardAvatar.onload = () => finishRender(cardAvatar);
+      cardAvatar.onerror = () => finishRender(defaultAvatarImg);
+      cardAvatar.src = card.avatarUrl || '/assets/default_avatar.svg';
+
+      const actionEl = document.getElementById('cardViewCompanyAction');
+      if (card.website) {
+        const url = card.website.startsWith('http') ? card.website : `https://${card.website}`;
+        actionEl.innerHTML = `
+          <a href="${url}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900 hover:bg-black text-white text-xs font-bold transition-all shadow-sm">
+            <span>Visit ${escapeHtml(card.idea)} Website (${escapeHtml(card.website)})</span>
+            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+          </a>
+        `;
+      } else {
+        actionEl.innerHTML = '';
+      }
+
+      modal.classList.remove('hidden');
+      lucide.createIcons();
+    }
+
+    function handleActiveModalCardClick() {
+      if (activeViewCardData && activeViewCardData.website) {
+        const url = activeViewCardData.website.startsWith('http') ? activeViewCardData.website : `https://${activeViewCardData.website}`;
+        window.open(url, '_blank');
+      }
+    }
+
+    function closeCardViewModal() {
+      document.getElementById('cardViewModal').classList.add('hidden');
+    }
+
+    function copyActiveCardLink() {
+      if (!activeViewCardData) return;
+      const jsonStr = JSON.stringify(activeViewCardData);
+      const encoded = btoa(encodeURIComponent(jsonStr));
+      const shareUrl = `${window.location.origin}${window.location.pathname}#/c/${encoded}`;
+      navigator.clipboard.writeText(shareUrl).then(() => {
+        alert('Card share link copied to clipboard!');
+      });
+    }
+
+    async function loadNesficProblems() {
+      try {
+        const res = await fetch('/assets/nesfic_problems.json');
+        allProblems = await res.json();
+        renderProblemsList(allProblems);
+      } catch (err) {
+        console.warn('Could not load nesfic_problems.json:', err);
+      }
+    }
+
+    function renderProblemsList(problems) {
+      const container = document.getElementById('problemsListContainer');
+      const countLabel = document.getElementById('problemCountLabel');
+      if (!container) return;
+
+      countLabel.innerText = `Showing ${problems.length} of ${allProblems.length || 62} official challenges`;
+
+      container.innerHTML = problems.map(p => `
+        <div class="pt-3 first:pt-0">
+          <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-3">
+            <div class="space-y-1">
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-black px-2 py-0.5 rounded-md bg-rose-100 text-rose-900 border border-rose-200">${p.id}</span>
+                <span class="text-xs font-semibold text-slate-500">${p.owners || 'Government of Assam'}</span>
+              </div>
+              <h4 class="text-sm font-bold text-slate-900 leading-snug">${escapeHtml(p.title)}</h4>
+              <div class="flex flex-wrap gap-1 mt-1">
+                ${(p.themes || []).map(t => `<span class="text-[10px] font-medium bg-slate-100 text-slate-700 px-2 py-0.5 rounded-full">${escapeHtml(t)}</span>`).join('')}
+              </div>
+            </div>
+
+            <button onclick="selectNesficProblem('${p.id}')" class="shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-rose-800 text-white text-xs font-bold transition-colors">
+              <span>Select for Card</span>
+              <i data-lucide="check" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </div>
+      `).join('');
+
+      lucide.createIcons();
+    }
+
+    function filterProblemsList() {
+      const q = (document.getElementById('problemSearchInput').value || '').toLowerCase().trim();
+      if (!q) {
+        renderProblemsList(allProblems);
+        return;
+      }
+      const filtered = allProblems.filter(p => 
+        p.id.toLowerCase().includes(q) ||
+        p.title.toLowerCase().includes(q) ||
+        (p.owners && p.owners.toLowerCase().includes(q)) ||
+        (p.themes && p.themes.some(t => t.toLowerCase().includes(q)))
+      );
+      renderProblemsList(filtered);
+    }
+
+    function filterProblemsByTheme(themeName) {
+      if (themeName === 'All') {
+        renderProblemsList(allProblems);
+        return;
+      }
+      const filtered = allProblems.filter(p => p.themes && p.themes.includes(themeName));
+      renderProblemsList(filtered);
+    }
+
+    function selectNesficProblem(problemId) {
+      document.getElementById('inputProblem').value = problemId;
+      renderStudioCanvas();
+      closeProblemBankModal();
+      openJoinCommunityModal();
+    }
+
+    function openProblemBankModal() {
+      document.getElementById('problemModal').classList.remove('hidden');
+      lucide.createIcons();
+    }
+
+    function closeProblemBankModal() {
+      document.getElementById('problemModal').classList.add('hidden');
+    }
+
+    function initWebhookSettings() {
+      const saved = localStorage.getItem('assamcoders_webhook_url');
+      if (saved) {
+        const input = document.getElementById('webhookUrlInput');
+        if (input) input.value = saved;
+      }
+    }
+
+    function saveWebhookUrl() {
+      const url = document.getElementById('webhookUrlInput').value.trim();
+      localStorage.setItem('assamcoders_webhook_url', url);
+      alert('Webhook URL saved! Submissions will now append directly to your Google Sheet.');
+      closeSyncSettingsModal();
+    }
+
+    function openSyncSettingsModal() {
+      document.getElementById('syncSettingsModal').classList.remove('hidden');
+      lucide.createIcons();
+    }
+
+    function closeSyncSettingsModal() {
+      document.getElementById('syncSettingsModal').classList.add('hidden');
+    }
+
+    function copyAppsScriptCode() {
+      const code = document.getElementById('appsScriptSnippet').innerText;
+      navigator.clipboard.writeText(code).then(() => {
+        const btnText = document.getElementById('copyScriptBtnText');
+        btnText.innerText = 'Copied to Clipboard!';
+        setTimeout(() => btnText.innerText = 'Copy Apps Script Code', 3000);
+      });
+    }
+
+    async function testWebhook() {
+      const url = document.getElementById('webhookUrlInput').value.trim();
+      if (!url) {
+        alert('Please enter your Google Apps Script Webhook URL first.');
+        return;
+      }
+      try {
+        await fetch(url, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'text/plain' },
+          body: JSON.stringify({
+            name: 'Test Community Member',
+            role: 'Diagnostics',
+            idea: 'Sheet Connection Verified',
+            tagline: 'Google Sheet Sync is Active!',
+            problem: 'NESFIC-TEST',
+            website: 'assamcoders.web.app',
+            phone: '',
+            theme: 'crimson',
+            shareUrl: 'https://assamcoders.web.app'
+          })
+        });
+        alert('✅ Test row sent to your Google Sheet! Check your spreadsheet.');
+      } catch (err) {
+        alert('Error sending test row: ' + err.message);
+      }
+    }
+
+    function exportWallCSV() {
+      if (localWallData.length === 0) {
+        alert('No community members to export.');
+        return;
+      }
+
+      const headers = ['Timestamp', 'Name', 'Role', 'Company/Idea', 'Tagline', 'Problem', 'Website', 'Phone', 'Theme', 'AvatarUrl'];
+      const rows = localWallData.map(c => [
+        `"${c.timestamp || ''}"`,
+        `"${(c.name || '').replace(/"/g, '""')}"`,
+        `"${(c.role || '').replace(/"/g, '""')}"`,
+        `"${(c.idea || '').replace(/"/g, '""')}"`,
+        `"${(c.tagline || '').replace(/"/g, '""')}"`,
+        `"${(c.problem || '').replace(/"/g, '""')}"`,
+        `"${(c.website || '').replace(/"/g, '""')}"`,
+        `"${(c.phone || '').replace(/"/g, '""')}"`,
+        `"${c.theme || ''}"`,
+        `"${c.avatarUrl || ''}"`
+      ]);
+
+      const csvContent = [headers.join(','), ...rows.map(r => r.join(','))].join('\n');
+      const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.setAttribute('href', url);
+      link.setAttribute('download', `AssamCoders_Community_${new Date().toISOString().slice(0,10)}.csv`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    function handleUrlHash() {
+      const hash = window.location.hash;
+      if (hash && hash.startsWith('#/c/')) {
+        const encoded = hash.slice(4);
+        try {
+          const jsonStr = decodeURIComponent(atob(encoded));
+          const cardData = JSON.parse(jsonStr);
+          if (cardData && cardData.name) {
+            document.getElementById('inputName').value = cardData.name || '';
+            document.getElementById('inputRole').value = cardData.role || '';
+            document.getElementById('inputIdea').value = cardData.idea || '';
+            document.getElementById('inputTagline').value = cardData.tagline || '';
+            document.getElementById('inputProblem').value = cardData.problem || '';
+            document.getElementById('inputWebsite').value = cardData.website || '';
+            document.getElementById('inputPhone').value = cardData.phone || '';
+            if (cardData.theme) selectTheme(cardData.theme);
+            if (cardData.avatarUrl) {
+              const sharedImg = new Image();
+              sharedImg.crossOrigin = 'anonymous';
+              sharedImg.onload = () => {
+                studioAvatarImg = sharedImg;
+                renderStudioCanvas();
+              };
+              sharedImg.src = cardData.avatarUrl;
+            } else {
+              renderStudioCanvas();
+            }
+          }
+        } catch (e) {
+          console.warn('Could not parse shared card hash:', e);
+        }
+      }
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+  </script>
+</body>
+</html>

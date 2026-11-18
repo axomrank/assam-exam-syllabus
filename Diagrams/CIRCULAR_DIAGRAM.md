@@ -32,12 +32,12 @@ The circular architecture consists of 4 concentric orbits radiating outward from
 
 ## 🎨 Interactive Visualizations
 
-1. 🌐 **[Interactive Circular Radiating HTML Viewer](file:///home/angsuman/extra_spac/Study_Assam/Diagrams/circular_radiating_diagram.html)**:
+1. 🌐 **[Interactive Circular Radiating HTML Viewer](../Diagrams/circular_radiating_diagram.html)**:
    * Dynamic SVG-based canvas with animated radiating light rays.
    * Concentric orbital rings with glowing hover states.
    * Click-to-inspect info card providing details on each domain and subtopic.
 
-2. 📐 **[Mermaid Syllabus Architecture Diagram](file:///home/angsuman/extra_spac/Study_Assam/Diagrams/SYLLABUS_ARCHITECTURE.md)**:
+2. 📐 **[Mermaid Syllabus Architecture Diagram](../Diagrams/SYLLABUS_ARCHITECTURE.md)**:
    * Flowcharts representing the 7 domains and examination mapping.
 
 ---

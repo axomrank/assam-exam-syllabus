@@ -1,10 +1,27 @@
-# Assam Government Examinations - Master Syllabus & Official Document Repository
+# Assam Exam Syllabus: syllabi and exam patterns for every Assam recruitment board
+
+> Syllabi, exam patterns, official notices and past papers for Assam government recruitment exams across 12 boards (APSC, SLRC ADRE, SLPRB, DME, TET, Gauhati HC, APDCL and more).
+
+[Part of AxomRank](https://github.com/axomrank)
+
+## At a glance
+
+- **12 recruitment categories**, 40+ cadres, each with a syllabus, exam pattern and the official PDFs where available
+- **Master topics checklist:** 842 atomic study items across 82 topics (CSV and JSON)
+- **Master syllabus dataset** for all cadres, including technical and specialised posts
+- **Diagrams** of the exam taxonomy (Mermaid and interactive HTML)
+
+## Quick start
+
+Browse the numbered folders, or load `csv/` and `json/` for programmatic use.
+
+## Overview
 
 A comprehensive, organized, and verified repository of **official syllabi, government gazettes, recruitment rules, previous question papers, and examination schemes** across all recruitment boards, commissions, directorates, and public enterprises under the **Government of Assam**.
 
 ---
 
-## 📊 Master Structured Datasets (CSV & JSON)
+## Master Structured Datasets (CSV & JSON)
 
 For programmatic access, test series creation, syllabus tracking, and multi-exam preparation, the repository provides two structured datasets:
 
@@ -29,7 +46,7 @@ The comprehensive dataset across all 12 recruitment categories and 40+ examinati
 
 ---
 
-## 🎨 Visual Architecture & Mermaid Diagrams
+## Visual Architecture & Mermaid Diagrams
 
 Visual representations of the examination taxonomy, recruitment boards, and universal syllabus domains:
 
@@ -41,11 +58,11 @@ Visual representations of the examination taxonomy, recruitment boards, and univ
 
 ---
 
-## 📑 Master Index of Examinations (12 Canonical Categories)
+## Master Index of Examinations (12 Canonical Categories)
 
 ### 1. [Assam Public Service Commission (APSC)](./01_APSC)
 
-#### 🏛️ [Combined Competitive Examination (CCE) - Assam Civil Services](./01_APSC/Combined_Competitive_Exam_CCE)
+#### [Combined Competitive Examination (CCE) - Assam Civil Services](./01_APSC/Combined_Competitive_Exam_CCE)
 * **Cadres:** ACS (Jr. Grade), APS (Jr. Grade), Assam Taxation Service, Assam Finance Service, District Transport Officer (DTO), Labour Officer, ARCS, BDO, Inspector of Taxes, Sub-Registrar.
 * **Stage 1: Preliminary Examination**:
   * 📖 [Detailed Prelims Syllabus (GS-I & GS-II CSAT Breakdown)](./01_APSC/Combined_Competitive_Exam_CCE/01_Prelims/SYLLABUS.md)
@@ -63,7 +80,7 @@ Visual representations of the examination taxonomy, recruitment boards, and univ
 * **Statutory Rules & Gazette**:
   * 📜 [Official APSC CCE Amendment Rules Gazette (PDF)](./01_APSC/Combined_Competitive_Exam_CCE/03_Rules_Gazette/Official_APSC_CCE_Amendment_Rules_Gazette.pdf)
 
-#### 🔸 Other APSC Services
+#### Other APSC Services
 * **[Engineering Services (AE & JE)](./01_APSC/Engineering_Services_AE_JE)**: [Syllabus Guide](./01_APSC/Engineering_Services_AE_JE/SYLLABUS.md) | [Official AE Civil (PDF)](./01_APSC/Engineering_Services_AE_JE/Official_Syllabus_AE_Civil_PWD.pdf) | [Official JE Civil (PDF)](./01_APSC/Engineering_Services_AE_JE/Official_Syllabus_JE_Civil_PWD.pdf) | [Official AE Mech (PDF)](./01_APSC/Engineering_Services_AE_JE/Official_Syllabus_AE_Mechanical_Irrigation.pdf) | [Official AE Elect (PDF)](./01_APSC/Engineering_Services_AE_JE/Official_Syllabus_AE_Electrical_Irrigation.pdf) | [Official AE Chem (PDF)](./01_APSC/Engineering_Services_AE_JE/Official_Syllabus_AE_Chemical_PHE.pdf)
 * **[Forest Services (Forest Ranger & AFS)](./01_APSC/Forest_Services_AFS_Ranger)**: [Syllabus & Physical Walking Rules](./01_APSC/Forest_Services_AFS_Ranger/SYLLABUS.md)
 * **[Agriculture, Veterinary & Fisheries](./01_APSC/Agriculture_Veterinary_Fisheries)**: [Syllabus Guide](./01_APSC/Agriculture_Veterinary_Fisheries/SYLLABUS.md) | [Official ADO Agri (PDF)](./01_APSC/Agriculture_Veterinary_Fisheries/Official_Syllabus_Agricultural_Development_Officer_ADO.pdf) | [Official VO Domain (PDF)](./01_APSC/Agriculture_Veterinary_Fisheries/Official_Syllabus_Veterinary_Officer_VO_BVO.pdf) | [Official VO GS (PDF)](./01_APSC/Agriculture_Veterinary_Fisheries/Official_Syllabus_VO_BVO_General_Studies.pdf)
@@ -158,5 +175,34 @@ Visual representations of the examination taxonomy, recruitment boards, and univ
 
 ---
 
-## 🔍 Structured JSON Metadata
+## Structured JSON Metadata
 All official PDF file paths, syllabus files, and portal URLs are indexed in [`metadata_catalog.json`](./metadata_catalog.json).
+
+## Roadmap: future improvements
+
+- [ ] Fill the 12 README links that point to files never committed (for example the APSC CCE Mains syllabus)
+- [ ] Add a "last verified" date and source URL for every syllabus
+- [ ] Turn the master checklist into a progress tracker inside the AxomRank app
+- [ ] Generate one blog page per exam from this data (syllabus, pattern, past-paper links)
+- [ ] Move large official PDFs to releases or R2 to slim the repo
+
+## For AI agents and contributors
+
+Read [AGENTS.md](AGENTS.md). Never present an unverified syllabus as official. Keep the source and date with every record.
+
+Commit as the `axomrank` account. Keep changes small and reviewable, and run the repository's checks before pushing.
+
+## Part of AxomRank
+
+[AxomRank](https://axomrank.pages.dev) offers free, bilingual preparation for Assam government exams. Related repositories:
+
+- **Learn:** [axomrank.github.io](https://github.com/axomrank/axomrank.github.io) (the AxomRank learning app), [ahom-kings-lessons](https://github.com/axomrank/ahom-kings-lessons) (41 bilingual Ahom reign lessons), [floor-test-simulator](https://github.com/axomrank/floor-test-simulator) (parliamentary majority simulator)
+- **Explore Assam history:** [ahom-kingdom-history](https://github.com/axomrank/ahom-kingdom-history) (illustrated Ahom kingdom website), [assam-history-map](https://github.com/axomrank/assam-history-map) (year-by-year historical map), [assam-history-characters](https://github.com/axomrank/assam-history-characters) (character sheets for Assam's history), [assam-visual-archive](https://github.com/axomrank/assam-visual-archive) (gallery of Assam scenes and photographs), [assam-heritage-ai-art](https://github.com/axomrank/assam-heritage-ai-art) (AI art gallery of Assamese heritage)
+- **Open data:** [assam-exam-pyq](https://github.com/axomrank/assam-exam-pyq) (2,398 previous-year questions with answers), [assam-maps](https://github.com/axomrank/assam-maps) (map portal and GIS layers), [assam-history-sources](https://github.com/axomrank/assam-history-sources) (Kamarupa inscriptions and primary sources)
+- **Publishing and brand:** [axomrank-blog](https://github.com/axomrank/axomrank-blog) (exam guides built from real papers), [assam-history-books](https://github.com/axomrank/assam-history-books) (13-book history of Assam), [axomrank-brand-assets](https://github.com/axomrank/axomrank-brand-assets) (brand kit and social media library)
+
+## License and contact
+
+No license file yet. Official documents belong to their issuing bodies.
+
+Corrections and questions: open an issue in this repository. AxomRank is run by Angsuman Das (sole proprietor).
